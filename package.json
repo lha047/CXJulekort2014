@@ -1,0 +1,26 @@
+{
+  "name": "CXJulekort2014",
+  "version": "0.0.0",
+  "description": "CX julekort. Laget av Lene Nævdal, Olga Voronkova og Lisa Halvorsen.",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.8.8"
+  },
+  "devDependencies": {
+    "gulp-ruby-sass": "^0.7.1",
+    "gulp-uglify": "^1.0.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lha047/CXJulekort2014.git"
+  },
+  "author": "Lene Nævdal, Olga Voronkova og Lisa Halvorsen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lha047/CXJulekort2014/issues"
+  },
+  "homepage": "https://github.com/lha047/CXJulekort2014"
+}
