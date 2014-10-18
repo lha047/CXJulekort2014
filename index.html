@@ -11,7 +11,7 @@
 <div class='main'>
 	<img class='shape' src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/28727/detective.png' />
 	<h1>A Christmas Carol</h1>
-	<div data-0="background-color:rgb(0,0,255);" data-500="background-color:rgb(255,0,0);">
+	<div class="skrollable skrollable-between" data-0="background-color:rgb(0,0,255);" data-500="background-color:rgb(255,0,0);">
 	<p>The woman sitting across from Connor Reid had broken the silence of an otherwise
 client-free evening. Beneath her perfect sculpture of dark brown hair,
 the woman&rsquo;s green eyes sparked with an equal measure of anger and fear. Connor
@@ -39,7 +39,11 @@ He watched her slim, well-manicured fingers raise a cigarette to her lips.</p>
 
 
 <script src='shapes-polyfill.js'></script>
-<script src='js/skrollr.min.js'></script>
+
+<script src='js/skrollr.min.js' ></script>
+<!--[if lt IE 9]>
+<script src='js/skrollr.ie.min.js'></script>
+<![endif]-->
 
 <script type="text/javascript">
     var s = skrollr.init();
