@@ -34,3 +34,17 @@ h1 {
     h1 { font-size: 1em; }
 }
 
+
+.poly-left{
+    shape-outside: polygon(0 0, 50%, 30%, 70%);
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+
+.poly-right{
+    shape-outside: polygon(50% 0, 30%, 20%, 40%);
+    float: right;
+    width: 50%;
+    height: 100%;
+}
