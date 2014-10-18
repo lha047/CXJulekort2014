@@ -13,12 +13,14 @@ body {
 .shape {
     float: left;
     width: 250px;
-    shape-outside: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/28727/detective-mask.png');
+    -webkit-shape-outside: url(../img/image.png);
+    shape-outside: url(../img/image.png);
     shape-margin: 1em;
 }
 .shape-right {
     float: right;
     width: 250px;
+    webkit-shape-outside: url(../img/image.png);
     shape-outside: url(../img/image.png);
     shape-margin: 1em;
 }
