@@ -2,22 +2,18 @@
 <html>
 <head>
 	<title>God Jul fra Computas</title>
+    <link rel="stylesheet" type="text/css" href="css/default.css"/>
 </head>
 <body>
-<img class=”element” src='img/image.png' />
+<img class='element' src='img/image.png' />
+
 <p>The shape-image-threshold property defines the minimum opacity level of pixels that will be used to create the shape. Its value must be in the range between 0.0 (fully transparent) and 1.0 (fully opaque). So, shape-image-threshold: 0.5 means that only pixels with opacity 50% and above will be used to create the shape.
 
 The float property is key here. While the shape-outside property defines the shape of the area around which content will wrap, without the float, you won't see the effects of the shape.
 
 Elements have a float area on the opposite side of their float value. For example, if an element with a coffee cup image is being floated left, the float area will be created to the right of the cup. Even though you can engineer an image with gaps on both sides, content will only wrap around the shape on the opposite side designated by the float property, left or right, never both.…</p>
 
-<style>
-.element{
-  shape-outside: url(img/image.png);
-  shape-image-threshold: 0.5;
-  float: left;
-}
-</style>
+
 <script src='shapes-polyfill.js'></script>
 </body>
 </html>
