@@ -22,6 +22,15 @@ body {
     shape-outside: url(../img/image.png);
     shape-margin: 1em;
 }
+.circle {
+    shape-outside: circle(30%);
+    transition: shape-outside ls;
+    float: left;
+    background-color: red;
+}
+.circle:hover {
+    shape-outside: circle(50%);
+}
 h1 {
     text-align: center;
 }
