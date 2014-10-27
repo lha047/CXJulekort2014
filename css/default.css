@@ -13,12 +13,14 @@ body {
 .shape {
     float: left;
     width: 250px;
-    shape-outside: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/28727/detective-mask.png');
+    -webkit-shape-outside: url(../img/image.png);
+    shape-outside: url(../img/image.png);
     shape-margin: 1em;
 }
 .shape-right {
     float: right;
     width: 250px;
+    webkit-shape-outside: url(../img/image.png);
     shape-outside: url(../img/image.png);
     shape-margin: 1em;
 }
@@ -34,14 +36,10 @@ body {
 h1 {
     text-align: center;
 }
-.colophon {
-    position: absolute;
-    bottom: 0;
-    right: 1em;
-}
 @media (max-width: 360px) {
     h1 { font-size: 1em; }
 }
+
 
 
 .poly-left{
@@ -51,9 +49,38 @@ h1 {
     height: 100%;
 }
 
-.poly-right{
+.poly-right {
     shape-outside: polygon(50% 0, 30%, 20%, 40%);
     float: right;
     width: 50%;
     height: 100%;
+}
+.skrollable {
+/*
+* First-level skrollables are positioned relative to window
+*/
+position:fixed;
+/*
+* Skrollables by default have a z-index of 100 in order to make it easy to position elements in front/back without changing each skrollable
+*/
+z-index:100;
+}
+.skrollr-mobile .skrollable {
+/*
+May cause issues on Android default browser (see #331 on GitHub).
+*/
+position:absolute;
+}
+.skrollable .skrollable {
+/*
+* Second-level skrollables are positioned relative their parent skrollable
+*/
+position:absolute;
+}
+.skrollable .skrollable .skrollable {
+/*
+* Third-level (and below) skrollables are positioned static
+*/
+position:static;
+
 }
