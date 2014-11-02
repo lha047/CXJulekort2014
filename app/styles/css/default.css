@@ -1,7 +1,7 @@
 body {
     font: 100%/1.4 'Merriweather', serif;
     color: rgb(51, 51, 51);
-    background-color: rgb(240, 240, 240);
+    background-color: red;
     position: relative;
     padding-bottom: 2em;
 }
