@@ -1,0 +1,12 @@
+{
+  "name": "cxjulekort2014",
+  "private": true,
+  "dependencies": {
+    "bootstrap-sass-official": "~3.1.1",
+    "modernizr": "~2.6.2",
+    "jquery": "~1.11.0"
+  },
+  "devDependencies": {
+    "bower-skrollr": "~0.6.26"
+  }
+}
