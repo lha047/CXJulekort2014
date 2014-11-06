@@ -99,3 +99,8 @@ position:absolute;
 position:static;
 
 }
+#snowBackground {
+    width: 400px;
+    height: 400px;
+    background-image: url(../../images/bluemorninglandscape.jpg);
+}

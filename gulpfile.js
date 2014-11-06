@@ -1,11 +1,13 @@
 'use strict';
 // generated on 2014-10-29 using generator-gulp-webapp 0.1.0
 
-var gulp = require('gulp');
+var gulp = require('gulp'),
+inject = require('gulp-inject'),
+plumber = require('gulp-plumber');
 
 // load plugins
 var $ = require('gulp-load-plugins')();
-var inject = require('gulp-inject');
+
 
 gulp.task('index', function() {
    var sources = gulp.src(['app/bower_components/**/*.min.js','app/lib/*.js','app/styles/css/*.css'], {read: false});
@@ -15,6 +17,7 @@ gulp.task('index', function() {
 
 gulp.task('styles', function () {
     return gulp.src('app/styles/main.scss')
+        .pipe(plumber)
         .pipe($.rubySass({
             style: 'expanded',
             precision: 10
@@ -26,6 +29,7 @@ gulp.task('styles', function () {
 
 gulp.task('scripts', function () {
     return gulp.src('app/scripts/**/*.js')
+        .pipe(plumber())
         .pipe($.jshint())
         .pipe($.jshint.reporter(require('jshint-stylish')))
         .pipe($.size());
@@ -36,6 +40,7 @@ gulp.task('html', ['styles', 'scripts'], function () {
     var cssFilter = $.filter('**/*.css');
 
     return gulp.src('app/*.html')
+        .pipe(plumber())
         .pipe($.useref.assets({searchPath: '{.tmp,app}'}))
         .pipe(jsFilter)
         .pipe($.uglify())

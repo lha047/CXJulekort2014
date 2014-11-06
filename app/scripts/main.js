@@ -5,8 +5,8 @@ var s = skrollr.init({
     });
 
 window.onload = function(){
-	var canvas = document.getElementById("snowWindow");
-	var snowBackground = document.getElementById("snowBackground");
+	var canvas = document.getElementById('snowWindow');
+	var snowBackground = document.getElementById('snowBackground');
 	var ctx = canvas.getContext('2d');
 
 	var width = 400; //window.innerWidth;
@@ -25,12 +25,12 @@ window.onload = function(){
 			r: Math.random()*4+1,
 			d: Math.random()*maxPixels
 		});
-	};
+	}
 
 	function draw() {
 		
 		ctx.clearRect(0,0,width,height);
-		ctx.fillStyle = "rgba(255, 255, 255, 0.8)";
+		ctx.fillStyle = 'rgba(255, 255, 255, 0.8)';
 		ctx.beginPath();
 		for(var i = 0; i < maxPixels; i++){
 			var p = particles[i];
@@ -86,5 +86,5 @@ window.onload = function(){
 	
 	//animation loop
 	setInterval(draw, 33);
-}
+};
 }(window));
