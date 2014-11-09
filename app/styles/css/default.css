@@ -1,7 +1,7 @@
 body {
     font: 100%/1.4 'Merriweather', serif;
     color: rgb(51, 51, 51);
-    background-color: #F0FFFF;
+    background-color: #FFFFFF;
     position: relative;
     padding-bottom: 2em;
 }
@@ -10,13 +10,13 @@ body {
     width: 100%;
     max-width: 780px;
 }
-.vers1 {
-    background: url(../../images/skisse_vers1.png) no-repeat center center;
+/*#vers1 {
+    background: url(../../images/skisse_vers1_del1.png) no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-}
+}*/
 .vers1-shape-left {
     float: left;
     width: 250px;
