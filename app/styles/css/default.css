@@ -104,3 +104,21 @@ position:static;
     height: 400px;
     background-image: url(../../images/bluemorninglandscape.jpg);
 }
+
+.myBackground {
+    position: absolute;
+}   
+.myForground {
+    position: relative;
+    background-color: red;
+    height: 200px;
+}
+
+#akebrett {
+    width : 100px;
+    height: 100px;
+    border-radius: 20px;
+    background: red;
+    /*z-index: 1000;*/
+
+}

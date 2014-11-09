@@ -3,11 +3,34 @@
 
 var gulp = require('gulp'),
 inject = require('gulp-inject'),
-plumber = require('gulp-plumber');
+plumber = require('gulp-plumber'),
+connect = require('gulp-connect');
 
-// load plugins
+
+// livereload plugins
 var $ = require('gulp-load-plugins')();
 
+gulp.task('default', ['connect', 'watch'], function () {
+    
+});
+
+gulp.task('watch', [], function () {    
+
+    gulp.watch(['app/styles/**/*.scss', 'app/styles/**/*.css'], ['styles']);
+    gulp.watch('app/scripts/**/*.js', ['scripts']);
+    gulp.watch('app/images/**/*', ['images']);
+    gulp.watch('app/index.html', ['html']);
+    gulp.watch('bower.json', ['wiredep']);
+});
+
+
+
+gulp.task('connect', function() {
+    connect.server({
+        root : ['app'],
+        livereload: true
+    });
+});
 
 gulp.task('index', function() {
    var sources = gulp.src(['app/bower_components/**/*.min.js','app/lib/*.js','app/styles/css/*.css'], {read: false});
@@ -17,14 +40,15 @@ gulp.task('index', function() {
 
 gulp.task('styles', function () {
     return gulp.src('app/styles/main.scss')
-        .pipe(plumber)
+        .pipe(plumber())
         .pipe($.rubySass({
             style: 'expanded',
             precision: 10
         }))
         .pipe($.autoprefixer('last 1 version'))
         .pipe(gulp.dest('.tmp/styles'))
-        .pipe($.size());
+        .pipe($.size())
+        .pipe(connect.reload());
 });
 
 gulp.task('scripts', function () {
@@ -32,7 +56,8 @@ gulp.task('scripts', function () {
         .pipe(plumber())
         .pipe($.jshint())
         .pipe($.jshint.reporter(require('jshint-stylish')))
-        .pipe($.size());
+        .pipe($.size())
+        .pipe(connect.reload());
 });
 
 gulp.task('html', ['styles', 'scripts'], function () {
@@ -51,7 +76,8 @@ gulp.task('html', ['styles', 'scripts'], function () {
         .pipe($.useref.restore())
         .pipe($.useref())
         .pipe(gulp.dest('dist'))
-        .pipe($.size());
+        .pipe($.size())
+        .pipe(connect.reload());
 });
 
 gulp.task('images', function () {
@@ -84,24 +110,6 @@ gulp.task('clean', function () {
 
 gulp.task('build', ['html', 'images', 'fonts', 'extras']);
 
-gulp.task('default', ['clean'], function () {
-    gulp.start('build');
-});
-
-gulp.task('connect', function () {
-    var connect = require('connect');
-    var app = connect()
-        .use(require('connect-livereload')({ port: 35729 }))
-        .use(connect.static('app'))
-        .use(connect.static('.tmp'))
-        .use(connect.directory('app'));
-
-    require('http').createServer(app)
-        .listen(9000)
-        .on('listening', function () {
-            console.log('Started connect web server on http://localhost:9000');
-        });
-});
 
 gulp.task('serve', ['connect', 'styles'], function () {
     require('opn')('http://localhost:9000');
@@ -125,22 +133,3 @@ gulp.task('wiredep', function () {
         .pipe(gulp.dest('app'));
 });
 
-gulp.task('watch', ['connect', 'serve'], function () {
-    var server = $.livereload();
-
-    // watch for changes
-
-    gulp.watch([
-        'app/*.html',
-        '.tmp/styles/**/*.css',
-        'app/scripts/**/*.js',
-        'app/images/**/*'
-    ]).on('change', function (file) {
-        server.changed(file.path);
-    });
-
-    gulp.watch('app/styles/**/*.scss', ['styles']);
-    gulp.watch('app/scripts/**/*.js', ['scripts']);
-    gulp.watch('app/images/**/*', ['images']);
-    gulp.watch('bower.json', ['wiredep']);
-});

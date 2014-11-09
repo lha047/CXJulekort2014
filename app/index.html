@@ -7,29 +7,21 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-        <!-- build:css styles/vendor.css -->
-        <!-- bower:css -->
-        <!-- endbower -->
-        <!-- endbuild -->
-
         <!-- inject:css -->
         <link rel="stylesheet" href="styles/css/default.css">
         <!-- endinject -->
 
-        <!-- build:css styles/main.css -->
-        <!-- endbuild -->
-
-        <!-- build:js scripts/vendor/modernizr.js -->
-        <script src="bower_components/modernizr/modernizr.js"></script>
-        <!-- endbuild -->
     </head>
     <body>
     <section id="container">
+        <div id="akrbrett" data-0="left[cos]:10%;top[sin]"; data-1000="left:90%;top:90%">
+        </div>
         <div id="vers1" class='main'>
-            <div id="snowBackground">
+            <div id="snowBackground"><!-- class="myBackground">-->
                 <canvas id="snowWindow"></canvas>
             </div>
-            
+            <!-- <div class="myForground"></div> -->
+
             <img class='.vers1-shape' src='images/skisse_vers1.png' width="100%" />
             <h1>God Jul Fra Computas</h1>
             <p>Til <span id="to" class="to">Deg</span></p>
@@ -137,6 +129,7 @@
         <!-- build:js scripts/vendor.js -->
         <!-- bower:js -->
         <script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="bower_components/modernizr/modernizr.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
 
@@ -144,25 +137,8 @@
         <script src="bower_components/bower-skrollr/skrollr.min.js"></script>
         <script src="bower_components/jquery/dist/jquery.min.js"></script>
         <script src="bower_components/modernizr/test/caniuse_files/jquery.min.js"></script>
-        <script src="bower_components/modernizr/test/caniuse_files/modernizr-1.7.min.js"></script>
-        <script src="bower_components/jquery/src/sizzle/dist/sizzle.min.js"></script>
         <script src="lib/shapes-polyfill.js"></script>
         <!-- endinject -->
-
-        <!-- build:js scripts/plugins.js -->
-        <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/affix.js"></script>
-        <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/alert.js"></script>
-        <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/dropdown.js"></script>
-        <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/tooltip.js"></script>
-        <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/modal.js"></script>
-        <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/transition.js"></script>
-        <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/button.js"></script>
-        <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/popover.js"></script>
-        <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/carousel.js"></script>
-        <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/scrollspy.js"></script>
-        <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/collapse.js"></script>
-        <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/tab.js"></script>
-        <!-- endbuild -->
 
         <!-- build:js scripts/main.js -->
         <script src="scripts/main.js"></script>

@@ -1,6 +1,19 @@
 'use strict';
 (function(window){
 var s = skrollr.init({
+    easing: {
+    	sin : function(p) {
+    		return (Math.sin(p * Math.PI * 2 - Math.PI/2)/2);
+    	}, 
+    	cos : function(p){
+    		return (Math.cos(p * Math.PI * 2 - Math.PI/2)/2);
+    	}
+    },
+    render : function(data) {
+    	if(data.curTop === data.maxTop) {
+    		this.setScrollTop(0, true);
+    	}
+    },
     smoothScrolling: true
     });
 
