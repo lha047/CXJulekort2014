@@ -17,11 +17,19 @@ body {
     -o-background-size: cover;
     background-size: cover;
 }
-.vers1-shape {
+.vers1-shape-left {
     float: left;
     width: 250px;
-    -webkit-shape-outside: url(../../images/skisse_vers1.png);
-    shape-outside: url(../../images/skisse_vers1.png);
+    -webkit-shape-outside: url(../../images/skisse_vers1_del1.png);
+    shape-outside: url(../../images/skisse_vers1_del1.png);
+    shape-margin: 1em;
+    transition: shape-outside ls;
+}
+.vers1-shape-right {
+    float: right;
+    width: 250px;
+    -webkit-shape-outside: url(../../images/skisse_vers1_del2.png);
+    shape-outside: url(../../images/skisse_vers1_del2.png);
     shape-margin: 1em;
     transition: shape-outside ls;
 }
