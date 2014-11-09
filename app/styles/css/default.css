@@ -1,7 +1,7 @@
 body {
     font: 100%/1.4 'Merriweather', serif;
     color: rgb(51, 51, 51);
-    background-color: #F0FFFF;
+    background-color: #FFFFFF;
     position: relative;
     padding-bottom: 2em;
 }
@@ -10,18 +10,26 @@ body {
     width: 100%;
     max-width: 780px;
 }
-.vers1 {
-    background: url(../../images/skisse_vers1.png) no-repeat center center;
+/*#vers1 {
+    background: url(../../images/skisse_vers1_del1.png) no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-}
-.vers1-shape {
+}*/
+.vers1-shape-left {
     float: left;
     width: 250px;
-    -webkit-shape-outside: url(../../images/skisse_vers1.png);
-    shape-outside: url(../../images/skisse_vers1.png);
+    -webkit-shape-outside: url(../../images/skisse_vers1_del1.png);
+    shape-outside: url(../../images/skisse_vers1_del1.png);
+    shape-margin: 1em;
+    transition: shape-outside ls;
+}
+.vers1-shape-right {
+    float: right;
+    width: 250px;
+    -webkit-shape-outside: url(../../images/skisse_vers1_del2.png);
+    shape-outside: url(../../images/skisse_vers1_del2.png);
     shape-margin: 1em;
     transition: shape-outside ls;
 }
@@ -169,7 +177,20 @@ html, body {
     -webkit-transform: translate(0%,200%);
     -ms-transform: translate(0%,200%);
     transform: translate(0%,200%);
+    width: 150%;
+    position: absolute;
 }
+#uteBilde {
+    position: absolute;
+}
+.vers {
+    position: relative;
+    width: 10%;
+    font-size: x-large;
+}
+
+
+
 /* Slide 4 goes to the top right */
 #slide4 {
     background-color: yellow;
@@ -185,14 +206,6 @@ html, body {
     -webkit-transform: translate(200%,200%);
     -ms-transform: translate(200%,200%);
     transform: translate(200%,200%);
-}
-/* Slide 4 goes to the top right */
-#slide6{
-    background-color: purple;
-    background-size: cover;
-    -webkit-transform: translate(100%,0%);
-    -ms-transform: translate(100%,0%);
-    transform: translate(100%,0%);
 }
 
 
