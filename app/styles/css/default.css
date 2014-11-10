@@ -108,9 +108,17 @@ position:static;
 
 }
 #snowBackground {
-    width: 400px;
-    height: 400px;
+    left: 38%;
+    position: relative;
+    top: 238px;
+    width: 171px;
+    height: 210px;
     background-image: url(../../images/bluemorninglandscape.jpg);
+}
+
+#snowWindow {
+    width: 200px;
+    height: 200px;
 }
 
 .myBackground {
