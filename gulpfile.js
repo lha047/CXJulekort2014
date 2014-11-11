@@ -4,7 +4,8 @@
 var gulp = require('gulp'),
 inject = require('gulp-inject'),
 plumber = require('gulp-plumber'),
-connect = require('gulp-connect');
+connect = require('gulp-connect'),
+sass = require('gulp-sass');
 
 
 // livereload plugins
@@ -16,14 +17,20 @@ gulp.task('default', ['connect', 'watch'], function () {
 
 gulp.task('watch', [], function () {    
 
-    gulp.watch(['app/styles/**/*.scss', 'app/styles/**/*.css'], ['styles']);
+    gulp.watch(['app/styles/**/*.scss', 'app/styles/**/*.css'], ['sass', 'styles']);
     gulp.watch('app/scripts/**/*.js', ['scripts']);
     gulp.watch('app/images/**/*', ['images']);
     gulp.watch('app/index.html', ['html']);
     gulp.watch('bower.json', ['wiredep']);
 });
 
-
+gulp.task('sass', function(){
+   gulp.src('app/styles/*.scss')
+       .pipe(plumber())
+       .pipe(sass())
+       .pipe(gulp.dest('app/styles/css'))
+       .pipe(connect.reload());
+});
 
 gulp.task('connect', function() {
     connect.server({
@@ -40,7 +47,7 @@ gulp.task('index', function() {
 });
 
 gulp.task('styles', function () {
-    return gulp.src('app/styles/main.scss')
+    return gulp.src(['app/styles/main.scss', 'app/styles/css/*.css'])
         .pipe(plumber())
         // .pipe($.rubySass({
             // style: 'expanded',
@@ -62,22 +69,9 @@ gulp.task('scripts', function () {
 });
 
 gulp.task('html', ['styles', 'scripts'], function () {
-    var jsFilter = $.filter('**/*.js');
-    var cssFilter = $.filter('**/*.css');
 
     return gulp.src('app/*.html')
         .pipe(plumber())
-        .pipe($.useref.assets({searchPath: '{.tmp,app}'}))
-        .pipe(jsFilter)
-        .pipe($.uglify())
-        .pipe(jsFilter.restore())
-        .pipe(cssFilter)
-        // .pipe($.csso())
-        .pipe(cssFilter.restore())
-        .pipe($.useref.restore())
-        .pipe($.useref())
-        .pipe(gulp.dest('dist'))
-        .pipe($.size())
         .pipe(connect.reload());
 });
 
