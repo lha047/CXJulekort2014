@@ -109,17 +109,18 @@ position:static;
 
 }
 #snowBackground {
-    left: 38%;
-    position: relative;
-    top: 238px;
-    width: 171px;
-    height: 210px;
+    left: 55%;
+    position: fixed;
+    top: 210px;
+    width: 510px;
+    height: 550px;
     background-image: url(../../images/bluemorninglandscape.jpg);
+    z-index: -1;
 }
 
 #snowWindow {
-    width: 171px;
-    height: 210px;
+    width: 510px;
+    height: 550px;
 }
 
 .myBackground {
@@ -178,6 +179,8 @@ html, body {
     color: snow;
     background-color: rgb(130,179,176);
     background-size: cover;
+    background: url(img_flwr.gif);
+    background-repeat: no-repeat;
     -webkit-transform: translate(0,100%);
     -ms-transform: translate(0,100%);
     transform: translate(0,100%);
