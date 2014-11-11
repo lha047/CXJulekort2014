@@ -185,6 +185,7 @@ html, body {
 }
 #uteBilde {
     position: absolute;
+    opacity: 0.5;
 }
 .vers {
     position: relative;
