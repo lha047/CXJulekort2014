@@ -110,7 +110,7 @@ position:static;
 }
 #snowBackground {
     left: 55%;
-    position: fixed;
+    position: absolute;
     top: 210px;
     width: 510px;
     height: 550px;
@@ -179,7 +179,6 @@ html, body {
     color: snow;
     background-color: rgb(130,179,176);
     background-size: cover;
-    background: url(img_flwr.gif);
     background-repeat: no-repeat;
     -webkit-transform: translate(0,100%);
     -ms-transform: translate(0,100%);
