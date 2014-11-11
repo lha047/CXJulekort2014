@@ -8,7 +8,8 @@ body {
 .main {
     margin: 1em auto;
     width: 100%;
-    max-width: 780px;
+    /*max-width: 780px;*/
+    max-width: 100%;
 }
 /*#vers1 {
     background: url(../../images/skisse_vers1_del1.png) no-repeat center center;
