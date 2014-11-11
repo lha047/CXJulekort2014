@@ -1,3 +1,7 @@
+$testColorRed: rgb(229,98,80);
+$testColorBlue: rgb(130,179,176);
+$testColorGray: rgb(49,49,49);
+
 body {
     font: 100%/1.4 'Merriweather', serif;
     color: rgb(51, 51, 51);
@@ -92,4 +96,15 @@ position:absolute;
 */
 position:static;
 
+}
+
+
+#v1 {
+  background-color: $testColorRed;
+}
+#v2 {
+  background-color: $testColorBlue;
+}
+#v3 {
+  background-color: $testColorGray;
 }
