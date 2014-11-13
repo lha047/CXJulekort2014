@@ -75,7 +75,9 @@ gulp.task('html', ['styles', 'scripts'], function () {
         .pipe(connect.reload());
 });
 
+gulp.task('images', function() {
 
+});
 // gulp.task('serve', ['connect', 'styles'], function () {
 //     require('opn')('http://localhost:9000');
 // });
