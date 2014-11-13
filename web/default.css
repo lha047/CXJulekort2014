@@ -1,0 +1,218 @@
+body {
+    font: 100%/1.4 'Merriweather', serif;
+    color: rgb(51, 51, 51);
+    background-color: #FFFFFF;
+    position: relative;
+    padding-bottom: 2em;
+}
+.main {
+    margin: 1em auto;
+    width: 100%;
+    max-width: 780px;
+}
+/*#vers1 {
+    background: url(../../images/skisse_vers1_del1.png) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}*/
+.vers1-shape-left {
+    float: left;
+    width: 250px;
+    -webkit-shape-outside: url(images/skisse_vers1_del1.png);
+    shape-outside: url(images/skisse_vers1_del1.png);
+    shape-margin: 1em;
+    transition: shape-outside ls;
+}
+.vers1-shape-right {
+    float: right;
+    width: 250px;
+    -webkit-shape-outside: url(images/skisse_vers1_del2.png);
+    shape-outside: url(images/skisse_vers1_del2.png);
+    shape-margin: 1em;
+    transition: shape-outside ls;
+}
+.shape {
+    float: left;
+    width: 250px;
+    -webkit-shape-outside: url(images/image.png);
+    shape-outside: url(images/image.png);
+    shape-margin: 1em;
+}
+.shape-right {
+    float: right;
+    width: 250px;
+    webkit-shape-outside: url(images/image.png);
+    shape-outside: url(images/image.png);
+    shape-margin: 1em;
+}
+.circle {
+    shape-outside: circle(30%);
+    transition: shape-outside ls;
+    float: left;
+    background-color: red;
+}
+.circle:hover {
+    shape-outside: circle(50%);
+}
+h1 {
+    text-align: center;
+}
+@media (max-width: 360px) {
+    h1 { font-size: 1em; }
+}
+
+
+
+.poly-left{
+    shape-outside: polygon(0 0, 50%, 30%, 70%);
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+
+.poly-right {
+    shape-outside: polygon(50% 0, 30%, 20%, 40%);
+    float: right;
+    width: 50%;
+    height: 100%;
+}
+.skrollable {
+/*
+* First-level skrollables are positioned relative to window
+*/
+position:fixed;
+/*
+* Skrollables by default have a z-index of 100 in order to make it easy to position elements in front/back without changing each skrollable
+*/
+z-index:100;
+}
+.skrollr-mobile .skrollable {
+/*
+May cause issues on Android default browser (see #331 on GitHub).
+*/
+position:absolute;
+}
+.skrollable .skrollable {
+/*
+* Second-level skrollables are positioned relative their parent skrollable
+*/
+position:absolute;
+}
+.skrollable .skrollable .skrollable {
+/*
+* Third-level (and below) skrollables are positioned static
+*/
+position:static;
+
+}
+#snowBackground {
+    left: 38%;
+    position: relative;
+    top: 238px;
+    width: 171px;
+    height: 210px;
+    background-image: url(images/bluemorninglandscape.jpg);
+}
+
+#snowWindow {
+    width: 200px;
+    height: 200px;
+}
+
+.myBackground {
+    position: absolute;
+}   
+.myForground {
+    position: relative;
+    /*background-color: red;*/
+    height: 200px;
+}
+
+#akebrett {
+    width : 100px;
+    height: 100px;
+    border-radius: 20px;
+    /*background: red;*/
+    /*z-index: 1000;*/
+
+
+}
+html, body {
+    width:100%;
+    height:100%;
+}
+/* full width/height container */
+#slides-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+ 
+/* double the height/width of a viewport */
+#slides {
+    width: 200%;
+    height: 300%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.slide {
+    position:absolute;
+    top:0;
+    left:0;
+    width:50%;
+    height:50%;
+}
+
+#slide1 {
+    background-color: rgb(49,49,49);
+    background-size: cover;
+    color: snow;
+}
+/* Slide 2 goes to the bottom left */
+#slide2 {
+    color: snow;
+    background-color: rgb(49,49,49);
+    background-size: cover;
+    -webkit-transform: translate(0,100%);
+    -ms-transform: translate(0,100%);
+    transform: translate(0,100%);
+}
+/* Slide 3 goes to the bottom right */
+#slide3 {
+    color: snow;
+    background-color: rgb(49,49,49);
+    background-size: cover;
+    -webkit-transform: translate(0%,200%);
+    -ms-transform: translate(0%,200%);
+    transform: translate(0%,200%);
+    width: 150%;
+    position: absolute;
+}
+#uteBilde {
+    position: absolute;
+    opacity: 0.5;
+}
+.vers {
+    position: relative;
+    width: 10%;
+    font-size: x-large;
+}
+
+
+#helper {
+    position:absolute;
+    left:0;
+    top: 0;
+    height:400%;
+    width: 20px;
+}
+.marker {
+    height: 25%;
+    width: 100%;
+}
+
+
