@@ -8,32 +8,9 @@ body {
 .main {
     margin: 1em auto;
     width: 100%;
-    /*max-width: 780px;*/
     max-width: 100%;
 }
-/*#vers1 {
-    background: url(../../images/skisse_vers1_del1.png) no-repeat center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}*/
-.vers1-shape-left {
-    float: left;
-    width: 250px;
-    -webkit-shape-outside: url(../../images/skisse_vers1_del1.png);
-    shape-outside: url(../../images/skisse_vers1_del1.png);
-    shape-margin: 1em;
-    transition: shape-outside ls;
-}
-.vers1-shape-right {
-    float: right;
-    width: 250px;
-    -webkit-shape-outside: url(../../images/skisse_vers1_del2.png);
-    shape-outside: url(../../images/skisse_vers1_del2.png);
-    shape-margin: 1em;
-    transition: shape-outside ls;
-}
+
 .shape {
     float: left;
     width: 250px;
