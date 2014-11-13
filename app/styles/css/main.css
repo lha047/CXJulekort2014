@@ -112,5 +112,13 @@ May cause issues on Android default browser (see #331 on GitHub).
   width: 20em; }
 
 #v3 {
-  width: 20em;
-  margin-left: 70em; }
+  width: 20em; }
+
+#akeTest {
+  -webkit-transform: translate(0em, 40em);
+  -ms-transform: translate(0em, 40em);
+  transform: translate(0em, 40em); }
+
+#akeBilde {
+  width: 100%;
+  height: auto; }
