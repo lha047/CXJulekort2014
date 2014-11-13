@@ -146,19 +146,18 @@ $fontSizeSmall: large;
 }
 
 .vers2-shape {
-
-  float: left;
+ float: left;
   -webkit-shape-outside: url(../../images/skisse_vers2-3.png);
   shape-outside: url(../../images/skisse_vers2-3.png);
   shape-margin: 1em;
   transition: shape-outside ls;
 }
 
-#v1 {
-//  background-color: $testColorRed;
-}
 #v2 {
-//  background-color: $testColorBlue;
+// background-color: $testColorRed;
+ width: 20em; //bredden må endres etter bredden på skjermen
+ margin-left: 40em;
+ padding-top:10em;
 }
 #v3 {
 //  background-color: $testColorGray;

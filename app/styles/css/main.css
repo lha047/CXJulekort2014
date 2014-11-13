@@ -107,3 +107,8 @@ May cause issues on Android default browser (see #331 on GitHub).
   shape-margin: 1em;
   transition: shape-outside ls; }
 
+#v2 {
+  width: 20em;
+  margin-left: 40em;
+  padding-top: 10em; }
+
