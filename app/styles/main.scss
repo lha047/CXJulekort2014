@@ -151,14 +151,18 @@ $fontSizeSmall: large;
   shape-outside: url(../../images/skisse_vers2-3.png);
   shape-margin: 1em;
   transition: shape-outside ls;
+  opacity: 0.5;
 }
 
 #v2 {
 // background-color: $testColorRed;
  width: 20em; //bredden må endres etter bredden på skjermen
- margin-left: 40em;
- padding-top:10em;
+// margin-left: 40em; //må endres ut fra bredden
+// padding-top:10em;
 }
 #v3 {
-//  background-color: $testColorGray;
+//  background-color: $testColorBlue;
+  width: 20em; //bredden må endres etter bredden på skjermen
+  margin-left: 70em; //må endres ut fra bredden
+//  padding-top:10em;
 }

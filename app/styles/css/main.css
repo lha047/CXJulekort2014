@@ -105,10 +105,12 @@ May cause issues on Android default browser (see #331 on GitHub).
   -webkit-shape-outside: url(../../images/skisse_vers2-3.png);
   shape-outside: url(../../images/skisse_vers2-3.png);
   shape-margin: 1em;
-  transition: shape-outside ls; }
+  transition: shape-outside ls;
+  opacity: 0.5; }
 
 #v2 {
-  width: 20em;
-  margin-left: 40em;
-  padding-top: 10em; }
+  width: 20em; }
 
+#v3 {
+  width: 20em;
+  margin-left: 70em; }
