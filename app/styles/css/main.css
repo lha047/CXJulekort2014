@@ -43,8 +43,7 @@ h1 {
 
 @media (max-width: 360px) {
   h1 {
-    font-size: 1em; }
- }
+    font-size: 1em; } }
 
 .poly-left {
   shape-outside: polygon(0 0, 50%, 30%, 70%);
@@ -85,4 +84,26 @@ May cause issues on Android default browser (see #331 on GitHub).
 * Third-level (and below) skrollables are positioned static
 */
   position: static; }
+
+/*starter litt inne i bildet*/
+/**/
+/* Slide 3 goes to the bottom right */
+#slide3 {
+  color: snow;
+  background-color: #313131;
+  background-size: cover;
+  -webkit-transform: translate(-5%, 200%);
+  -ms-transform: translate(-5%, 200%);
+  transform: translate(-5%, 200%);
+  width: 1000%;
+  position: absolute; }
+
+#uteBilde {
+  position: absolute;
+  opacity: 0.5; }
+
+.vers {
+  position: relative;
+  width: 10%;
+  font-size: large; }
 

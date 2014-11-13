@@ -184,26 +184,7 @@ html, body {
     -ms-transform: translate(0,100%);
     transform: translate(0,100%);
 }
-/* Slide 3 goes to the bottom right */
-#slide3 {
-    color: snow;
-    background-color: rgb(49,49,49);
-    background-size: cover;
-    -webkit-transform: translate(0%,200%);
-    -ms-transform: translate(0%,200%);
-    transform: translate(0%,200%);
-    width: 150%;
-    position: absolute;
-}
-#uteBilde {
-    position: absolute;
-    opacity: 0.5;
-}
-.vers {
-    position: relative;
-    width: 10%;
-    font-size: x-large;
-}
+
 
 
 #helper {
