@@ -45,13 +45,13 @@ canvas {
     // width: 100%;
     // max-width: 600px;
 }
-.shape {
-    float: left;
-    width: 250px;
-    -webkit-shape-outside: url(../../images/image.png);
-    shape-outside: url(../../images/image.png);
-    shape-margin: 1em;
-}
+//.shape {
+//    float: left;
+//    width: 250px;
+//    -webkit-shape-outside: url(../../images/image.png);
+//    shape-outside: url(../../images/image.png);
+//    shape-margin: 1em;
+//}
 .shape-right {
     float: right;
     width: 250px;
@@ -143,6 +143,15 @@ $fontSizeSmall: large;
   position: relative;
   width: 10%;
   font-size: $fontSizeSmall;
+}
+
+.vers2-shape {
+
+  float: left;
+  -webkit-shape-outside: url(../../images/skisse_vers2-3.png);
+  shape-outside: url(../../images/skisse_vers2-3.png);
+  shape-margin: 1em;
+  transition: shape-outside ls;
 }
 
 #v1 {
