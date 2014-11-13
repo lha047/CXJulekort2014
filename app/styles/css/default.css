@@ -8,7 +8,8 @@ body {
 .main {
     margin: 1em auto;
     width: 100%;
-    max-width: 780px;
+    /*max-width: 780px;*/
+    max-width: 100%;
 }
 /*#vers1 {
     background: url(../../images/skisse_vers1_del1.png) no-repeat center center;
@@ -108,17 +109,18 @@ position:static;
 
 }
 #snowBackground {
-    left: 38%;
-    position: relative;
-    top: 238px;
-    width: 171px;
-    height: 210px;
+    left: 55%;
+    position: absolute;
+    top: 210px;
+    width: 510px;
+    height: 550px;
     background-image: url(../../images/bluemorninglandscape.jpg);
+    z-index: -1;
 }
 
 #snowWindow {
-    width: 200px;
-    height: 200px;
+    width: 510px;
+    height: 550px;
 }
 
 .myBackground {
@@ -177,6 +179,7 @@ html, body {
     color: snow;
     background-color: rgb(49,49,49);
     background-size: cover;
+    background-repeat: no-repeat;
     -webkit-transform: translate(0,100%);
     -ms-transform: translate(0,100%);
     transform: translate(0,100%);

@@ -22,8 +22,8 @@ window.onload = function(){
 	var snowBackground = document.getElementById('snowBackground');
 	var ctx = canvas.getContext('2d');
 
-	var width = 400; //window.innerWidth;
-	var height = 400; //window.innerHeight;
+	var width = 510; //window.innerWidth;
+	var height = 550; //window.innerHeight;
 	canvas.width = width;
 	canvas.height = height;
 
