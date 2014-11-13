@@ -126,7 +126,7 @@ position:static;
 }   
 .myForground {
     position: relative;
-    background-color: red;
+    /*background-color: red;*/
     height: 200px;
 }
 
@@ -134,7 +134,7 @@ position:static;
     width : 100px;
     height: 100px;
     border-radius: 20px;
-    background: red;
+    /*background: red;*/
     /*z-index: 1000;*/
 
 
@@ -168,14 +168,14 @@ html, body {
 }
 
 #slide1 {
-    background-color: rgb(229,98,80);
+    background-color: rgb(49,49,49);
     background-size: cover;
     color: snow;
 }
 /* Slide 2 goes to the bottom left */
 #slide2 {
     color: snow;
-    background-color: rgb(130,179,176);
+    background-color: rgb(49,49,49);
     background-size: cover;
     -webkit-transform: translate(0,100%);
     -ms-transform: translate(0,100%);
@@ -203,25 +203,6 @@ html, body {
 }
 
 
-
-/* Slide 4 goes to the top right */
-#slide4 {
-    background-color: yellow;
-    background-size: cover;
-    -webkit-transform: translate(100%,200%);
-    -ms-transform: translate(100%,200%);
-    transform: translate(100%,200%);
-}
-/* Slide 4 goes to the top right */
-#slide5 {
-    background-color: green;
-    background-size: cover;
-    -webkit-transform: translate(200%,200%);
-    -ms-transform: translate(200%,200%);
-    transform: translate(200%,200%);
-}
-
-
 #helper {
     position:absolute;
     left:0;
@@ -233,16 +214,5 @@ html, body {
     height: 25%;
     width: 100%;
 }
-.red {
-    background-color: red;
-}
-.green {
-    background-color: green;
-}
-.blue {
-    background-color: blue;
-}
-.yellow {
-    background-color: yellow;
-}
+
 

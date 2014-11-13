@@ -85,11 +85,3 @@ May cause issues on Android default browser (see #331 on GitHub).
 */
   position: static; }
 
-#v1 {
-  background-color: #e56250; }
-
-#v2 {
-  background-color: #82b3b0; }
-
-#v3 {
-  background-color: #313131; }
