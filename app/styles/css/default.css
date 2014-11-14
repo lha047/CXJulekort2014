@@ -8,32 +8,9 @@ body {
 .main {
     margin: 1em auto;
     width: 100%;
-    /*max-width: 780px;*/
     max-width: 100%;
 }
-/*#vers1 {
-    background: url(../../images/skisse_vers1_del1.png) no-repeat center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}*/
-.vers1-shape-left {
-    float: left;
-    width: 250px;
-    -webkit-shape-outside: url(../../images/skisse_vers1_del1.png);
-    shape-outside: url(../../images/skisse_vers1_del1.png);
-    shape-margin: 1em;
-    transition: shape-outside ls;
-}
-.vers1-shape-right {
-    float: right;
-    width: 250px;
-    -webkit-shape-outside: url(../../images/skisse_vers1_del2.png);
-    shape-outside: url(../../images/skisse_vers1_del2.png);
-    shape-margin: 1em;
-    transition: shape-outside ls;
-}
+
 .shape {
     float: left;
     width: 250px;
@@ -166,13 +143,25 @@ html, body {
     top:0;
     left:0;
     width:50%;
-    height:50%;
+    height:50%;    
 }
 
 #slide1 {
-    background-color: rgb(49,49,49);
+    background: url('../../images/julebilde.jpg') no-repeat center center fixed; 
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
-    color: snow;
+
+    filter: blur(3px); 
+-webkit-filter: blur(3px); 
+-moz-filter: blur(3px);
+-o-filter: blur(3px); 
+-ms-filter: blur(3px);
+
+filter: url(../blur.svg#blur);
+filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='5');
 }
 /* Slide 2 goes to the bottom left */
 #slide2 {

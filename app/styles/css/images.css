@@ -1,0 +1,35 @@
+#vers1 img {
+    width: 10em;
+    float: right;
+}
+#vers1 #img-container{
+    float: right;
+    overflow: hidden; 
+    width: 50%;
+}
+@media (min-width: 350px) {
+    #vers1 img {
+        width: 20em;
+        float: right;
+    }
+    #vers1 #img-container{
+        float: right;
+        overflow: hidden; 
+        width: 60%;
+    }
+
+}
+@media (min-width: 500px) {
+    #vers1 img {
+        width: 25em;
+        float: right;
+    }
+}
+@media (min-width: 700px) {
+    #vers1 img {
+        width: 100%;
+    }
+    #vers1 #img-container{
+        width: 100%;
+    }
+}
