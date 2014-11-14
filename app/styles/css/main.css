@@ -109,10 +109,13 @@ May cause issues on Android default browser (see #331 on GitHub).
   opacity: 0.5; }
 
 #v2 {
-  width: 20em; }
+  width: 20em;
+  margin-left: 40em;
+  padding-top: 10em; }
 
 #v3 {
-  width: 20em; }
+  width: 15em;
+  margin-left: 70em; }
 
 #akeTest {
   -webkit-transform: translate(0em, 40em);
