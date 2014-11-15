@@ -1,12 +1,16 @@
 'use strict';
-(function(window){
+(function(window, skrollr){
 var s = skrollr.init({
     easing: {
     	sin : function(p) {
-    		return (Math.sin(p * Math.PI * 2 - Math.PI/2)/2);
+            var s = (Math.sin(p * Math.PI * 2 - Math.PI/2)/2);
+            console.log('sin: ' + s);
+    		return s;
     	}, 
     	cos : function(p){
-    		return (Math.cos(p * Math.PI * 2 - Math.PI/2)/2);
+            var c = (Math.cos(p * Math.PI * 2 - Math.PI/2)/2);
+            console.log('cos: ' + c);
+    		return c;
     	}
     },
     render : function(data) {
@@ -100,4 +104,4 @@ window.onload = function(){
 	//animation loop
 	setInterval(draw, 33);
 };
-}(window));
+}(window, skrollr));

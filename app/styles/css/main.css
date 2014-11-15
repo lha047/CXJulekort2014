@@ -85,11 +85,30 @@ May cause issues on Android default browser (see #331 on GitHub).
   color: snow;
   background-color: #313131;
   background-size: cover;
-  -webkit-transform: translate(-5%, 200%);
-  -ms-transform: translate(-5%, 200%);
-  transform: translate(-5%, 200%);
-  width: 1000%;
   position: absolute; }
+  @media (max-width: 350px) {
+    #slide3 {
+      -webkit-transform: translate(-5%, 200%);
+      -ms-transform: translate(-5%, 200%);
+      transform: translate(-5%, 200%);
+      width: 1000%; } }
+  @media (min-width: 350px) {
+    #slide3 {
+      -webkit-transform: translate(-2%, 200%);
+      -ms-transform: translate(-2%, 200%);
+      transform: translate(-2%, 200%);
+      width: 1000%; } }
+  @media (min-width: 500px) {
+    #slide3 {
+      -webkit-transform: translate(-1.5%, 200%);
+      -ms-transform: translate(-1.5%, 200%);
+      transform: translate(-1.5%, 200%);
+      width: 1000%; } }
+  @media (min-width: 700px) {
+    #slide3 {
+      -webkit-transform: translate(0%, 200%);
+      -ms-transform: translate(0%, 200%);
+      transform: translate(0%, 200%); } }
 
 #uteBilde {
   position: absolute;
@@ -115,7 +134,12 @@ May cause issues on Android default browser (see #331 on GitHub).
 
 #v3 {
   width: 15em;
-  margin-left: 70em; }
+  margin-left: 1200em;
+  padding-top: 10em; }
+  @media (min-width: 700px) {
+    #v3 {
+      width: 20em;
+      margin-left: 120em; } }
 
 #akeTest {
   -webkit-transform: translate(0em, 40em);
@@ -123,5 +147,5 @@ May cause issues on Android default browser (see #331 on GitHub).
   transform: translate(0em, 40em); }
 
 #akeBilde {
-  width: 100%;
+  width: 100px;
   height: auto; }
