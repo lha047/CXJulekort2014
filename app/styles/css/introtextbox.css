@@ -1,0 +1,47 @@
+
+#intro-textbox-container { 	
+    margin-left: 25%;
+    margin-top: 50%;
+    margin-right: 5%;
+    box-sizing: border-box;
+    position: relative;
+}
+#intro-textbox {
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 7px;
+    padding: 5px 5px 5px;    
+    text-align: center;
+}
+
+#volume-container {
+    width: 17%;
+    background-color: #9999FF;
+    border-radius: 50%;
+    color: #ffffff;
+    margin-top: 10px;
+    text-align: center;
+    display: inline-block;
+}
+
+@media (min-width: 245px) {
+	#intro-textbox-container { 	
+	    margin-left: 25%;
+	    margin-top: 5%;
+	    margin-right: 2%;
+	}
+}
+@media (min-width: 355px) {
+	#volume-container {
+	    width: 11%;
+	}
+}
+@media (min-width: 1500px) {
+	#intro-textbox-container { 	
+	    margin-left: 25%;
+	    margin-top: 25%;
+	    margin-right: 2%;
+	}
+	#volume-container {
+	    width: 2%;
+	}
+}

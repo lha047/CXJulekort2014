@@ -86,18 +86,30 @@ position:static;
 
 }
 #snowBackground {
-    left: 55%;
+    left: 65%;
     position: absolute;
-    top: 210px;
-    width: 510px;
-    height: 550px;
+    height: 19%;
+    width: 30%;
     background-image: url(../../images/bluemorninglandscape.jpg);
     z-index: -1;
 }
 
 #snowWindow {
-    width: 510px;
-    height: 550px;
+    width: 4em;
+    height: 4em;
+    margin-top: 20%;
+}
+
+@media (min-width: 338px) {
+    #snowBackground {
+        height: 45%;
+        left: 45%;
+    }
+
+    #snowWindow {
+        width: 45%;
+        height: 45%;
+    }
 }
 
 .myBackground {
@@ -148,21 +160,23 @@ html, body {
 
 #slide1 {
     background: url('../../images/julebilde.jpg') no-repeat center center fixed; 
-    background-repeat: no-repeat;
+ /*   background-repeat: no-repeat; */
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 
-    filter: blur(3px); 
+/*    filter: blur(3px); 
 -webkit-filter: blur(3px); 
 -moz-filter: blur(3px);
 -o-filter: blur(3px); 
 -ms-filter: blur(3px);
 
 filter: url(../blur.svg#blur);
-filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='5');
+filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='5');*/
 }
+
+
 /* Slide 2 goes to the bottom left */
 #slide2 {
     color: snow;

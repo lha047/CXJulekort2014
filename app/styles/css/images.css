@@ -7,9 +7,9 @@
     overflow: hidden; 
     width: 50%;
 }
-@media (min-width: 350px) {
+@media (min-width: 338px) {
     #vers1 img {
-        width: 20em;
+        width: 18em;
         float: right;
     }
     #vers1 #img-container{
@@ -25,7 +25,7 @@
         float: right;
     }
 }
-@media (min-width: 700px) {
+@media (min-width: 685px) {
     #vers1 img {
         width: 100%;
     }
