@@ -36,8 +36,7 @@ h1 {
 
 @media (max-width: 360px) {
   h1 {
-    font-size: 1em; }
- }
+    font-size: 1em; } }
 
 .poly-left {
   shape-outside: polygon(0 0, 50%, 30%, 70%);
@@ -79,79 +78,23 @@ May cause issues on Android default browser (see #331 on GitHub).
 */
   position: static; }
 
-/*starter litt inne i bildet*/
-/**/
-/* Slide 3 goes to the bottom right */
-#slide3 {
-  color: snow;
-  background-color: #313131;
-  background-size: cover;
-  position: absolute; }
-  @media (max-width: 350px) {
-    #slide3 {
-      -webkit-transform: translate(-5%, 200%);
-      -ms-transform: translate(-5%, 200%);
-      transform: translate(-5%, 200%);
-      width: 1000%; } }
-  @media (min-width: 350px) {
-    #slide3 {
-      -webkit-transform: translate(-2%, 200%);
-      -ms-transform: translate(-2%, 200%);
-      transform: translate(-2%, 200%);
-      width: 1000%; } }
-  @media (min-width: 500px) {
-    #slide3 {
-      -webkit-transform: translate(-1.5%, 200%);
-      -ms-transform: translate(-1.5%, 200%);
-      transform: translate(-1.5%, 200%);
-      width: 1000%; } }
-  @media (min-width: 700px) {
-    #slide3 {
-      -webkit-transform: translate(0%, 200%);
-      -ms-transform: translate(0%, 200%);
-      transform: translate(0%, 200%); } }
-
-#uteBilde {
-  position: absolute;
-  opacity: 0.5; }
-
-.vers {
-  position: relative;
-  width: 10%;
-  font-size: large; }
-
-#vers2 {
+/* full width/height container */
+#slides-container {
+  width: 100%;
   height: 100%;
-  width: auto; }
+  overflow: hidden; }
 
-.vers2-shape {
-  float: left;
-  -webkit-shape-outside: url(../../images/skisse_vers2-3.png);
-  shape-outside: url(../../images/skisse_vers2-3.png);
-  shape-margin: 1em;
-  transition: shape-outside ls;
-  opacity: 0.5;
-  width: auto; }
+/* double the height/width of a viewport */
+#slides {
+  width: 200%;
+  height: 300%;
+  position: fixed;
+  top: 0;
+  left: 0; }
 
-#v2 {
-  width: 20em;
-  margin-left: 40em;
-  padding-top: 10em; }
-
-#v3 {
-  width: 15em;
-  margin-left: 1200em;
-  padding-top: 10em; }
-  @media (min-width: 700px) {
-    #v3 {
-      width: 20em;
-      margin-left: 120em; } }
-
-#akeTest {
-  -webkit-transform: translate(0em, 40em);
-  -ms-transform: translate(0em, 40em);
-  transform: translate(0em, 40em); }
-
-#akeBilde {
-  width: 100px;
-  height: auto; }
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 50%; }
