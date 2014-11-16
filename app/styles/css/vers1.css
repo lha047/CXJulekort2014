@@ -1,12 +1,22 @@
-#vers1 img {
-    width: 15em;
-    float: right;
+#vers1-jenta {
+    height: 50%;
+    width: auto;
 }
-#vers1 #img-container{
-    overflow: hidden; 
+#lykt {
+    height: 7%;
+    width: 40%;
+    margin-top: 150%;
+    margin-left: 7%;
+    z-index: 1;
+    position: absolute;
+}
+#vers1 #img-container{    
+    -webkit-transform: translate(-270%);
+    -ms-transform: translate(-270%);
+    transform: translate(-270%);
     width: 100%;
     height: 100%;
-    z-index: 1;    
+    z-index: 2;    
     position: absolute;
 }
 #vers1-text {
@@ -14,7 +24,7 @@
     position: absolute;
 }
 @media (min-width: 338px) {
-    #vers1 img {
+    #vers1-jenta{
         width: 18em;
         float: right;
     }
@@ -26,13 +36,13 @@
 
 }
 @media (min-width: 500px) {
-    #vers1 img {
+    #vers1-jenta {
         width: 25em;
         float: right;
     }
 }
 @media (min-width: 685px) {
-    #vers1 img {
+    #vers1-jenta {
         width: 100%;
     }
     #vers1 #img-container{
@@ -40,27 +50,18 @@
     }
 }
 
-
-/*#vers1 {
-    background-image: url(../../images/vers1.png);
-    background-repeat: no-repeat;
-    background-position: right;
-    background-size: 50%;
-    z-index: 1;
-}*/
 #snowBackground {
-    left: 35%;
     position: absolute;
-    height: 25%;
-    width: 45%;
+    height: 45%;
+    width: 100%;
     background-image: url(../../images/bluemorninglandscape.jpg);
     z-index: -1;
 }
 
 #snowWindow {
-    width: 4em;
-    height: 4em;
-    margin-top: 20%;
+    width: 80%;
+    height: 50%;
+    margin-top: 70%;
 }
 
 @media (min-width: 338px) {
