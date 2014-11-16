@@ -119,6 +119,10 @@ position:absolute;
 position:static;
 
 }
+$break-small: 350px;
+$break-medium: 500px;
+$break-large: 700px;
+
 $slide3tStartSmall: -5%; /*starter litt inne i bildet*/
 $slide3tEndSmall: 200%; /**/
 $slide3widthSmall: 1000%;
@@ -128,11 +132,43 @@ $fontSizeSmall: large;
   color: snow;
   background-color: rgb(49,49,49);
   background-size: cover;
-  -webkit-transform: translate($slide3tStartSmall,$slide3tEndSmall);
-  -ms-transform: translate($slide3tStartSmall,$slide3tEndSmall);
-  transform: translate($slide3tStartSmall, $slide3tEndSmall);
-  width: $slide3widthSmall;
+
   position: absolute;
+  @media(max-width: $break-small) {
+    -webkit-transform: translate($slide3tStartSmall,$slide3tEndSmall);
+    -ms-transform: translate($slide3tStartSmall,$slide3tEndSmall);
+    transform: translate($slide3tStartSmall, $slide3tEndSmall);
+    width: $slide3widthSmall;
+  }
+  $slide3tStartMed:-2%;
+  $slide3tEndMed:200%;
+  $slide3widthMed: 1000%;
+  @media(min-width: $break-small) {
+    -webkit-transform: translate($slide3tStartMed,$slide3tEndMed);
+    -ms-transform: translate($slide3tStartMed,$slide3tEndMed);
+    transform: translate($slide3tStartMed, $slide3tEndMed);
+    width: $slide3widthMed;
+  }
+  $slide3tStartLarge:-1.5%;
+  $slide3tEndLarge:200%;
+  $slide3widthLarge: 1000%;
+  @media(min-width: $break-medium) {
+    -webkit-transform: translate($slide3tStartLarge,$slide3tEndLarge);
+    -ms-transform: translate($slide3tStartLarge,$slide3tEndLarge);
+    transform: translate($slide3tStartLarge, $slide3tEndLarge);
+    width: $slide3widthLarge;
+  }
+  $slide3tStartXLarge:0%;
+  $slide3tEndXLarge:200%;
+  $slide3widthXLarge: 100%;
+  @media(min-width: $break-large) {
+    -webkit-transform: translate($slide3tStartXLarge,$slide3tEndXLarge);
+    -ms-transform: translate($slide3tStartXLarge,$slide3tEndXLarge);
+    transform: translate($slide3tStartXLarge, $slide3tEndXLarge);
+//    width: $slide3widthXLarge;
+  }
+
+
 }
 #uteBilde {
   position: absolute;
@@ -144,14 +180,19 @@ $fontSizeSmall: large;
   width: 10%;
   font-size: $fontSizeSmall;
 }
-
+#vers2{
+  height: 100%;
+  width: auto;
+}
 .vers2-shape {
- float: left;
+  float: left;
   -webkit-shape-outside: url(../../images/skisse_vers2-3.png);
   shape-outside: url(../../images/skisse_vers2-3.png);
   shape-margin: 1em;
   transition: shape-outside ls;
   opacity: 0.5;
+//  height: 100%;
+  width: auto;
 }
 
 #v2 {
@@ -163,9 +204,18 @@ padding-top:10em;
 #v3 {
 //  background-color: $testColorBlue;
   width: 15em; //bredden må endres etter bredden på skjermen
-  margin-left: 70em; //må endres ut fra bredden
-//  padding-top: 5em;
+  margin-left: 1200em; //må endres ut fra bredden
+  padding-top: 10em;
+
+  $slide3tStartXLarge:0%;
+  $slide3tEndXLarge:200%;
+  $slide3widthXLarge: 100%;
+  @media(min-width: $break-large) {
+    width: 20em;
+    margin-left: 120em;
+  }
 }
+
 $akeStartSmall: 0em;
 $akeEndSmall: 40em;
 #akeTest {
@@ -174,6 +224,6 @@ $akeEndSmall: 40em;
   transform: translate($akeStartSmall, $akeEndSmall);
 }
 #akeBilde {
-  width: 100%;
+  width: 100px;
   height: auto;
 }
