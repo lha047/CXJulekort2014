@@ -11,13 +11,16 @@
     <link rel="stylesheet" href="styles/css/default.css">
     <link rel="stylesheet" href="styles/css/main.css">
     <link rel="stylesheet" href="styles/css/images.css">
+    <link rel="stylesheet" href="styles/css/introtextbox.css">
     <link rel="stylesheet" href="styles/css/skrollr.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
     <!-- endinject -->
 
 </head>
 <body>
-<audio controls="controls">
-    <source type="audio/mp3" src="audio/angels-we-have-heard.mp3" >
+<audio controls="controls" id="audio" autoplay >
+    <source type="audio/mp3" src="audio/angels-we-have-heard.mp3">
     Your browser does not support the audio element.
 </audio>
 
@@ -25,9 +28,9 @@
 <div id="slides-container">
     <div id="slides"
          data-0p="transform:translate(0%,0%);"
-         date-50p=""
-         data-100p="transform:translate(0%,-55%);"
-         data-150=""
+         data-10p="transform:translate(0%,-50%);"
+         data-150p=""
+         data-200p=""
          data-300p="transform:translate(-0%,-100%);"
          data-350p=""
          data-500p="transform:translate(-50%,-100%);"
@@ -36,30 +39,37 @@
 
         <div id="slide1" class="slide">
 
-            <h1>God Jul Fra Computas</h1>
-            <p>Til <span id="to" class="to">Deg</span></p>
-            <p>Fra Computas</p>
-            <!-- id="text" data-0="top:0%;" data-1200="top:100%;" style="position:relative"  -->
-            <p>Computas ønsker å takke for et spennende og fremgangsrikt år i 2014, og ser frem til fortsatt samarbeide i 2015.</p>
+            <div id="intro-textbox-container">
+                <div id="intro-textbox">
+                    <h1>God Jul</h1>
+                    <div id="volume-container"> 
+                        <i id="playpause" title="play" onclick="togglePlayPause()" class="fa fa-bell-slash-o"> </i>
+                    </div>
+                    
+                    <p>Til <span id="to" class="to">Deg</span></p>
+                    <p>Fra Computas</p>
+                    <!-- id="text" data-0="top:0%;" data-1200="top:100%;" style="position:relative"  -->
+                    <p>Computas ønsker å takke for et spennende og fremgangsrikt år i 2014, og ser frem til fortsatt samarbeide i 2015.</p>
 
-            <p>Tradisjonen tro har vi valgt å støtte en god sak med en donasjon, denne gang til aksjonen .......</p>
+                    <p>Tradisjonen tro har vi valgt å støtte en god sak med en donasjon, denne gang til aksjonen .......</p>
 
-            <p>Med ønske om en fredelig og inspirerende høytid. Riktig god jul og godt nytt år!</p>
+                   <!--  <p>Med ønske om en fredelig og inspirerende høytid. Riktig god jul og godt nytt år!</p> -->
 
-            <p class="arrows">▼&nbsp;▼&nbsp;▼</p>
+                    <p class="arrows">▼&nbsp;▼&nbsp;▼</p>
+                </div>
+            </div>
         </div>
         <!-- 800 1200-->
-        <div id="slide2" class="slide" data-1000="background:rgba(0, 0, 0, 0);color[swing]:rgb(0,0,0);" data-1400="background:rgba(0,0,0,1);color:rgb(255,255,255);">
+        <div id="slide2" class="slide" data-50p="background:rgba(0, 0, 0, 0);color[swing]:rgb(0,0,0);" data-140p="background:rgba(0,0,0,1);color:rgb(255,255,255);">
             <!--<div id="slide2" class="slide" data-1000="background:rgba(0, 0, 0, 0);color[swing]:rgb(0,0,0);" data-1400="background:rgba(0,0,0,1);color:rgb(255,255,255);">-->
 
 
-            <div id="vers1" class='main' data-1000="opacity:1;font-size:150%;" data-1400="opacity:0;font-size:150%;" >
+            <div id="vers1" class='main' data-50p="opacity:1;font-size:150%;" data-140p="opacity:0;font-size:150%;" >
                 <!--<div id="vers1" class='main' data-1000="opacity:1;font-size:150%;" data-1400="opacity:0;font-size:150%;" >-->
 
-                <!-- <div id="snowBackground">
+                <div id="snowBackground">
                     <canvas id="snowWindow"></canvas>
-                </div> -->
-                <!--  <img class='vers1-shape-right' src='images/skisse_vers1-del2.png' /> -->
+                </div> 
                 <div id="img-container">
                     <img src='images/skisse_vers1.png'/>
                 </div>    
@@ -69,26 +79,6 @@
                 <p>Vi tok skjerf og votter på,</p>
                 <p>hastet veldig med å gå,</p>
                 <p>snart var det tusen barnespor her ute!</p>
-                <!-- <img class='vers1-shape-left under' src='images/skisse_vers1_del1.png'/>   -->
-
-
-
-                <!-- <div id="snowBackground">
-                <canvas id="snowWindow"></canvas>
-                </div>  -->
-                <!--<div id="img-container">-->
-                <!--<img src='images/skisse_vers1.png'/>-->
-                <!--</div>-->
-                <!--<p >Sneen dalte lett og fin,</p>-->
-                <!--<p>og strøk blidt mot ruten min</p>-->
-                <!--<p>i morgens da jeg drømte på min pute.</p>-->
-                <!--<p>Vi tok skjerf og votter på,</p>-->
-                <!--<p>hastet veldig med å gå,</p>-->
-                <!--<p>snart var det tusen barnespor her ute!</p>-->
-                <!-- <img class='vers1-shape-left under' src='images/skisse_vers1_del1.png'/>   -->
-
-
-
             </div>
         </div>
 
