@@ -2,28 +2,6 @@ $testColorRed: rgb(229,98,80);
 $testColorBlue: rgb(130,179,176);
 $testColorGray: rgb(49,49,49);
 
-@mixin breakpoint($class) {
-  @if $class == xs {
-    @media (max-width: 767px) { @content; }
-  }
-
-  @else if $class == sm {
-    @media (min-width: 768px) { @content; }
-  }
-
-  @else if $class == md {
-    @media (min-width: 992px) { @content; }
-  }
-
-  @else if $class == lg {
-    @media (min-width: 1200px) { @content; }
-  }
-
-  @else {
-    @warn "Breakpoint mixin supports: xs, sm, md, lg";
-  }
-}
-
 body {
     font: 100%/1.4 'Merriweather', serif;
     color: rgb(51, 51, 51);
@@ -119,111 +97,27 @@ position:absolute;
 position:static;
 
 }
-$break-small: 350px;
-$break-medium: 500px;
-$break-large: 700px;
 
-$slide3tStartSmall: -5%; /*starter litt inne i bildet*/
-$slide3tEndSmall: 200%; /**/
-$slide3widthSmall: 1000%;
-$fontSizeSmall: large;
-/* Slide 3 goes to the bottom right */
-#slide3 {
-  color: snow;
-  background-color: rgb(49,49,49);
-  background-size: cover;
-
-  position: absolute;
-  @media(max-width: $break-small) {
-    -webkit-transform: translate($slide3tStartSmall,$slide3tEndSmall);
-    -ms-transform: translate($slide3tStartSmall,$slide3tEndSmall);
-    transform: translate($slide3tStartSmall, $slide3tEndSmall);
-    width: $slide3widthSmall;
-  }
-  $slide3tStartMed:-2%;
-  $slide3tEndMed:200%;
-  $slide3widthMed: 1000%;
-  @media(min-width: $break-small) {
-    -webkit-transform: translate($slide3tStartMed,$slide3tEndMed);
-    -ms-transform: translate($slide3tStartMed,$slide3tEndMed);
-    transform: translate($slide3tStartMed, $slide3tEndMed);
-    width: $slide3widthMed;
-  }
-  $slide3tStartLarge:-1.5%;
-  $slide3tEndLarge:200%;
-  $slide3widthLarge: 1000%;
-  @media(min-width: $break-medium) {
-    -webkit-transform: translate($slide3tStartLarge,$slide3tEndLarge);
-    -ms-transform: translate($slide3tStartLarge,$slide3tEndLarge);
-    transform: translate($slide3tStartLarge, $slide3tEndLarge);
-    width: $slide3widthLarge;
-  }
-  $slide3tStartXLarge:0%;
-  $slide3tEndXLarge:200%;
-  $slide3widthXLarge: 100%;
-  @media(min-width: $break-large) {
-    -webkit-transform: translate($slide3tStartXLarge,$slide3tEndXLarge);
-    -ms-transform: translate($slide3tStartXLarge,$slide3tEndXLarge);
-    transform: translate($slide3tStartXLarge, $slide3tEndXLarge);
-//    width: $slide3widthXLarge;
-  }
-
-
-}
-#uteBilde {
-  position: absolute;
-  opacity: 0.5;
-}
-
-.vers {
-  position: relative;
-  width: 10%;
-  font-size: $fontSizeSmall;
-}
-#vers2{
+/* full width/height container */
+#slides-container {
+  width: 100%;
   height: 100%;
-  width: auto;
-}
-.vers2-shape {
-  float: left;
-  -webkit-shape-outside: url(../../images/skisse_vers2-3.png);
-  shape-outside: url(../../images/skisse_vers2-3.png);
-  shape-margin: 1em;
-  transition: shape-outside ls;
-  opacity: 0.5;
-//  height: 100%;
-  width: auto;
+  overflow: hidden;
 }
 
-#v2 {
-// background-color: $testColorRed;
-width: 20em; //bredden må endres etter bredden på skjermen
-margin-left: 40em; //må endres ut fra bredden
-padding-top:10em;
-}
-#v3 {
-//  background-color: $testColorBlue;
-  width: 15em; //bredden må endres etter bredden på skjermen
-  margin-left: 1200em; //må endres ut fra bredden
-  padding-top: 10em;
-
-  $slide3tStartXLarge:0%;
-  $slide3tEndXLarge:200%;
-  $slide3widthXLarge: 100%;
-  @media(min-width: $break-large) {
-    width: 20em;
-    margin-left: 120em;
-  }
+/* double the height/width of a viewport */
+#slides {
+  width: 200%;
+  height: 300%;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
-$akeStartSmall: 0em;
-$akeEndSmall: 40em;
-#akeTest {
-  -webkit-transform: translate($akeStartSmall,$akeEndSmall);
-  -ms-transform: translate($akeStartSmall,$akeEndSmall);
-  transform: translate($akeStartSmall, $akeEndSmall);
-}
-#akeBilde {
-  width: 100px;
-  height: auto;
+.slide {
+  position:absolute;
+  top:0;
+  left:0;
+  width:50%;
+  height:50%;
 }
