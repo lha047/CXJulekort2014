@@ -180,14 +180,19 @@ $fontSizeSmall: large;
   width: 10%;
   font-size: $fontSizeSmall;
 }
-
+#vers2{
+  height: 100%;
+  width: auto;
+}
 .vers2-shape {
- float: left;
+  float: left;
   -webkit-shape-outside: url(../../images/skisse_vers2-3.png);
   shape-outside: url(../../images/skisse_vers2-3.png);
   shape-margin: 1em;
   transition: shape-outside ls;
   opacity: 0.5;
+//  height: 100%;
+  width: auto;
 }
 
 #v2 {
@@ -209,8 +214,8 @@ padding-top:10em;
     width: 20em;
     margin-left: 120em;
   }
-
 }
+
 $akeStartSmall: 0em;
 $akeEndSmall: 40em;
 #akeTest {

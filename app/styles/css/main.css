@@ -119,13 +119,18 @@ May cause issues on Android default browser (see #331 on GitHub).
   width: 10%;
   font-size: large; }
 
+#vers2 {
+  height: 100%;
+  width: auto; }
+
 .vers2-shape {
   float: left;
   -webkit-shape-outside: url(../../images/skisse_vers2-3.png);
   shape-outside: url(../../images/skisse_vers2-3.png);
   shape-margin: 1em;
   transition: shape-outside ls;
-  opacity: 0.5; }
+  opacity: 0.5;
+  width: auto; }
 
 #v2 {
   width: 20em;
