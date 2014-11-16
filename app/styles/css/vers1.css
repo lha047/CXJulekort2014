@@ -1,11 +1,17 @@
 #vers1 img {
-    width: 10em;
+    width: 15em;
     float: right;
 }
 #vers1 #img-container{
-    float: right;
     overflow: hidden; 
-    width: 50%;
+    width: 100%;
+    height: 100%;
+    z-index: 1;    
+    position: absolute;
+}
+#vers1-text {
+    z-index: 5;
+    position: absolute;
 }
 @media (min-width: 338px) {
     #vers1 img {
@@ -31,5 +37,40 @@
     }
     #vers1 #img-container{
         width: 100%;
+    }
+}
+
+
+/*#vers1 {
+    background-image: url(../../images/vers1.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 50%;
+    z-index: 1;
+}*/
+#snowBackground {
+    left: 35%;
+    position: absolute;
+    height: 25%;
+    width: 45%;
+    background-image: url(../../images/bluemorninglandscape.jpg);
+    z-index: -1;
+}
+
+#snowWindow {
+    width: 4em;
+    height: 4em;
+    margin-top: 20%;
+}
+
+@media (min-width: 338px) {
+    #snowBackground {
+        height: 45%;
+        left: 45%;
+    }
+
+    #snowWindow {
+        width: 45%;
+        height: 45%;
     }
 }

@@ -85,32 +85,7 @@ position:absolute;
 position:static;
 
 }
-#snowBackground {
-    left: 65%;
-    position: absolute;
-    height: 19%;
-    width: 30%;
-    background-image: url(../../images/bluemorninglandscape.jpg);
-    z-index: -1;
-}
 
-#snowWindow {
-    width: 4em;
-    height: 4em;
-    margin-top: 20%;
-}
-
-@media (min-width: 338px) {
-    #snowBackground {
-        height: 45%;
-        left: 45%;
-    }
-
-    #snowWindow {
-        width: 45%;
-        height: 45%;
-    }
-}
 
 .myBackground {
     position: absolute;
