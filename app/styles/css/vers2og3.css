@@ -8,10 +8,10 @@
   position: absolute; }
   @media (max-width: 350px) {
     #slide3 {
-      -webkit-transform: translate(-5%, 200%);
-      -ms-transform: translate(-5%, 200%);
-      transform: translate(-5%, 200%);
-      width: 1000%; } }
+      -webkit-transform: translate(-1%, 200%);
+      -ms-transform: translate(-1%, 200%);
+      transform: translate(-1%, 200%);
+      width: 5000%; } }
   @media (min-width: 350px) {
     #slide3 {
       -webkit-transform: translate(-2%, 200%);
@@ -40,15 +40,26 @@
 
 .vers2-shape {
   float: left;
-  -webkit-shape-outside: url(../../images/skisse_vers2-3.png);
-  shape-outside: url(../../images/skisse_vers2-3.png);
+  -webkit-shape-outside: url(images/vers2-3.png);
+  shape-outside: url(images/vers2-3.png);
   shape-margin: 1em;
   transition: shape-outside ls;
-  opacity: 0.5;
-  width: auto; }
+  opacity: 0.5; }
+  @media (max-width: 350px) {
+    .vers2-shape {
+      margin-top: 2em; } }
+  @media (min-width: 350px) {
+    .vers2-shape {
+      margin-top: 5em; } }
+  @media (min-width: 500px) {
+    .vers2-shape {
+      margin-top: 7em; } }
+  @media (min-width: 700px) {
+    .vers2-shape {
+      margin-top: 10em; } }
 
 #v2 {
-  width: 20em;
+  width: 15em;
   margin-left: 40em;
   padding-top: 10em; }
 
@@ -61,17 +72,16 @@
       width: 20em;
       margin-left: 120em; } }
 
+#ref2 {
+  width: 20em;
+  margin-left: 67em;
+  padding-top: 10em; }
+
 #akeTest {
-  -webkit-transform: translate(0em, 40em);
-  -ms-transform: translate(0em, 40em);
-  transform: translate(0em, 40em); }
+  -webkit-transform: translate(10em, 30em);
+  -ms-transform: translate(10em, 30em);
+  transform: translate(10em, 30em); }
 
 #akeBilde {
   width: 100px;
   height: auto; }
-  @media (max-width: 350px) {
-    #akeBilde {
-      padding-top: 2%; } }
-  @media (min-width: 350px) { }
-  @media (min-width: 500px) { }
-  @media (min-width: 700px) { }
