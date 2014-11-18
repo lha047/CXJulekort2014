@@ -25,9 +25,9 @@
 }
 #snowBackground {
     position: absolute;
-    height: 45%;
+    height: 100%;
     width: 100%;
-    background-image: url(../../images/bluemorninglandscape.jpg);
+    background-image: url(../../images/snow-bg.png);
     z-index: -1;
 }
 

@@ -1,3 +1,8 @@
+@font-face{
+    font-family:'DINPro';
+    src: url('../fonts/DINPro.otf') format('opentype');
+}
+
 body {
     font: 100%/1.4 'Merriweather', serif;
     color: rgb(51, 51, 51);
