@@ -37,10 +37,10 @@
     margin-top: 70%;
 }
 @media (min-width: 260px) {
-    #lykt {
+    /*#lykt {
         margin-top: 140%;
         margin-left: 2%;
-    }
+    }*/
     #vers1 #img-container{    
         -webkit-transform: translate(-250%);
         -ms-transform: translate(-250%);
