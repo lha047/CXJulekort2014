@@ -1,10 +1,15 @@
-#lykt {
-    height: 30em;
-    width: 40em;
-    margin-top: 150;
-    margin-left: 7%;
+#lykt-container {
+    height: 20%;
+    width: 30%;
+    padding-top: 15%;
+    padding-left: 5%;
     z-index: 1;
     position: relative;
+    float: right;
+}
+#lykt {
+    height: 100%;
+
 }
 #vers1-jenta {
     height: 50%;
