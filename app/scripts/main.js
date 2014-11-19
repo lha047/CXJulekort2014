@@ -15,12 +15,12 @@ function togglePlayPause() {
 var s = skrollr.init({
     easing: {
     	sin : function(p) {
-            var s = (Math.sin(p * Math.PI * 2 - Math.PI/2)/2);
+            var s = Math.sin(p);//(Math.sin(p * Math.PI * 2 - Math.PI/2)/2);
             console.log('sin: ' + s);
     		return s;
     	}, 
     	cos : function(p){
-            var c = (Math.cos(p * Math.PI * 2 - Math.PI/2)/2);
+            var c = p;//(Math.cos(p * Math.PI * 2 - Math.PI/2)/2);
             console.log('cos: ' + c);
     		return c;
     	}

@@ -2,14 +2,6 @@ $testColorRed: rgb(229,98,80);
 $testColorBlue: rgb(130,179,176);
 $testColorGray: rgb(49,49,49);
 
-body {
-    font: 100%/1.4 'Merriweather', serif;
-    color: rgb(51, 51, 51);
-    background-color: rgb(240, 240, 240);
-    position: relative;
-    padding-bottom: 2em;
-}
-
 *{margin: 0;
 padding: 0;
 }
@@ -122,15 +114,3 @@ position:static;
   height:50%;
 }
 
-
-@include keyframes(bounce) {
-  0%, 20%, 50%, 80%, 100% {
-    @include transform(translateY(0));
-  }
-  40% {
-    @include transform(translateY(-30px));
-  }
-  60% {
-    @include transform(translateY(-15px));
-  }
-}

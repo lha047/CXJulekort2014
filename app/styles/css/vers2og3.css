@@ -62,11 +62,19 @@
   width: 15em;
   margin-left: 40em;
   padding-top: 10em; }
+  @media (max-width: 350px) { }
+  @media (min-width: 350px) { }
+  @media (min-width: 500px) { }
+  @media (min-width: 700px) { }
 
 #v3 {
   width: 15em;
   margin-left: 1200em;
   padding-top: 10em; }
+  @media (max-width: 350px) { }
+  @media (min-width: 350px) { }
+  @media (min-width: 500px) { }
+  @media (min-width: 700px) { }
   @media (min-width: 700px) {
     #v3 {
       width: 20em;
@@ -84,4 +92,8 @@
 
 #akeBilde {
   width: 100px;
-  height: auto; }
+  height: 100px; }
+  @media (max-width: 350px) { }
+  @media (min-width: 350px) { }
+  @media (min-width: 500px) { }
+  @media (min-width: 700px) { }

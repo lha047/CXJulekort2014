@@ -148,11 +148,10 @@ $akeEndSmall: 30em;
 
 #akeBilde {
   width: 100px;
-  height: auto;
+  height: 100px;
+  
   @media(max-width: $break-small) {
-//    -webkit-transform: translate($akeStartSmall,$akeEndSmall);
-//    -ms-transform: translate($akeStartSmall,$akeEndSmall);
-//    transform: translate($akeStartSmall, $akeEndSmall);
+
   }
 
   @media(min-width: $break-small) {
