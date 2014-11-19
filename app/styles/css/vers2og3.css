@@ -40,8 +40,8 @@
 
 .vers2-shape {
   float: left;
-  -webkit-shape-outside: url(images/vers2-3.png);
-  shape-outside: url(images/vers2-3.png);
+  -webkit-shape-outside: url(../../images/vers2-3.png);
+  shape-outside: url(../../images/vers2-3.png);
   shape-margin: 1em;
   transition: shape-outside ls;
   opacity: 0.5; }
@@ -62,11 +62,19 @@
   width: 15em;
   margin-left: 40em;
   padding-top: 10em; }
+  @media (max-width: 350px) { }
+  @media (min-width: 350px) { }
+  @media (min-width: 500px) { }
+  @media (min-width: 700px) { }
 
 #v3 {
   width: 15em;
   margin-left: 1200em;
   padding-top: 10em; }
+  @media (max-width: 350px) { }
+  @media (min-width: 350px) { }
+  @media (min-width: 500px) { }
+  @media (min-width: 700px) { }
   @media (min-width: 700px) {
     #v3 {
       width: 20em;
@@ -85,3 +93,7 @@
 #akeBilde {
   width: 100px;
   height: auto; }
+  @media (max-width: 350px) { }
+  @media (min-width: 350px) { }
+  @media (min-width: 500px) { }
+  @media (min-width: 700px) { }

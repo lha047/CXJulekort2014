@@ -64,8 +64,8 @@ $fontSizeSmall: large;
 }
 .vers2-shape {
   float: left;
-  -webkit-shape-outside: url(images/vers2-3.png);
-  shape-outside: url(images/vers2-3.png);
+  -webkit-shape-outside: url(../../images/vers2-3.png);
+  shape-outside: url(../../images/vers2-3.png);
   shape-margin: 1em;
   transition: shape-outside ls;
   opacity: 0.5;
@@ -150,9 +150,7 @@ $akeEndSmall: 30em;
   width: 100px;
   height: auto;
   @media(max-width: $break-small) {
-//    -webkit-transform: translate($akeStartSmall,$akeEndSmall);
-//    -ms-transform: translate($akeStartSmall,$akeEndSmall);
-//    transform: translate($akeStartSmall, $akeEndSmall);
+
   }
 
   @media(min-width: $break-small) {
