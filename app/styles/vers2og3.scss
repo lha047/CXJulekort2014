@@ -59,8 +59,10 @@ $fontSizeSmall: large;
 }
 
 #vers2{
+  width: 100%;
   height: 100%;
-  width: auto;
+  background-repeat: no-repeat;
+  background-image: url(../../images/vers2-3.png);
 }
 .vers2-shape {
   float: left;
@@ -89,7 +91,7 @@ $fontSizeSmall: large;
 #v2 {
   // background-color: $testColorRed;
   width: 15em; //bredden må endres etter bredden på skjermen
-  margin-left: 40em; //må endres ut fra bredden
+  margin-left: 45em; //må endres ut fra bredden
   padding-top:10em;
   @media(max-width: $break-small) {
 
@@ -100,6 +102,8 @@ $fontSizeSmall: large;
   }
 
   @media(min-width: $break-medium) {
+    margin-left: 50em; //må endres ut fra bredden
+
   }
 
   @media(min-width: $break-large) {
@@ -138,6 +142,13 @@ $fontSizeSmall: large;
   margin-left: 72em; //må endres ut fra bredden
   padding-top:10em;
 }
+
+#ref3 {
+  width: 20em;
+  margin-left: 260vh;
+  padding-top: 10vh;
+}
+
 $akeStartSmall: 10em;
 $akeEndSmall: 30em;
 #akeTest {
