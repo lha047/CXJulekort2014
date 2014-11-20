@@ -33,7 +33,22 @@ var s = skrollr.init({
     smoothScrolling: true
     });
 
+function setLanguage(lang) {
+	var elements = document.getElementByClassName('ref');
+	for(var i = 0; i < elements.size(); i++) {
+		elements[i].innerHTML = translate[elements[i].translate.value][lang];	
+	}	
+	var til = document.getElementById('til'),
+		vers1 = document.getElementById('v1'),
+		vers2 = document.getElementById('v2');
+	til.innerHTML = translate[til.translate.value][lang];
+	vers1.innerHTML = translate[vers1.translate.value][lang];
+	vers2.innerHTML = translate[vers2.translate.value][lang];
+
+}
+
 window.onload = function(){	
+	setLanguage('no');
 	 // Grab a handle to the audio 
 	var audio = document.getElementById('audio'); // Turn off the default controls 
 	audio.controls = false;
