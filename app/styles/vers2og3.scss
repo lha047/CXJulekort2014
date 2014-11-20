@@ -148,7 +148,8 @@ $akeEndSmall: 30em;
 
 #akeBilde {
   width: 100px;
-  height: auto;
+  height: 100px;
+  
   @media(max-width: $break-small) {
 
   }

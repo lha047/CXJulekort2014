@@ -92,7 +92,7 @@
 
 #akeBilde {
   width: 100px;
-  height: auto; }
+  height: 100px; }
   @media (max-width: 350px) { }
   @media (min-width: 350px) { }
   @media (min-width: 500px) { }
