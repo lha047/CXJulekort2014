@@ -59,13 +59,15 @@ $fontSizeSmall: large;
 }
 
 #vers2{
+  width: 100%;
   height: 100%;
-  width: auto;
+  background-repeat: no-repeat;
+  background-image: url(../../images/vers2-3.png);
 }
 .vers2-shape {
   float: left;
-  -webkit-shape-outside: url(images/vers2-3.png);
-  shape-outside: url(images/vers2-3.png);
+  -webkit-shape-outside: url(../../images/vers2-3.png);
+  shape-outside: url(../../images/vers2-3.png);
   shape-margin: 1em;
   transition: shape-outside ls;
   opacity: 0.5;
@@ -89,7 +91,7 @@ $fontSizeSmall: large;
 #v2 {
   // background-color: $testColorRed;
   width: 15em; //bredden må endres etter bredden på skjermen
-  margin-left: 40em; //må endres ut fra bredden
+  margin-left: 45em; //må endres ut fra bredden
   padding-top:10em;
   @media(max-width: $break-small) {
 
@@ -100,6 +102,8 @@ $fontSizeSmall: large;
   }
 
   @media(min-width: $break-medium) {
+    margin-left: 50em; //må endres ut fra bredden
+
   }
 
   @media(min-width: $break-large) {
@@ -138,6 +142,13 @@ $fontSizeSmall: large;
   margin-left: 72em; //må endres ut fra bredden
   padding-top:10em;
 }
+
+#ref3 {
+  width: 20em;
+  margin-left: 260vh;
+  padding-top: 10vh;
+}
+
 $akeStartSmall: 10em;
 $akeEndSmall: 30em;
 #akeTest {
@@ -148,11 +159,10 @@ $akeEndSmall: 30em;
 
 #akeBilde {
   width: 100px;
-  height: auto;
+  height: 100px;
+  
   @media(max-width: $break-small) {
-//    -webkit-transform: translate($akeStartSmall,$akeEndSmall);
-//    -ms-transform: translate($akeStartSmall,$akeEndSmall);
-//    transform: translate($akeStartSmall, $akeEndSmall);
+
   }
 
   @media(min-width: $break-small) {

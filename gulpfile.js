@@ -49,13 +49,6 @@ gulp.task('index', function() {
 gulp.task('styles', function () {
     return gulp.src(['app/styles/main.scss', 'app/styles/css/*.css'])
         .pipe(plumber())
-        // .pipe($.rubySass({
-            // style: 'expanded',
-            // precision: 10
-        // }))
-        // .pipe($.autoprefixer('last 1 version'))
-        // .pipe(gulp.dest('.tmp/styles'))
-        // .pipe($.size())
         .pipe(connect.reload());
 });
 
@@ -69,7 +62,6 @@ gulp.task('scripts', function () {
 });
 
 gulp.task('html', ['styles', 'scripts'], function () {
-
     return gulp.src('app/*.html')
         .pipe(plumber())
         .pipe(connect.reload());
@@ -78,25 +70,4 @@ gulp.task('html', ['styles', 'scripts'], function () {
 gulp.task('images', function() {
 
 });
-// gulp.task('serve', ['connect', 'styles'], function () {
-//     require('opn')('http://localhost:9000');
-// });
-
-// inject bower components
-// gulp.task('wiredep', function () {
-//     var wiredep = require('wiredep').stream;
-
-//     gulp.src('app/styles/*.scss')
-//         .pipe(wiredep({
-//             directory: 'app/bower_components'
-//         }))
-//         .pipe(gulp.dest('app/styles'));
-
-//     gulp.src('app/*.html')
-//         .pipe(wiredep({
-//             directory: 'app/bower_components',
-//             exclude: ['bootstrap-sass-official']
-//         }))
-//         .pipe(gulp.dest('app'));
-// });
 
