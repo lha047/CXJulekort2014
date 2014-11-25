@@ -1,1 +1,34 @@
+#intro-textbox-container {
+    bottom: 60%;
+    width: 100%;
+    position: absolute;
+}
+#intro-textbox {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding-left: 5%;
+    width: 100%;
+    position: absolute;
+}
 
+#intro-textbox p {
+    position: relative;
+    font-family: 'DINPro';
+    padding-bottom: 1em;
+    padding-right: 5em;
+}
+#godjul {
+    position: relative;
+    margin-top: 1em;
+    width: 10em;
+}
+#volume-container {
+    width: 3em;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    color: #993392;
+    margin-top: 2em;
+    margin-left: 1%;
+    text-align: center;
+    display: inline-block;
+    position: absolute;
+}
