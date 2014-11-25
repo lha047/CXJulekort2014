@@ -8,21 +8,23 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
     <!-- inject:css -->
-    <link rel="stylesheet" href="styles/css/default.css">
-    <link rel="stylesheet" href="styles/css/main.css">
-    <link rel="stylesheet" href="styles/css/vers1.css">
-    <link rel="stylesheet" href="styles/css/introtextbox.css">
-    <link rel="stylesheet" href="styles/css/skrollr.css">
-    <link rel="stylesheet" href="styles/css/vers2og3.css">
+    <link rel="stylesheet" href="bower_components/normalize.css/normalize.css">
+    <link rel="stylesheet" href="styles/new/css/main.css">
+    <link rel="stylesheet" href="styles/new/css/slide1.css">
+    <link rel="stylesheet" href="styles/new/css/slide2.css">
+    <link rel="stylesheet" href="styles/new/css/slide3.css">
+    <link rel="stylesheet" href="styles/new/css/slide4.css">
+    <link rel="stylesheet" href="styles/new/css/slide5.css">
+
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
     <!-- endinject -->
 
 </head>
 <body>
-<audio id="audio" autoplay >    
+<audio id="audio" autoplay>
     <source src="audio/cxlykter.mp3" type="audio/mp3">
-     <source src="audio/cxlykter.ogg" type="audio/ogg">
+    <source src="audio/cxlykter.ogg" type="audio/ogg">
     <source src="audio/cxlykter.flac" type="audio/flac">
     Your browser does not support the audio element.
 </audio>
@@ -30,32 +32,31 @@
 <div id="slides-container">
     <div id="slides"
          data-0p="transform:translate(0%,0%);"
-         data-30p="transform:translate(0%,-50%);"
+         data-30p="transform:translate(0%,-33.33%);"
          data-150p=""
          data-200p=""
          data-250p=""
-         data-300p="transform:translate(-0%,-100%);"
+         data-300p="transform:translate(-0%,-66.66%);"
          data-350p=""
-         data-450p="transform:translate(-50%,-100%);"
-         data-550p="transform:translate(-150%,-100%);"
-            >
+         data-450p="transform:translate(-50%,-66.66%);"
+         data-550p="transform:translate(-150%,-66.66%);"
+        >
 
         <div id="slide1" class="slide">
 
             <div id="intro-textbox-container">
                 <div id="intro-textbox">
                     <img id="godjul" src='images/god_jul.png'/>
+
                     <div id="volume-container">
                         <i id="playpause" title="play" onclick="togglePlayPause()" class="fa fa-bell-slash-o"> </i>
                     </div>
-                    
-                    <!-- <p>Til <span id="to" class="to">Deg</span></p> -->
-                    <!-- id="text" data-0="top:0%;" data-1200="top:100%;" style="position:relative"  -->
-                    <p>Computas ønsker å takke for et spennende og fremgangsrikt år i 2014, og ser frem til fortsatt samarbeide i 2015. </p>
 
-                   <p> Tradisjonen tro har vi valgt å støtte en god sak med en donasjon, denne gang til aksjonen .......</p>
+                    <p>Computas ønsker å takke for et spennende og fremgangsrikt år i 2014, og ser frem til fortsatt
+                        samarbeide i 2015. </p>
 
-                   <!--  <p>Med ønske om en fredelig og inspirerende høytid. Riktig god jul og godt nytt år!</p> -->
+                    <p> Tradisjonen tro har vi valgt å støtte en god sak med en donasjon, denne gang til aksjonen
+                        .......</p>
 
                 </div>
             </div>
@@ -63,82 +64,94 @@
             <div class="arrow animated bounce"></div>
         </div>
         <!-- 800 1200-->
-        <div id="slide2" class="slide" data-50p="background:rgba(0, 0, 0, 0);color[swing]:rgb(0,0,0);" data-140p="background:rgba(0,0,0,1);color:rgb(255,255,255);">
-            <!--<div id="slide2" class="slide" data-1000="background:rgba(0, 0, 0, 0);color[swing]:rgb(0,0,0);" data-1400="background:rgba(0,0,0,1);color:rgb(255,255,255);">-->
+        <div id="slide2" class="slide" data-50p="background:rgba(0, 0, 0, 0);color[swing]:rgb(0,0,0);"
+             data-140p="background:rgba(0,0,0,1);color:rgb(255,255,255);">
 
-             
-            <div id="vers1" class='main' data-50p="opacity:1;font-size:150%;" data-140p="opacity:0;font-size:150%;" >
-                <!--<div id="vers1" class='main' data-1000="opacity:1;font-size:150%;" data-1400="opacity:0;font-size:150%;" >-->
-               
-                
-                <div id="img-container">
-                    <img id="vers1-jenta" src='images/vers1_uten-seng.png'/>
-                    <!-- <div id="lykt" data-30p="color[swing]:rgb(0,0,0);" data-250p="color:rgb(255,255,0);">
-                         <img src='images/tent-lykt.png'/>
-                    </div> -->
-                </div>    
-                
-                <div id="vers1-text" data-30p="display:block;" data-100p="display:none;" > <!--data-10p="display:block;"  -->
-                    <p >Sneen dalte lett og fin,</p>
+
+            <div id="vers1" class='main' data-50p="opacity:1;font-size:150%;" data-140p="opacity:0;font-size:150%;">
+                <div id="vers1-text" data-30p="display:block;" data-100p="display:none;">
+                    <!--data-10p="display:block;"  -->
+                    <p>Sneen dalte lett og fin,</p>
+
                     <p>og strøk blidt mot ruten min</p>
+
                     <p>i morgens da jeg drømte på min pute.</p>
+
                     <p>Vi tok skjerf og votter på,</p>
+
                     <p>hastet veldig med å gå,</p>
+
                     <p>snart var det tusen barnespor her ute!</p>
-                 </div>              
+                </div>
             </div>
             <div id="snowBackground" data-50p="opacity:1;" data-140p="opacity:0.4;">
                 <canvas id="snowWindow"></canvas>
-            </div> 
-            <div id="lykt-container" data-0="color[swing]:rgb(0,0,0);" data-250p="color:rgb(255,255,0);">
-                     <img id="lykt" src='images/tent-lykt.png'/>
             </div>
-            <div id="refreng1" data-30p="display:none;" data-130p="display:block;" data-160p="opacity:0;font-size:150%;" data-200p="opacity:1;font-size:150%;"data-240p="opacity:0;font-size:150%;" data-250p="display:none">
-                    <p>Ja, vi tenner våre lykter når det mørkner</p>
-                    <p>og når alle lyder pakkes inn i vatt</p>
-                    <p>Ja, vi tenner våre lykter når det mørkner</p>
-                    <p>kanskje lyser de til kvelden si'r god natt.</p>
-                    <p>kanskje lyser de til kvelden si'r god natt.</p>
+            <div id="lykt-container" data-0="color[swing]:rgb(0,0,0);" data-250p="color:rgb(255,255,0);">
+                <img id="lykt" src='images/tent-lykt.png'/>
+            </div>
+            <div id="refreng1" data-30p="display:none;" data-130p="display:block;" data-160p="opacity:0;font-size:150%;"
+                 data-200p="opacity:1;font-size:150%;" data-240p="opacity:0;font-size:150%;" data-250p="display:none">
+                <p>Ja, vi tenner våre lykter når det mørkner</p>
+
+                <p>og når alle lyder pakkes inn i vatt</p>
+
+                <p>Ja, vi tenner våre lykter når det mørkner</p>
+
+                <p>kanskje lyser de til kvelden si'r god natt.</p>
+
+                <p>kanskje lyser de til kvelden si'r god natt.</p>
             </div>
         </div>
 
-        <div id="slide3" class="slide">
-            <div id="vers2">
+        <div id="slide4" class="slide">
 
-                <!-- <img class='vers2-shape' src='images/vers2-3-bg.png' /> -->
+            <!-- <img class='vers2-shape' src='images/vers2-3-bg.png' /> -->
 
-                 <img id="akeBilde" src="images/kjelke.png" data-310p="left[cos]:19em;top[sin]:14em" data-400p="left:65em;top:44em" />
-                
+            <img id="akeBilde" src="images/kjelke.png" data-310p="left[cos]:19em;top[sin]:14em"
+                 data-400p="left:65em;top:44em"/>
 
-                <p id="v2" data-390p="margin-left:45em;padding-top:10em;opacity:1" data-430p="margin-left:60em;padding-top:20em;opacity:0" >
-                </p>
-                <p id="ref2" data-380p="opacity:0" data-430p="opacity:1" data-430p="margin-left:70em;padding-top:10em;opacity:1" data-450p="margin-left:85em;padding-top:10em;opacity:0">
-                </p>
-                
-                <p id="v3" data-340p="opacity:0" data-360p="opacity:1" > <!--Large-->
-                
-                    Vi har bygget oss et slott
-                    som vi syns ble stort og flott
-                    med prinser og en sne-dronning så vakkert
-                    vinterdagen tar farvel
-                    vi må hjem nå er det kveld
-                    vi ser på himmelen at det lir og lakker!
-                </p>
 
-                <p id="ref3" data-370p="opacity:0" data-450p="opacity:1">
-                </p>                
-            </div>
+            <p id="v2" data-390p="margin-left:45em;padding-top:10em;opacity:1"
+               data-430p="margin-left:60em;padding-top:20em;opacity:0">
+            </p>
+
+            <p id="ref2" data-380p="opacity:0" data-430p="opacity:1"
+               data-430p="margin-left:70em;padding-top:10em;opacity:1"
+               data-450p="margin-left:85em;padding-top:10em;opacity:0">
+            </p>
+
+            <p id="v3" data-340p="opacity:0" data-360p="opacity:1"> <!--Large-->
+
+                Vi har bygget oss et slott
+                som vi syns ble stort og flott
+                med prinser og en sne-dronning så vakkert
+                vinterdagen tar farvel
+                vi må hjem nå er det kveld
+                vi ser på himmelen at det lir og lakker!
+            </p>
+
+            <p id="ref3" data-370p="opacity:0" data-450p="opacity:1">
+            </p>
         </div>
     </div>
 </div>
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 <script>
-    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-        e.src='//www.google-analytics.com/analytics.js';
-        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-    ga('create','UA-XXXXX-X');ga('send','pageview');
+    (function (b, o, i, l, e, r) {
+        b.GoogleAnalyticsObject = l;
+        b[l] || (b[l] =
+            function () {
+                (b[l].q = b[l].q || []).push(arguments)
+            });
+        b[l].l = +new Date;
+        e = o.createElement(i);
+        r = o.getElementsByTagName(i)[0];
+        e.src = '//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e, r)
+    }(window, document, 'script', 'ga'));
+    ga('create', 'UA-XXXXX-X');
+    ga('send', 'pageview');
 </script>
 
 <!-- build:js scripts/vendor.js -->
@@ -150,7 +163,7 @@
 
 <!-- inject:js -->
 <script src="bower_components/bower-skrollr/skrollr.min.js"></script>
-<!--<script src="bower_components/jquery/dist/jquery.min.js"></script>-->
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
 <!--<script src="bower_components/modernizr/test/caniuse_files/jquery.min.js"></script>-->
 <script src="lib/shapes-polyfill.js"></script>
 <!-- endinject -->

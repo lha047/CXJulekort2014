@@ -1,14 +1,14 @@
 'use strict';
 
-function togglePlayPause() { 
-    var playpause = document.getElementById("playpause"); 
-    if (audio.paused || audio.ended) { 
+function togglePlayPause() {
+    var playpause = document.getElementById("playpause");
+    if (audio.paused || audio.ended) {
     	playpause.className = "fa fa-bell-slash-o";
-        audio.play(); 
-    } else { 
+        audio.play();
+    } else {
     	playpause.className = "fa fa-bell-o";
-        audio.pause(); 
-    } 
+        audio.pause();
+    }
 }
 
 (function(window, skrollr){
@@ -18,7 +18,7 @@ var s = skrollr.init({
             var s = Math.sin(p);//(Math.sin(p * Math.PI * 2 - Math.PI/2)/2);
             console.log('sin: ' + s);
     		return s;
-    	}, 
+    	},
     	cos : function(p){
             var c = p;//(Math.cos(p * Math.PI * 2 - Math.PI/2)/2);
             console.log('cos: ' + c);
@@ -36,8 +36,8 @@ var s = skrollr.init({
 function setLanguage(lang) {
 	var elements = document.getElementByClassName('ref');
 	for(var i = 0; i < elements.size(); i++) {
-		elements[i].innerHTML = translate[elements[i].translate.value][lang];	
-	}	
+		elements[i].innerHTML = translate[elements[i].translate.value][lang];
+	}
 	var til = document.getElementById('til'),
 		vers1 = document.getElementById('v1'),
 		vers2 = document.getElementById('v2');
@@ -47,10 +47,24 @@ function setLanguage(lang) {
 
 }
 
-window.onload = function(){	
+window.onload = function(){
+
+    console.log('bing');
+
+
+        resize();
+        $(window).resize(function () {
+            console.log('resize');
+            resize();
+        });
+        function resize() {
+            $('#slides').css({width: $('#slide4').height() * 3.55 + 'px'})
+        }
+
+
 	setLanguage('no');
-	 // Grab a handle to the audio 
-	var audio = document.getElementById('audio'); // Turn off the default controls 
+	 // Grab a handle to the audio
+	var audio = document.getElementById('audio'); // Turn off the default controls
 	audio.controls = false;
 
 	var canvas = document.getElementById('snowWindow');
@@ -76,14 +90,14 @@ window.onload = function(){
 	}
 
 	function draw() {
-		
+
 		ctx.clearRect(0,0,width,height);
 		ctx.fillStyle = 'rgba(255, 255, 255, 0.8)';
 		ctx.beginPath();
 		for(var i = 0; i < maxPixels; i++){
 			var p = particles[i];
 			ctx.moveTo(p.x,p.y);
-			ctx.arc(p.x,p.y, p.r, 0, Math.PI*2, true);	
+			ctx.arc(p.x,p.y, p.r, 0, Math.PI*2, true);
 			ctx.fill();
 			update();
 		}
@@ -105,7 +119,7 @@ window.onload = function(){
 			//Lets make it more random by adding in the radius
 			p.y += Math.cos(angle+p.d) + 1 + p.r/2;
 			p.x += Math.sin(angle) * 2;
-			
+
 			//Sending flakes back from the top when it exits
 			//Lets make it a bit more organic and let flakes enter from the left and right also.
 			if(p.x > width+5 || p.x < -5 || p.y > height)
@@ -131,7 +145,7 @@ window.onload = function(){
 			}
 		}
 	}
-	
+
 	//animation loop
 	setInterval(draw, 33);
 };

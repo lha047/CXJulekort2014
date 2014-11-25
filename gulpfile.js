@@ -12,12 +12,12 @@ sass = require('gulp-sass');
 var $ = require('gulp-load-plugins')();
 
 gulp.task('default', ['connect', 'watch'], function () {
-    
+
 });
 
-gulp.task('watch', [], function () {    
+gulp.task('watch', [], function () {
 
-    gulp.watch(['app/styles/**/*.scss', 'app/styles/**/*.css'], ['sass', 'styles']);
+    gulp.watch(['app/styles/new/*.scss', 'app/styles/new/*.css'], ['sass', 'styles']);
     gulp.watch('app/scripts/**/*.js', ['scripts']);
     gulp.watch('app/images/**/*', ['images']);
     gulp.watch('app/index.html', ['html']);
@@ -25,10 +25,10 @@ gulp.task('watch', [], function () {
 });
 
 gulp.task('sass', function(){
-   gulp.src('app/styles/*.scss')
+   gulp.src('app/styles/new/*.scss')
        .pipe(plumber())
        .pipe(sass())
-       .pipe(gulp.dest('app/styles/css'))
+       .pipe(gulp.dest('app/styles/new/css'))
        .pipe(connect.reload());
 });
 
@@ -41,13 +41,13 @@ gulp.task('connect', function() {
 });
 
 gulp.task('index', function() {
-   var sources = gulp.src(['app/bower_components/**/*.min.js','app/lib/*.js','app/styles/css/*.css'], {read: false});
+   var sources = gulp.src(['app/bower_components/**/*.min.js','app/lib/*.js','app/styles/new/css/*.css'], {read: false});
    var target = gulp.src('app/index.html');
    return target.pipe(inject(sources)).pipe(gulp.dest('app'));
 });
 
 gulp.task('styles', function () {
-    return gulp.src(['app/styles/main.scss', 'app/styles/css/*.css'])
+    return gulp.src(['app/styles/new/css/*.css'])
         .pipe(plumber())
         .pipe(connect.reload());
 });

@@ -1,12 +1,17 @@
 #slide2 {
+    background: url('../../images/vers1_uten-seng.png');
+    -webkit-background-size: auto, 100%;
+    -moz-background-size: auto, 100%
+    -o-background-size: auto, 100%;
+    background-size: auto, 100%
     -webkit-transform: translate(0,100%);
     -ms-transform: translate(0,100%);
     transform: translate(0,100%);
     position:absolute;
     top:0;
     left:0;
-    width:100%;
-    height:50%;
+    width:100vw;
+    height:33%;
 }
 #snowBackground {
     position: absolute;
@@ -20,15 +25,12 @@
     height: 50%;
     z-index: -1;
 }
-#vers1 #img-container{    
-   /* -webkit-transform: translate(-30%);
-    -ms-transform: translate(-30%);
-    transform: translate(-30%);*/
+/*#vers1 #img-container{
     width: 100%;
     height: 50%;
-    z-index: 2;    
+    z-index: 2;
     position: absolute;
-}
+}*/
 /*#vers1-jenta {
     height: 100%;
     width: 100%;
@@ -59,28 +61,28 @@
 }*/
 
 /*@media (min-width: 260px) {
-    #vers1 #img-container{    
+    #vers1 #img-container{
         -webkit-transform: translate(-250%);
         -ms-transform: translate(-250%);
         transform: translate(-250%);
     }
 }
 @media (min-width: 280px) {
-    #vers1 #img-container{    
+    #vers1 #img-container{
         -webkit-transform: translate(-230%);
         -ms-transform: translate(-230%);
         transform: translate(-230%);
     }
 }
 @media (min-width: 300px) {
-    #vers1 #img-container{    
+    #vers1 #img-container{
         -webkit-transform: translate(-210%);
         -ms-transform: translate(-210%);
         transform: translate(-210%);
     }
 }
 @media (min-width: 320px) {
-    #vers1 #img-container{    
+    #vers1 #img-container{
         -webkit-transform: translate(-190%);
         -ms-transform: translate(-190%);
         transform: translate(-190%);
@@ -119,10 +121,10 @@
         height: 40%;
         width: 100%;
     }
-    #vers1 #img-container{  
+    #vers1 #img-container{
         -webkit-transform: translate(0%);
         -ms-transform: translate(0%);
-        transform: translate(0%);  
+        transform: translate(0%);
         width: 100%;
         height: 100%;
     }

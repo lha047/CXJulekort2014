@@ -29,8 +29,7 @@ h1 {
 
 @media (max-width: 360px) {
   h1 {
-    font-size: 1em; }
- }
+    font-size: 1em; } }
 
 .poly-left {
   shape-outside: polygon(0 0, 50%, 30%, 70%);
@@ -90,5 +89,4 @@ May cause issues on Android default browser (see #331 on GitHub).
   position: absolute;
   top: 0;
   left: 0;
-  width: 50%;
-  height: 50%; }
+  height: 33%; }

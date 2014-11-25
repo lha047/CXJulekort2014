@@ -4,41 +4,17 @@
 #slide3 {
   color: snow;
   background-color: #313131;
-  background-size: cover;
-  position: absolute; }
-  @media (max-width: 350px) {
-    #slide3 {
-      -webkit-transform: translate(-1%, 200%);
-      -ms-transform: translate(-1%, 200%);
-      transform: translate(-1%, 200%);
-      width: 5000%; } }
-  @media (min-width: 350px) {
-    #slide3 {
-      -webkit-transform: translate(-2%, 200%);
-      -ms-transform: translate(-2%, 200%);
-      transform: translate(-2%, 200%);
-      width: 1000%; } }
-  @media (min-width: 500px) {
-    #slide3 {
-      -webkit-transform: translate(-1.5%, 200%);
-      -ms-transform: translate(-1.5%, 200%);
-      transform: translate(-1.5%, 200%);
-      width: 1000%; } }
-  @media (min-width: 700px) {
-    #slide3 {
-      -webkit-transform: translate(0%, 200%);
-      -ms-transform: translate(0%, 200%);
-      transform: translate(0%, 200%); } }
+  background: url('../../images/vers2-3-bg.png') no-repeat left center;
+  background-size: auto 100%;
+  position: absolute;
+  width: 100%;
+  -webkit-transform: translate(0%, 200%);
+  -ms-transform: translate(0%, 200%);
+  transform: translate(0%, 200%); }
 
 #uteBilde {
   position: absolute;
   opacity: 0.5; }
-
-#vers2 {
-  width: 100%;
-  height: 100%;
-  background-repeat: no-repeat;
-  background-image: url(../../images/vers2-3.png); }
 
 .vers2-shape {
   float: left;
@@ -64,14 +40,21 @@
   width: 15em;
   margin-left: 45em;
   padding-top: 10em; }
+  @media (max-width: 350px) { }
+  @media (min-width: 350px) { }
   @media (min-width: 500px) {
     #v2 {
       margin-left: 50em; } }
+  @media (min-width: 700px) { }
 
 #v3 {
   width: 15em;
   margin-left: 1200em;
   padding-top: 10em; }
+  @media (max-width: 350px) { }
+  @media (min-width: 350px) { }
+  @media (min-width: 500px) { }
+  @media (min-width: 700px) { }
   @media (min-width: 700px) {
     #v3 {
       width: 20em;
@@ -95,3 +78,7 @@
 #akeBilde {
   width: 100px;
   height: 100px; }
+  @media (max-width: 350px) { }
+  @media (min-width: 350px) { }
+  @media (min-width: 500px) { }
+  @media (min-width: 700px) { }
