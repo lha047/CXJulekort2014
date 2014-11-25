@@ -1,7 +1,7 @@
 #vers1 {
     height: 100%;
     width: 100%;
-    background: url('/images/vers1_uten-seng.png') no-repeat right center;
+    background: url('/images/vers1-langt.png') no-repeat right center;
     -webkit-background-size: auto 100%;
     -moz-background-size: auto 100%;
     -o-background-size: auto 100%;
@@ -11,17 +11,17 @@
     top: 0;
 }
 
-
 #snowBackground {
     position: absolute;
     height: 100%;
-    width: 50%;
-    background-image: url(../../images/snowy-bg.png);
+    width: 100vw;
+    background: url('/images/snowy-bg.png') no-repeat right center;
     z-index: -5;
 }
+
 #snowWindow {
-    width: 100%;
-    height: 50%;
+    width: 100vw;
+    height: 100vw;
     z-index: -1;
 }
 
@@ -29,15 +29,22 @@
     z-index: 5;
     position: absolute;
 }
+
 #lykt-container {
-    height: 20%;
-    width: 30%;
     z-index: 1;
     position: absolute;
-    right: 30vw;
-    top: 50%
-}
-#lykt {
+    right: 0;
+    top: 0;
     height: 100%;
+    width: 100%;
+}
 
+#lykt {
+    background: url('/images/lykt-padding.png') no-repeat right center;
+    -webkit-background-size: auto 100%;
+    -moz-background-size: auto 100%;
+    -o-background-size: auto 100%;
+    background-size: auto 100%;
+    height: 100%;
+    width: 100%;
 }
