@@ -50,7 +50,6 @@ function setLanguage(lang) {
 }
 
 window.onload = function(){
-
     console.log('bing');
 
 
