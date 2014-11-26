@@ -60,7 +60,12 @@ window.onload = function(){
             resize();
         });
         function resize() {
-            $('#slides').css({width: $('#slide4').height() * 3.55 + 'px'})
+            $('#slides').css({width: $('#slide4').height() * 3.55 + 'px'});
+            var slide4Width = $('#slide4').width();
+            $('#slide5').css({
+                '-webkit-transform': 'translate('+slide4Width+'px,200%)',
+                '-ms-transform': 'translate('+slide4Width+'px,200%)',
+                'transform': 'translate('+slide4Width+'px,200%)'});
         }
 
 
