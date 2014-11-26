@@ -28,12 +28,12 @@
   background-size: auto 100%;
   width: 3em;
   border-radius: 50%;
-  color: #993392;
   margin-top: 2em;
   margin-left: 1%;
   text-align: center;
   display: inline-block;
-  position: absolute; }
+  position: absolute;
+  height: 2em; }
 
 @-webkit-keyframes bounce {
   0%, 20%, 50%, 80%, 100% {

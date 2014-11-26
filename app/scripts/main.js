@@ -1,15 +1,5 @@
 'use strict';
 
-function togglePlayPause() {
-    var playpause = document.getElementById("playpause");
-    if (audio.paused || audio.ended) {
-    	playpause.className = "fa fa-bell-slash-o";
-        audio.play();
-    } else {
-    	playpause.className = "fa fa-bell-o";
-        audio.pause();
-    }
-}
 
 (function(window, skrollr){
 var s = skrollr.init({
@@ -49,25 +39,35 @@ function setLanguage(lang) {
 
 }
 
+function togglePlayPause() {
+	 // Grab a handle to the audio
+	var audio = document.getElementById('audio'); 
+    var playpause = document.getElementById('playpause');
+    if (audio.paused || audio.ended) {
+    	/*playpause.className = 'fa fa-bell-slash-o';*/
+        audio.play();
+    } else {
+    	/*playpause.className = 'fa fa-bell-o';*/
+        audio.pause();
+    }
+}
+
 window.onload = function(){
     console.log('bing');
 
 
+        function resize() {
+            $('#slides').css({width: $('#slide4').height() * 3.55 + 'px'});
+        }
         resize();
         $(window).resize(function () {
             console.log('resize');
             resize();
         });
-        function resize() {
-            $('#slides').css({width: $('#slide4').height() * 3.55 + 'px'})
-        }
 
 
 	setLanguage('no');
-	 // Grab a handle to the audio
-	var audio = document.getElementById('audio'); // Turn off the default controls
-	audio.controls = false;
-
+	
 	var canvas = document.getElementById('snowWindow');
 	var snowBackground = document.getElementById('snowBackground');
 	var ctx = canvas.getContext('2d');

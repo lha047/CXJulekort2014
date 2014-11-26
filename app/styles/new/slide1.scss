@@ -29,12 +29,12 @@
     background-size: auto 100%;
     width: 3em;
     border-radius: 50%;
-    color: #993392;
     margin-top: 2em;
     margin-left: 1%;
     text-align: center;
     display: inline-block;
     position: absolute;
+    height: 2em
 }
 @mixin keyframes($name) {
   @-webkit-keyframes #{$name} {
