@@ -1,0 +1,35 @@
+#fadein {
+  width: 100vw;
+  height: 100vw; }
+
+#outro-textbox-container {
+  bottom: 60%;
+  width: 100%;
+  position: absolute; }
+
+#ut1 {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding-left: 5%;
+  width: 100%;
+  position: absolute; }
+
+.ut p {
+  position: relative;
+  font-family: 'DINPro';
+  padding-bottom: 1em;
+  padding-right: 5em;
+  visibility: visible; }
+
+#ut2 {
+  visibility: hidden;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding-left: 5%;
+  width: 100%;
+  position: absolute; }
+
+#ut3 {
+  visibility: hidden;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding-left: 5%;
+  width: 100%;
+  position: absolute; }

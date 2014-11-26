@@ -7,22 +7,34 @@
 
 #vers2 {
     width: 15em; //bredden må endres etter bredden på skjermen
-    margin-left: 45em; //må endres ut fra bredden
-    padding-top:10em;
+//    margin-left: 45em; //må endres ut fra bredden
+//    padding-top:10em;
+  display: inline;
 }
 #vers3 {
     width: 15em; //bredden må endres etter bredden på skjermen
-    margin-left: 1200em; //må endres ut fra bredden
-    padding-top: 10em;
+//    margin-left: 1200em; //må endres ut fra bredden
+//    padding-top: 10em;
+  display: inline;
 }
 #refreng2 {
     width: 15em; //bredden må endres etter bredden på skjermen
-    margin-left: 72em; //må endres ut fra bredden
-    padding-top:10em;
+//    margin-left: 72em; //må endres ut fra bredden
+//    padding-top:10em;
+  display: inline;
 }
 
 #refreng3 {
     width: 20em;
-    margin-left: 260vh;
-    padding-top: 10vh;
+//    margin-left: 260vh;
+//    padding-top: 10vh;
+  display: inline;
+
+}
+
+#fadeOut{
+  width: 100vw;
+  height: 100vw;
+  position: absolute;
+  right: 0;
 }
