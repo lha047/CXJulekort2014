@@ -5,13 +5,14 @@ var gulp = require('gulp'),
 inject = require('gulp-inject'),
 plumber = require('gulp-plumber'),
 connect = require('gulp-connect'),
-sass = require('gulp-sass');
+sass = require('gulp-sass'),
+install = require('gulp-install');
 
 
 // livereload plugins
 var $ = require('gulp-load-plugins')();
 
-gulp.task('default', ['connect', 'watch'], function () {
+gulp.task('default', ['install', 'connect', 'watch'], function () {
 
 });
 
@@ -65,6 +66,10 @@ gulp.task('html', ['styles', 'scripts'], function () {
     return gulp.src('app/*.html')
         .pipe(plumber())
         .pipe(connect.reload());
+});
+gulp.task('install', function(){
+    gulp.src(['./bower.json', './package.json'])
+        .pipe(install());
 });
 
 gulp.task('images', function() {
