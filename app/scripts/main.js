@@ -1,5 +1,17 @@
 'use strict';
 
+function togglePlayPause() {
+	 // Grab a handle to the audio
+	var audio = document.getElementById('audio'); 
+    var playpause = document.getElementById('playpause');
+    if (audio.paused || audio.ended) {
+    	/*playpause.className = 'fa fa-bell-slash-o';*/
+        audio.play();
+    } else {
+    	/*playpause.className = 'fa fa-bell-o';*/
+        audio.pause();
+    }
+}
 
 (function(window, skrollr){
 var s = skrollr.init({
@@ -37,19 +49,6 @@ function setLanguage(lang) {
 	vers2.innerHTML = translate[vers2.translate.value][lang];
 	*/
 
-}
-
-function togglePlayPause() {
-	 // Grab a handle to the audio
-	var audio = document.getElementById('audio'); 
-    var playpause = document.getElementById('playpause');
-    if (audio.paused || audio.ended) {
-    	/*playpause.className = 'fa fa-bell-slash-o';*/
-        audio.play();
-    } else {
-    	/*playpause.className = 'fa fa-bell-o';*/
-        audio.pause();
-    }
 }
 
 window.onload = function(){
