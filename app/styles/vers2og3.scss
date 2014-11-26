@@ -59,62 +59,23 @@ $fontSizeSmall: large;
   }
 }
 
-#v2 {
-  // background-color: $testColorRed;
+#vers2 {
   width: 15em; //bredden må endres etter bredden på skjermen
   margin-left: 45em; //må endres ut fra bredden
   padding-top:10em;
-  @media(max-width: $break-small) {
-
   }
-  @media(min-width: $break-small) {
-
-
-  }
-
-  @media(min-width: $break-medium) {
-    margin-left: 50em; //må endres ut fra bredden
-
-  }
-
-  @media(min-width: $break-large) {
-
-  }
-  }
-#v3 {
-  //  background-color: $testColorBlue;
+#vers3 {
   width: 15em; //bredden må endres etter bredden på skjermen
   margin-left: 1200em; //må endres ut fra bredden
   padding-top: 10em;
-  @media(max-width: $break-small) {
-
-  }
-  @media(min-width: $break-small) {
-
-
-  }
-
-  @media(min-width: $break-medium) {
-  }
-
-  @media(min-width: $break-large) {
-
-  }
-    $slide3tStartXLarge:0%;
-  $slide3tEndXLarge:200%;
-  $slide3widthXLarge: 100%;
-  @media(min-width: $break-large) {
-    width: 20em;
-    margin-left: 120em;
-  }
 }
-#ref2 {
+#refreng2 {
   width: 15em; //bredden må endres etter bredden på skjermen
   margin-left: 72em; //må endres ut fra bredden
   padding-top:10em;
 }
 
-#ref3 {
+#refreng3 {
   width: 20em;
   margin-left: 260vh;
   padding-top: 10vh;
