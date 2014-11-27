@@ -50,6 +50,8 @@ window.onload = function(){
                 '-webkit-transform': 'translate('+slide4Width+'px,200%)',
                 '-ms-transform': 'translate('+slide4Width+'px,200%)',
                 'transform': 'translate('+slide4Width+'px,200%)'});
+            console.log("slide width: " + slide4Width);
+            $('#akeBilde').css({width: slide4Width/25});
 
         }
         resize();
