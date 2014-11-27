@@ -53,11 +53,6 @@ html, body {
 
 #slide5 {
   width: 100vw;
-  background: url('../../../images/julebilde.jpg') no-repeat center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
   -webkit-transform: translate(100%, 200%);
   -ms-transform: translate(100%, 200%);
   transform: translate(100%, 200%); }
@@ -65,3 +60,8 @@ html, body {
 #skrollr-body {
   width: 100%;
   height: 100%; }
+
+.Selfie {
+  font-family: Selfie;
+  font-weight: normal;
+  font-style: normal; }
