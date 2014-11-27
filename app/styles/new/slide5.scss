@@ -1,9 +1,4 @@
 
-#outro-textbox-container {
-    bottom: 60%;
-    width: 100%;
-    position: absolute;
-}
 
 #ut1 {
     background-color: rgba(255, 255, 255, 0.8);
@@ -70,7 +65,9 @@ $julebildeUrl: '../../../images/julebilde.jpg';
     z-index: 1;
 }
 
-#outro-textbox-container
-{
+#outro-textbox-container {
+    bottom: 60%;
+    width: 100%;
+    position: absolute;
     z-index: 2;
 }
