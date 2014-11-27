@@ -62,3 +62,6 @@ html, body {
   -ms-transform: translate(100%, 200%);
   transform: translate(100%, 200%); }
 
+#skrollr-body {
+  width: 100%;
+  height: 100%; }
