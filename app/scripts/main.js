@@ -50,15 +50,22 @@ window.onload = function(){
             /*Posisjoner akebilde*/
             var akeBilde = $('#akeBilde'),
                 akeStartScroll = 355, //xl
-//                akeSluttScroll = 430, //xl
                 akeSluttScroll = 400, //l
-//                akeSluttScroll = 395, //s
-//                akeStartLeft = 10, //xl
                 akeStartLeft = 6, //m
-//                akeStartLeft = 3, //s
                 akeStartTop = 20,
                 akeSluttLeft = 45,
                 akeSluttTop = 70;
+
+            if(viewportWidth < 300) {
+                akeStartLeft = 3;
+                akeSluttScroll = 395; //s
+            } else if(viewportWidth > 300 && viewportWidth < 500) {
+                akeStartLeft = 6; //m
+                akeSluttScroll = 400; //l
+            } else {
+                akeStartLeft = 10, //xl
+                akeSluttScroll = 430; //xl
+            }
             akeBilde.css({width: slide4Width/25});
             akeBilde.attr('data-'+ akeStartScroll +'p', 'left:'+akeStartLeft+'%;top:'+akeStartTop+'%');
             akeBilde.attr('data-'+ akeSluttScroll +'p', 'left:'+akeSluttLeft+'%;top:'+akeSluttTop+'%');
