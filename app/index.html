@@ -42,7 +42,7 @@
          data-550p=""
          data-600p=""
          data-750p=""
-            >
+        >
 
         <div id="slide1" class="slide">
 
@@ -54,6 +54,7 @@
                         <i id="playpause" class="volume-off" onclick="togglePlayPause()"> </i>
                     </div>
                     <p id="ttt" data-i18n="test.tast"></p>
+
                     <p>Computas ønsker å takke for et spennende og fremgangsrikt år i 2014, og ser frem til fortsatt
                         samarbeide i 2015. </p>
 
@@ -162,43 +163,58 @@
                 kanskje lyser de til kvelden si'r god natt.
             </p> -->
 
-            <div id="fadeOut" data-450p="background:rgba(0,0,0,0) right center;"
-                 data-550p="background:rgba(0,0,0,1) right center;"></div>
 
         </div>
-        <div id="slide5" class="slide" data-550p="opacity: 0" data-620p="opacity: 1">
-            <div id="outro-textbox-container">
-                <div id="ut1" class="ut">
+        <div id="slide5" class="slide">
+            <div id="fadeOut" data-450p="background:rgba(0,0,0,0) right center;"
+                 data-550p="background:rgba(0,0,0,1) right center;"></div>
+            <div id="slide5-content" data-550p="opacity: 0" data-620p="opacity: 1">
+                <div id="outro-textbox-container">
+                    <div id="ut1" class="ut">
 
-                    <p data-550p="visibility:visible;" data-650p="visibility:hidden;">Computas ønsker å takke for et
-                        spennende og fremgangsrikt år i 2014, og ser frem til fortsatt
-                        samarbeide i 2015. </p>
+                        <p data-550p="visibility:visible;" data-650p="visibility:hidden;">Computas ønsker å takke for et
+                            spennende og fremgangsrikt år i 2014, og ser frem til fortsatt
+                            samarbeide i 2015. </p>
 
 
-                    <p data-550p="visibility:visible;" data-650p="visibility:hidden;"> Tradisjonen tro har vi valgt å støtte en god sak med en donasjon, denne gang til aksjonen
-                        .......</p>
-                    <img class="firmalogo" src="images/firmalogo.png"/>
+                        <p data-550p="visibility:visible;" data-650p="visibility:hidden;"> Tradisjonen tro har vi valgt
+                            å støtte en god sak med en donasjon, denne gang til aksjonen
+                            .......</p>
+                        <img class="firmalogo" src="images/firmalogo.png"/>
+                    </div>
+                    <div id="ut2" class="ut">
+
+                        <p data-550p="visibility:hidden;" data-650p="visibility:visible;" data-700p="visibility:hidden;"
+                           data-i18n="test.textLabel">Bjørn Rønning</p>
+
+                        <p data-550p="visibility:hidden;" data-650p="visibility:visible;" data-700p="visibility:hidden;"
+                           data-i18n="test.translatorLabel">Marit Grundstad</p>
+
+                        <p data-550p="visibility:hidden;" data-650p="visibility:visible;" data-700p="visibility:hidden;"
+                           data-i18n="test.musicLabel">Aksel Qviller</p>
+
+                        <p data-550p="visibility:hidden;" data-650p="visibility:visible;" data-700p="visibility:hidden;"
+                           data-i18n="test.photoLabel">Ailin Helgestad</p>
+
+                        <p data-550p="visibility:hidden;" data-650p="visibility:visible;" data-700p="visibility:hidden;"
+                           data-i18n="test.designerLabel">Lene Nævdal</p>
+
+                        <p data-550p="visibility:hidden;" data-650p="visibility:visible;" data-700p="visibility:hidden;"
+                           data-i18n="test.developersLabel">Lisa Halvorsen Olga Voronkova Nicholas Paulik</p>
+                        <img class="firmalogo" src="images/firmalogo.png"/>
+                    </div>
+                    <div id="ut3" class="ut">
+
+                        <p data-550p="visibility:hidden;" data-700p="visibility:visible;"
+                           data-i18n="test.christmasGreetings">
+                        </p>
+                        <img class="firmalogo" src="images/firmalogo.png"/>
+
+                    </div>
                 </div>
-                <div id="ut2"  class="ut">
-
-                    <p data-550p="visibility:hidden;" data-650p="visibility:visible;" data-700p="visibility:hidden;" data-i18n="test.textLabel">Bjørn Rønning</p>
-                    <p data-550p="visibility:hidden;" data-650p="visibility:visible;" data-700p="visibility:hidden;" data-i18n="test.translatorLabel">Marit Grundstad</p>
-                    <p data-550p="visibility:hidden;" data-650p="visibility:visible;" data-700p="visibility:hidden;" data-i18n="test.musicLabel">Aksel Qviller</p>
-                    <p data-550p="visibility:hidden;" data-650p="visibility:visible;" data-700p="visibility:hidden;" data-i18n="test.photoLabel">Ailin Helgestad</p>
-                    <p data-550p="visibility:hidden;" data-650p="visibility:visible;" data-700p="visibility:hidden;" data-i18n="test.designerLabel">Lene Nævdal</p>
-                    <p data-550p="visibility:hidden;" data-650p="visibility:visible;" data-700p="visibility:hidden;" data-i18n="test.developersLabel">Lisa Halvorsen Olga Voronkova Nicholas Paulik</p>
-                    <img class="firmalogo" src="images/firmalogo.png"/>
-                </div>
-                <div id="ut3" class="ut" >
-
-                    <p data-550p="visibility:hidden;" data-700p="visibility:visible;" data-i18n="test.christmasGreetings">
-                    </p>
-                    <img class="firmalogo" src="images/firmalogo.png"/>
-
-                </div>
+                <div id="fadeIn" data-580p="background:rgba(0,0,0,0.9) right center;"
+                     data-600p="background:rgba(0,0,0,0) right center;"></div>
             </div>
-            <div id="fadein" data-580p="background:rgba(0,0,0,0.9) right center;"
-                 data-600p="background:rgba(0,0,0,0) right center;"></div>
         </div>
     </div>
 </div>
@@ -207,9 +223,9 @@
     (function (b, o, i, l, e, r) {
         b.GoogleAnalyticsObject = l;
         b[l] || (b[l] =
-                function () {
-                    (b[l].q = b[l].q || []).push(arguments)
-                });
+            function () {
+                (b[l].q = b[l].q || []).push(arguments)
+            });
         b[l].l = +new Date;
         e = o.createElement(i);
         r = o.getElementsByTagName(i)[0];
