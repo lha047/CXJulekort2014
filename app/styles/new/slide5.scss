@@ -1,45 +1,76 @@
-#fadein {
-  width: 100vw;
-  height: 100vw;
-}
 
 #outro-textbox-container {
-  bottom: 60%;
-  width: 100%;
-  position: absolute;
+    bottom: 60%;
+    width: 100%;
+    position: absolute;
 }
 
 #ut1 {
-  background-color: rgba(255, 255, 255, 0.8);
-  padding-left: 5%;
-  width: 100%;
-  position: absolute; }
+    background-color: rgba(255, 255, 255, 0.8);
+    padding-left: 5%;
+    width: 100%;
+    position: absolute;
+}
 
 .ut p {
-  position: relative;
-  padding-bottom: 1em;
-  padding-right: 5em;
-  visibility: visible;
+    position: relative;
+    padding-bottom: 1em;
+    padding-right: 5em;
+    visibility: visible;
 }
 
 #ut2 {
-  visibility: hidden;
-  background-color: rgba(255, 255, 255, 0.8);
-  padding-left: 5%;
-  width: 100%;
-  position: absolute;
+    visibility: hidden;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding-left: 5%;
+    width: 100%;
+    position: absolute;
 }
 
 #ut3 {
-  visibility: hidden;
-  background-color: rgba(255, 255, 255, 0.8);
-  padding-left: 5%;
-  width: 100%;
-  position: absolute;
+    visibility: hidden;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding-left: 5%;
+    width: 100%;
+    position: absolute;
 }
+
 .firmalogo {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+$julebildeUrl: '../../../images/julebilde.jpg';
+#slide5-content {
+    width: 100%;
+    height: 100%;
+    background: url($julebildeUrl) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#fadeOut {
+    width: 100vw;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+#fadeIn {
+    width: 100vw;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+#outro-textbox-container
+{
+    z-index: 2;
 }
