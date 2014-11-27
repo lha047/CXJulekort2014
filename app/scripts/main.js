@@ -41,16 +41,29 @@ function setLanguage(lang) {
 
 window.onload = function(){
         function resize() {
+            var viewportWidth = $(window).width();
+
             $('#slides').css({width: $('#slide4').height() * 3.55 + 'px'});
             var slide4Width = $('#slide4').width();
             $('#slide5').css({
                 '-webkit-transform': 'translate('+slide4Width+'px,200%)',
                 '-ms-transform': 'translate('+slide4Width+'px,200%)',
                 'transform': 'translate('+slide4Width+'px,200%)'});
-            console.log("slide width: " + slide4Width);
-            $('#akeBilde').css({width: slide4Width/25});
 
-            var viewportWidth = $(window).width();
+            console.log("slide width: " + slide4Width);
+            /*Posisjoner akebilde*/
+            var akeBilde = $('#akeBilde'),
+                akeStartScroll = 355,
+                akeSluttScroll = 430,
+                akeStartLeft = 3,
+                akeStartTop = 20,
+                akeSluttLeft = 45,
+                akeSluttTop = 70;
+            akeBilde.css({width: slide4Width/25});
+            akeBilde.attr('data-'+ akeStartScroll +'p', 'left:'+akeStartLeft+'%;top:'+akeStartTop+'%');
+            akeBilde.attr('data-'+ akeSluttScroll +'p', 'left:'+akeSluttLeft+'%;top:'+akeSluttTop+'%');
+
+
             var imageWidth = $('#slides').width();
 
             var percentage = 100 - ((viewportWidth / imageWidth) * 100);
