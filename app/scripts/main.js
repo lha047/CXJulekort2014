@@ -45,10 +45,6 @@ window.onload = function(){
 
             $('#slides').css({width: $('#slide4').height() * 3.55 + 'px'});
             var slide4Width = $('#slide4').width();
-            $('#slide5').css({
-                '-webkit-transform': 'translate('+slide4Width+'px,200%)',
-                '-ms-transform': 'translate('+slide4Width+'px,200%)',
-                'transform': 'translate('+slide4Width+'px,200%)'});
 
             console.log("slide width: " + slide4Width);
             /*Posisjoner akebilde*/
@@ -68,6 +64,10 @@ window.onload = function(){
 
             var percentage = 100 - ((viewportWidth / imageWidth) * 100);
             $('#slides').attr('data-450p', 'transform:translate(-' + percentage + '%,-66.66%);');
+
+            var transform = 'translate(' + (imageWidth - viewportWidth) + 'px, 200%)';
+            $('#slide5').css({'transform': transform, '-moz-transform': transform, '-webkit-transform': transform});
+
             skrollr.get().refresh();
 
         }

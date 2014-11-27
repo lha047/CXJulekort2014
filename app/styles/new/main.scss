@@ -67,6 +67,9 @@ $julebildeUrl: '../../../images/julebilde.jpg';
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+    -webkit-transform: translate(100%,200%);
+    -ms-transform: translate(100%,200%);
+    transform: translate(100%,200%);
 }
 
 #test {
