@@ -2,7 +2,7 @@
 
 function togglePlayPause() {
 	 // Grab a handle to the audio
-	var audio = document.getElementById('audio'); 
+	var audio = document.getElementById('audio');
     var playpause = document.getElementById('playpause');
     if (audio.paused || audio.ended) {
     	/*playpause.className = 'fa fa-bell-slash-o';*/
@@ -52,9 +52,6 @@ function setLanguage(lang) {
 }
 
 window.onload = function(){
-    console.log('bing');
-
-
         function resize() {
             $('#slides').css({width: $('#slide4').height() * 3.55 + 'px'});
             var slide4Width = $('#slide4').width();
@@ -62,6 +59,13 @@ window.onload = function(){
                 '-webkit-transform': 'translate('+slide4Width+'px,200%)',
                 '-ms-transform': 'translate('+slide4Width+'px,200%)',
                 'transform': 'translate('+slide4Width+'px,200%)'});
+
+            var viewportWidth = $(window).width();
+            var imageWidth = $('#slides').width();
+
+            var percentage = 100 - ((viewportWidth / imageWidth) * 100);
+            $('#slides').attr('data-450p', 'transform:translate(-' + percentage + '%,-66.66%);');
+            skrollr.get().refresh();
 
         }
         resize();
@@ -72,7 +76,7 @@ window.onload = function(){
 
 
 	setLanguage('no');
-	
+
 	var canvas = document.getElementById('snowWindow');
 	var snowBackground = document.getElementById('snowBackground');
 	var ctx = canvas.getContext('2d');
