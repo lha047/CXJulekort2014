@@ -46,12 +46,16 @@ window.onload = function(){
             $('#slides').css({width: $('#slide4').height() * 3.55 + 'px'});
             var slide4Width = $('#slide4').width();
 
-            console.log("slide width: " + slide4Width);
+
             /*Posisjoner akebilde*/
             var akeBilde = $('#akeBilde'),
-                akeStartScroll = 355,
-                akeSluttScroll = 430,
-                akeStartLeft = 3,
+                akeStartScroll = 355, //xl
+//                akeSluttScroll = 430, //xl
+                akeSluttScroll = 400, //l
+//                akeSluttScroll = 395, //s
+//                akeStartLeft = 10, //xl
+                akeStartLeft = 6, //m
+//                akeStartLeft = 3, //s
                 akeStartTop = 20,
                 akeSluttLeft = 45,
                 akeSluttTop = 70;

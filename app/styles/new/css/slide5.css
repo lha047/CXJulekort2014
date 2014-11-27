@@ -15,7 +15,6 @@
 
 .ut p {
   position: relative;
-  font-family: 'DINPro';
   padding-bottom: 1em;
   padding-right: 5em;
   visibility: visible; }
@@ -33,3 +32,9 @@
   padding-left: 5%;
   width: 100%;
   position: absolute; }
+
+.firmalogo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%; }
