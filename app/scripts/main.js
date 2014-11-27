@@ -163,3 +163,8 @@ window.onload = function(){
 	setInterval(draw, 33);
 };
 }(window, skrollr));
+
+
+i18n.init(function(t) {
+    $("#ttt").i18n();
+});
