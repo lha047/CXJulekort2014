@@ -46,6 +46,24 @@ window.onload = function(){
             $('#slides').css({width: $('#slide4').height() * 3.55 + 'px'});
             var slide4Width = $('#slide4').width();
 
+            var vers2 = $('#vers2'),
+	            vers2StartScroll = 355,
+	            vers2SluttScroll = 395,
+	            vers2StartLeft = 4,
+	            vers2SluttLeft = 35,
+	            vers2StartTop = 0,
+	            vers2SluttTop = 0;
+	        var refreng2 = $('#refreng2'),
+	        	refreng2StartScroll = 395,
+	            refreng2SluttScroll = 410,
+	            refreng2StartLeft = 35,
+	            refreng2SluttLeft = 55;	 
+	        var vers3 = $('#vers3'),
+	            vers3StartScroll = 410,
+	            vers3SluttScroll = 420,
+	            vers3StartLeft = 60,
+	            vers3SluttLeft = 70;
+	        	    	
 
             /*Posisjoner akebilde*/
             var akeBilde = $('#akeBilde'),
@@ -56,19 +74,78 @@ window.onload = function(){
                 akeSluttLeft = 45,
                 akeSluttTop = 70;
 
+
+
             if(viewportWidth < 300) {
                 akeStartLeft = 3;
-                akeSluttScroll = 395; //s
+                akeSluttScroll = 395;
+
+	            vers2StartScroll = 350,
+				vers2SluttScroll = 380; //390
+                vers2StartLeft = 1;
+                vers2SluttLeft = 30; //37
+
+                refreng2StartScroll = 380;
+	            refreng2SluttScroll = 410;
+	            refreng2StartLeft = 43;//28;
+	            refreng2SluttLeft = 55;	 
+
+    	       	vers3StartScroll = 410;
+	            vers3SluttScroll = 430;
+	            vers3StartLeft = 70;//53;
+	            vers3SluttLeft = 71;
             } else if(viewportWidth > 300 && viewportWidth < 500) {
                 akeStartLeft = 6; //m
                 akeSluttScroll = 400; //l
+
+                vers2StartScroll = 350,
+                    vers2SluttScroll = 380; //390
+                vers2StartLeft = 1;
+                vers2SluttLeft = 30; //37
+
+                refreng2StartScroll = 380;
+                refreng2SluttScroll = 410;
+                refreng2StartLeft = 43;//28;
+                refreng2SluttLeft = 55;
+
+                vers3StartScroll = 410;
+                vers3SluttScroll = 430;
+                vers3StartLeft = 70;//53;
+                vers3SluttLeft = 71;
             } else {
                 akeStartLeft = 10, //xl
                 akeSluttScroll = 430; //xl
+
+                vers2StartScroll = 350,
+                    vers2SluttScroll = 380; //390
+                vers2StartLeft = 1;
+                vers2SluttLeft = 30; //37
+
+                refreng2StartScroll = 380;
+                refreng2SluttScroll = 410;
+                refreng2StartLeft = 43;//28;
+                refreng2SluttLeft = 55;
+
+
+                vers3StartScroll = 410;
+                vers3SluttScroll = 430;
+                vers3StartLeft = 70;//53;
+                vers3SluttLeft = 71;
             }
             akeBilde.css({width: slide4Width/25});
             akeBilde.attr('data-'+ akeStartScroll +'p', 'left:'+akeStartLeft+'%;top:'+akeStartTop+'%');
             akeBilde.attr('data-'+ akeSluttScroll +'p', 'left:'+akeSluttLeft+'%;top:'+akeSluttTop+'%');
+            /*vers2*/
+            vers2.attr('data-'+ vers2StartScroll +'p', 'margin-left:'+vers2StartLeft+'%;top:'+vers2StartTop+'%;visibility:visible;');
+//			vers2.attr('data-'+ vers2SluttScroll +'p', 'margin-lef:'+vers2SluttLeft+'%;top:'+vers2SluttTop+'%;visibility:hidden;');
+            /*refreng2*/
+            refreng2.attr('data-'+ refreng2StartScroll +'p', 'margin-left:'+refreng2StartLeft+'%;visibility:visible;');
+//			refreng2.attr('data-'+ refreng2SluttScroll +'p', 'margin-left:'+refreng2SluttLeft+'%;visibility:hidden;');
+			/*vers3*/
+            vers3.attr('data-'+ vers3StartScroll +'p', 'margin-left:'+vers3StartLeft+'%;');
+//			vers3.attr('data-'+ vers3SluttScroll +'p', 'margin-left:'+vers3SluttLeft+'%;');
+
+
 
 
             var imageWidth = $('#slides').width();
