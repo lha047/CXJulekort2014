@@ -80,7 +80,7 @@ window.onload = function(){
                 akeStartLeft = 3;
                 akeSluttScroll = 395;
 
-	            vers2StartScroll = 350,
+	            vers2StartScroll = 350;
 				vers2SluttScroll = 380; //390
                 vers2StartLeft = 1;
                 vers2SluttLeft = 30; //37
@@ -98,7 +98,7 @@ window.onload = function(){
                 akeStartLeft = 6; //m
                 akeSluttScroll = 400; //l
 
-                vers2StartScroll = 350,
+                vers2StartScroll = 350;
                     vers2SluttScroll = 380; //390
                 vers2StartLeft = 1;
                 vers2SluttLeft = 30; //37
@@ -113,10 +113,10 @@ window.onload = function(){
                 vers3StartLeft = 70;//53;
                 vers3SluttLeft = 71;
             } else {
-                akeStartLeft = 10, //xl
+                akeStartLeft = 10; //xl
                 akeSluttScroll = 430; //xl
 
-                vers2StartScroll = 350,
+                vers2StartScroll = 350;
                     vers2SluttScroll = 380; //390
                 vers2StartLeft = 1;
                 vers2SluttLeft = 30; //37
