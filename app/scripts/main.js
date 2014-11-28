@@ -5,10 +5,10 @@ function togglePlayPause() {
 	var audio = document.getElementById('audio');
     var playpause = document.getElementById('playpause');
     if (audio.paused || audio.ended) {
-    	/*playpause.className = 'fa fa-bell-slash-o';*/
+    	playpause.className = 'volume-off';
         audio.play();
     } else {
-    	/*playpause.className = 'fa fa-bell-o';*/
+    	playpause.className = 'volume';
         audio.pause();
     }
 }

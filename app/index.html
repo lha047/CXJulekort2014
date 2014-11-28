@@ -23,7 +23,7 @@
 </head>
 <body>
 
-<audio id="audio" autoplay loop>
+<audio id="audio" loop>
     <source src="audio/cxlykter.mp3" type="audio/mp3">
     <source src="audio/cxlykter.ogg" type="audio/ogg">
     <source src="audio/cxlykter.flac" type="audio/flac">
@@ -46,26 +46,28 @@
 
         <div id="slide1" class="slide">
 
-            <div id="intro-textbox-container">
+            <div id="intro-content-container">
                  <div id="volume-container">
-                    <i id="playpause" class="volume-off" onclick="togglePlayPause()"> </i>
+                    <i id="playpause" class="volume" onclick="togglePlayPause()"> </i>
                 </div>
-                <div id="intro-textbox">                    
-                    <header>
-                        <h1>God Jul</h1>
-                    </header>
-                   
-                    <p id="ttt" data-i18n="test.tast"></p>
+                <div id="intro-textbox-container">      
+                    <div id="intro-textbox">              
+                        <header>
+                            <h1>God Jul</h1>
+                        </header>
+                       
+                        <!-- <p id="ttt" data-i18n="test.tast"></p> -->
 
-                    <p>Computas ønsker å takke for et spennende og fremgangsrikt år i 2014, og ser frem til fortsatt
-                        samarbeide i 2015. </p>
+                        <p>Computas ønsker å takke for et spennende og fremgangsrikt år i 2014, og ser frem til fortsatt
+                            samarbeide i 2015. </p>
 
-                    <p> Tradisjonen tro har vi valgt å støtte en god sak med en donasjon, denne gang til aksjonen NerdAid 3 og Røde Kors til arbeidet på Filipinene etter tyfonens herjinger. </p>
+                        <p> Tradisjonen tro har vi valgt å støtte en god sak med en donasjon, denne gang til aksjonen NerdAid 3 og Røde Kors til arbeidet på Filipinene etter tyfonens herjinger. </p>
 
-                    <p> Hilsen Trond Eilertsen </p>
-
-
-                    <div id="logo"> </div>
+                        <sub> Hilsen Trond Eilertsen </sub>
+                    </div>
+                    <div id="logo-container">
+                        <div id="logo"> </div>
+                    </div>
                 </div>
             </div>
             <div class="arrow-container bounce animated">
@@ -78,7 +80,7 @@
              data-140p="background:rgba(0,0,0,0.65);color:rgb(255,255,255);">
 
 
-            <div id="vers1" class='main' data-50p="opacity:1;font-size:150%;" data-140p="opacity:0;font-size:150%;">
+            <div id="vers1" class='main' data-50p="opacity:1;" data-140p="opacity:0;">
                 <div id="vers1-text" data-30p="display:block;" data-100p="display:none;">
                     <!--data-10p="display:block;"  -->
                     <p>Sneen dalte lett og fin,</p>

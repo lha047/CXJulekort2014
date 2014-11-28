@@ -13,9 +13,9 @@
 
 #snowBackground {
     position: absolute;
-    height: 100%;
+    height: 100vh;
     width: 100vw;
-    background: url('../../../images/snowy-bg.png') no-repeat right center;
+    background: url('../../../images/snowy-bg.png') no-repeat center;
     z-index: -5;
 }
 
@@ -28,6 +28,8 @@
 #vers1-text {
     z-index: 5;
     position: absolute;
+    padding: 5%;
+    max-width: 50em;
 }
 
 #lykt-container {
