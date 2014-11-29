@@ -12,7 +12,7 @@ install = require('gulp-install');
 // livereload plugins
 var $ = require('gulp-load-plugins')();
 
-gulp.task('default', ['install', 'connect', 'watch'], function () {
+gulp.task('default', ['connect', 'watch'], function () {
 
 });
 

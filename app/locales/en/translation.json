@@ -8,5 +8,28 @@
         "designerLabel": "Design Illustrations",
         "developersLabel": "Developers",
         "christmasGreetings" : "We wish you a merry christmas and a happy new year!"
+    },    
+    "sang" : {
+        "vers2" : "Vers two",
+        "refreng" : "course ",
+        "vers3"   : "Vers three"
+    }, "hilsen" : { 
+        "takker" : "Computas ønsker å takke for et spennende og fremgangsrikt år i 2014, og ser frem til fortsatt samarbeide i 2015. "
+        ,"donasjon":" Tradisjonen tro har vi valgt å støtte en god sak med en donasjon, denne gang til aksjonen NerdAid 3 og Røde Kors til arbeidet på Filipinene etter tyfonens herjinger."
+        ,"trond":"Hilsen Trond Eilertsen "
+    },"refreng" : {
+        "1":"Ja, vi tenner våre lykter når det mørkner",
+        "2":"og når alle lyder pakkes inn i vatt",
+        "3":"Ja, vi tenner våre lykter når det mørkner",
+        "4":"kanskje lyser de til kvelden si'r god natt.",
+        "5":"kanskje lyser de til kvelden si'r god natt."
+    }, "vers1" : {
+        "1":"Sneen dalte lett og fin,",
+        "2":"og strøk blidt mot ruten min",
+        "3":"i morgens da jeg drømte på min pute.",
+        "4":"Vi tok skjerf og votter på,",
+        "5":">hastet veldig med å gå,",
+        "6":"snart var det tusen barnespor her ute!"
+
     }
 }

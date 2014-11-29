@@ -254,5 +254,13 @@ window.onload = function(){
 
 
 i18n.init(function(t) {
-    $("#ttt").i18n();
+    $(".slide").i18n();
+    var currentLang = navigator.language;    
+    console.log('currentLang: ' + currentLang);
+    if(currentLang === 'nb-no' || currentLang === 'nb-no') {
+		i18n.setLng('no', function(t) {});	    	
+    } else if(currentLang === 'en-US' || currentLang === 'en-UK') {
+    	i18n.setLng('en', function(t) {});
+    } 
+    console.log('Satt språk: ' + i18n.lng());
 });

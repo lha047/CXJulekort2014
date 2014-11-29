@@ -1,28 +1,8 @@
-#ut1 {
-  background-color: rgba(255, 255, 255, 0.8);
-  padding-left: 5%;
-  width: 100%;
-  position: absolute; }
-
 .ut p {
   position: relative;
   padding-bottom: 1em;
   padding-right: 5em;
   visibility: visible; }
-
-#ut2 {
-  visibility: hidden;
-  background-color: rgba(255, 255, 255, 0.8);
-  padding-left: 5%;
-  width: 100%;
-  position: absolute; }
-
-#ut3 {
-  visibility: hidden;
-  background-color: rgba(255, 255, 255, 0.8);
-  padding-left: 5%;
-  width: 100%;
-  position: absolute; }
 
 .firmalogo {
   display: block;
@@ -55,8 +35,27 @@
   left: 0;
   z-index: 1; }
 
-#outro-textbox-container {
-  bottom: 60%;
-  width: 100%;
-  position: absolute;
-  z-index: 2; }
+.bold {
+  font-family: 'DINProBold'; }
+
+.normal {
+  font-family: 'DINPro'; }
+
+.credit {
+  margin: 1em; }
+
+.credit p {
+  padding: 0;
+  margin: 0;
+  text-align: center; }
+
+.infoTextboxCenter {
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0; }
+
+#christmasGreetings {
+  text-align: center;
+  font-family: Selfie;
+  color: #F5F5F5; }

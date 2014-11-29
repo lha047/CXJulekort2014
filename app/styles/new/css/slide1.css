@@ -10,7 +10,7 @@ sub {
   font-family: 'DINProItalic';
   color: #F5F5F5; }
 
-#logo-container {
+.logo-container {
   position: absolute;
   padding-right: 5%;
   padding-bottom: 5%;
@@ -19,7 +19,7 @@ sub {
   right: 0;
   bottom: 0; }
 
-#logo {
+.logo {
   background: url('../../../images/firmalogo.png') no-repeat;
   -webkit-background-size: auto 100%;
   -moz-background-size: auto 100%;
@@ -34,25 +34,25 @@ sub {
   left: 0;
   margin: auto; }
 
-#intro-content-container {
+.intro-content-container {
   background-color: rgba(7, 70, 109, 0.65);
   width: 100%;
   height: 70%;
   top: 20%;
   position: absolute; }
 
-#intro-textbox-container {
+.intro-textbox-container {
   width: 100%;
   height: 100%;
   position: absolute; }
 
-#intro-textbox {
+.intro-textbox {
   padding-left: 15%;
   padding-right: 10%;
   max-width: 50em;
   position: absolute; }
 
-#intro-textbox p {
+.intro-textbox p {
   position: relative;
   padding-bottom: 1em;
   color: #F5F5F5;
