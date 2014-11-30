@@ -89,4 +89,5 @@ span.line {
   color: #f5f5f5;
   background-color: rgba(7, 70, 109, 0.6);
   padding: 1.8em;
-  line-height: 1.3em; }
+  line-height: 1.3em;
+  z-index: 16; }
