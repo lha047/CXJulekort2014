@@ -90,8 +90,8 @@ window.onload = function(){
 
             /*Posisjoner akebilde*/
             var akeBilde = $('#akeBilde'),
-                akeStartScroll = 355, //xl
-                akeSluttScroll = 40, //l
+                akeStartScroll = 300, //xl
+                akeSluttScroll = 320, //l
                 akeStartLeft = 6, //m
                 akeStartTop = 20,
                 akeSluttLeft = 45,
@@ -119,7 +119,7 @@ window.onload = function(){
 	            vers3SluttLeft = 21;
             } else if(viewportWidth > 300 && viewportWidth < 500) {
                 akeStartLeft = 6; //m
-                akeSluttScroll = 400; //l
+                akeSluttScroll = 370; //l
 
                 vers2StartScroll = 350;
                     vers2SluttScroll = 380; //390
@@ -137,7 +137,7 @@ window.onload = function(){
                 vers3SluttLeft = 21;
             } else {
                 akeStartLeft = 10; //xl
-                akeSluttScroll = 430; //xl
+                akeSluttScroll = 400; //xl
 
                 vers2StartScroll = 350;
                     vers2SluttScroll = 380; //390
@@ -157,7 +157,7 @@ window.onload = function(){
             }
             akeBilde.css({width: slide4Width/25});
             akeBilde.attr('data-'+ akeStartScroll +'p', 'left[x]:'+akeStartLeft+'%;top[y]:'+akeStartTop+'%');
-            akeBilde.attr('data-'+ akeSluttScroll +'p', 'left:'+akeSluttLeft+'%;top:'+ (akeSluttTop)+'%');
+            akeBilde.attr('data-'+ akeSluttScroll +'p', 'left[x]:'+akeSluttLeft+'%;top[y]:'+ (akeSluttTop)+'%');
             /*vers2*/
             vers2.attr('data-'+ vers2StartScroll +'p', 'margin-left:'+vers2StartLeft+'%;top:'+vers2StartTop+'%;visibility:visible;');
 //			vers2.attr('data-'+ vers2SluttScroll +'p', 'margin-lef:'+vers2SluttLeft+'%;top:'+vers2SluttTop+'%;visibility:hidden;');
@@ -186,7 +186,11 @@ window.onload = function(){
         });
 
 
-	setLanguage('no');
+	function getCustomerNameFromUrl() {
+		var customer = window.location.pathName;
+		console.log("customer: " + customer);
+	}
+	getCustomerNameFromUrl();
 
     function generateSnow(backgroundId, canvasId) {
         var canvas = document.getElementById(canvasId);
@@ -278,11 +282,11 @@ window.onload = function(){
 }(window, skrollr));
 
 
-i18n.init({ detectLngQS: 'lang' }, function(t) {
+i18n.init({ detectLngQS: 'lang', lng:'no' }, function(t) {
     $(".slide").i18n();
     var currentLang = navigator.language;    
     console.log('currentLang: ' + currentLang);
-    i18n.setLng('no', function(t) {});
+    // i18n.setLng('no', function(t) {});
   //   if(currentLang === 'nb-no' || currentLang === 'nb-no') {
 		// i18n.setLng('no', function(t) {});	    	
   //   } else if(currentLang === 'en-US' || currentLang === 'en-UK') {
