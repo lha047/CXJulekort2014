@@ -48,6 +48,14 @@ html, body {
   -o-background-size: cover;
   background-size: cover; }
 
+#slide1-blurry {
+  width: 100vw;
+  background: url('../../../images/julebilde-blurry.png') no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
 #slide2 {
   width: 100vw;
   -webkit-transform: translate(0, 100%);
