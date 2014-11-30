@@ -1,18 +1,6 @@
 #akeBilde {
-  position: absolute; }
-
-#vers2 {
-  width: 15em; }
-
-#vers3 {
-  width: 15em;
-  color: #D2E0E6; }
-
-#refreng2 {
-  width: 15em; }
-
-#refreng3 {
-  width: 20em; }
+  position: absolute;
+  z-index: -1; }
 
 #fadeOut {
   width: 100vw;

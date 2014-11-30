@@ -87,13 +87,13 @@ window.onload = function(){
 
                 refreng2StartScroll = 380;
 	            refreng2SluttScroll = 410;
-	            refreng2StartLeft = 43;//28;
-	            refreng2SluttLeft = 55;	 
+	            refreng2StartLeft = 23;//28;
+	            refreng2SluttLeft = 35;	 
 
     	       	vers3StartScroll = 410;
 	            vers3SluttScroll = 430;
-	            vers3StartLeft = 70;//53;
-	            vers3SluttLeft = 71;
+	            vers3StartLeft = 20;//53;
+	            vers3SluttLeft = 21;
             } else if(viewportWidth > 300 && viewportWidth < 500) {
                 akeStartLeft = 6; //m
                 akeSluttScroll = 400; //l
@@ -105,13 +105,13 @@ window.onload = function(){
 
                 refreng2StartScroll = 380;
                 refreng2SluttScroll = 410;
-                refreng2StartLeft = 43;//28;
-                refreng2SluttLeft = 55;
+                refreng2StartLeft = 23;//28;
+                refreng2SluttLeft = 35;
 
                 vers3StartScroll = 410;
                 vers3SluttScroll = 430;
-                vers3StartLeft = 70;//53;
-                vers3SluttLeft = 71;
+                vers3StartLeft = 20;//53;
+                vers3SluttLeft = 21;
             } else {
                 akeStartLeft = 10; //xl
                 akeSluttScroll = 430; //xl
@@ -123,14 +123,14 @@ window.onload = function(){
 
                 refreng2StartScroll = 380;
                 refreng2SluttScroll = 410;
-                refreng2StartLeft = 43;//28;
-                refreng2SluttLeft = 55;
+                refreng2StartLeft = 23;//28;
+                refreng2SluttLeft = 35;
 
 
                 vers3StartScroll = 410;
                 vers3SluttScroll = 430;
-                vers3StartLeft = 70;//53;
-                vers3SluttLeft = 71;
+                vers3StartLeft = 20;//53;
+                vers3SluttLeft = 21;
             }
             akeBilde.css({width: slide4Width/25});
             akeBilde.attr('data-'+ akeStartScroll +'p', 'left:'+akeStartLeft+'%;top:'+akeStartTop+'%');
