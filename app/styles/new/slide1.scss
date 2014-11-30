@@ -86,7 +86,7 @@ sub {
     margin-top: 1%;
     margin-left: 1%;
     position: absolute;
-    z-index:50;
+    z-index:99;
 }
 .volume-off {  
     background: url('../../../images/musikknote-mute.png') no-repeat;
@@ -98,7 +98,7 @@ sub {
     left:0; right:0; bottom:0; top: 0;
     margin:auto;
     position: absolute;
-    z-index:51;
+    z-index:100;
 }
 .volume {  
     background: url('../../../images/musikknote.png') no-repeat;
@@ -110,7 +110,7 @@ sub {
     left:0; right:0; bottom:0; top: 0;
     margin:auto;
     position: absolute;
-    z-index:51;
+    z-index:100;
 }
 @mixin keyframes($name) {
   @-webkit-keyframes #{$name} {
