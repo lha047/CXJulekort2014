@@ -1,11 +1,11 @@
 {
     "test" : {
         "tast": "engelsk",
-        "textLabel": "Text",
+        "textLabel": "Lyrcis & Melody",
         "translatorLabel": "Translation",
         "musicLabel": "Music",
         "photoLabel": "Photo",
-        "designerLabel": "Design Illustrations",
+        "designerLabel": "Design & Illustration",
         "developersLabel": "Developers",
         "christmasGreetings" : "We wish you a merry christmas and a happy new year!"
     },
