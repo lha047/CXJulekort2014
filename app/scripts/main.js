@@ -6,6 +6,8 @@ function togglePlayPause() {
     var playpause = document.getElementById('playpause');
     if (audio.paused || audio.ended) {
     	playpause.className = 'volume-off';
+  /*      var sound = new Audio();
+        sound.play();*/
         audio.play();
     } else {
     	playpause.className = 'volume';
@@ -13,7 +15,28 @@ function togglePlayPause() {
     }
 }
 
+/*function detectIE() {
+    var ua = window.navigator.userAgent;
+    var msie = ua.indexOf('MSIE ');
+    var trident = ua.indexOf('Trident/');
+
+    if (msie > 0) {
+        // IE 10 or older => return version number
+        return parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10);
+    }
+
+    if (trident > 0) {
+        // IE 11 (or newer) => return version number
+        var rv = ua.indexOf('rv:');
+        return parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10);
+    }
+
+    // other browser
+    return false;
+}*/
+
 (function(window, skrollr){
+
 var s = skrollr.init({
     easing: {
     	x : function(p) {
@@ -164,8 +187,6 @@ window.onload = function(){
 
 
 	setLanguage('no');
-    generateSnow('snowBackground1', 'snowWindow1');
-    generateSnow('snowBackground2', 'snowWindow2');
 
     function generateSnow(backgroundId, canvasId) {
         var canvas = document.getElementById(canvasId);
@@ -247,6 +268,9 @@ window.onload = function(){
             }
         }
 
+        generateSnow('snowBackground1', 'snowWindow1');
+        generateSnow('snowBackground2', 'snowWindow2');
+    
         //animation loop
         setInterval(draw, 33);
     }
