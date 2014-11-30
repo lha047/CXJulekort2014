@@ -1,40 +1,21 @@
 #akeBilde {
 //    width: 7.5%;
 //    height: auto;
-    position: absolute;
+  position: absolute;
+  z-index: -1;
 }
 
-#vers2 {
-    width: 15em; //bredden må endres etter bredden på skjermen
-//    margin-left: 45em; //må endres ut fra bredden
-//    padding-top:10em;
-//  display: inline;
-//  font-family: 'DINPro';
-
-}
-#vers3 {
-    width: 15em; //bredden må endres etter bredden på skjermen
-    color: #D2E0E6;
-//    margin-left: 1200em; //må endres ut fra bredden
-//    padding-top:  10em;
-//  display: inline;
-
-}
-#refreng2 {
-    width: 15em; //bredden må endres etter bredden på skjermen
-//    margin-left: 72em; //må endres ut fra bredden
-//    padding-top:10em;
-//  display: inline;
-
-}
+// #vers2 {
+//   margin-right: 30%;
+// }
+// #vers3 {
+//   margin-right: 20%;
+// }
+// #refreng2 {
+//   margin-right: 30%;
+// }
 
 #refreng3 {
-    width: 20em;
-
-//    margin-left: 260vh;
-//    padding-top: 10vh;
-//  display: inline;
-
 
 }
 
