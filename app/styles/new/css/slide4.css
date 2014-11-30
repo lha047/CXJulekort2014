@@ -1,7 +1,6 @@
 #akeBilde {
   position: absolute;
-  z-index: -1;
-  background-color: red; }
+  z-index: -1; }
 
 #fadeOut {
   width: 100vw;
