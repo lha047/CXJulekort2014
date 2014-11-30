@@ -39,13 +39,13 @@ function togglePlayPause() {
 
 var s = skrollr.init({
     easing: {
-    	sin : function(p) {
-            var s = Math.sin(p);//(Math.sin(p * Math.PI * 2 - Math.PI/2)/2);
+    	x : function(p) {
+            var s = p;
             console.log('sin: ' + s);
     		return s;
     	},
-    	cos : function(p){
-            var c = p;//(Math.cos(p * Math.PI * 2 - Math.PI/2)/2);
+    	y : function(p){
+            var c = Math.sin(2*p);
             console.log('cos: ' + c);
     		return c;
     	}
@@ -91,7 +91,7 @@ window.onload = function(){
             /*Posisjoner akebilde*/
             var akeBilde = $('#akeBilde'),
                 akeStartScroll = 355, //xl
-                akeSluttScroll = 400, //l
+                akeSluttScroll = 40, //l
                 akeStartLeft = 6, //m
                 akeStartTop = 20,
                 akeSluttLeft = 45,
@@ -156,8 +156,8 @@ window.onload = function(){
                 vers3SluttLeft = 21;
             }
             akeBilde.css({width: slide4Width/25});
-            akeBilde.attr('data-'+ akeStartScroll +'p', 'left:'+akeStartLeft+'%;top:'+akeStartTop+'%');
-            akeBilde.attr('data-'+ akeSluttScroll +'p', 'left:'+akeSluttLeft+'%;top:'+akeSluttTop+'%');
+            akeBilde.attr('data-'+ akeStartScroll +'p', 'left[x]:'+akeStartLeft+'%;top[y]:'+akeStartTop+'%');
+            akeBilde.attr('data-'+ akeSluttScroll +'p', 'left:'+akeSluttLeft+'%;top:'+ (akeSluttTop)+'%');
             /*vers2*/
             vers2.attr('data-'+ vers2StartScroll +'p', 'margin-left:'+vers2StartLeft+'%;top:'+vers2StartTop+'%;visibility:visible;');
 //			vers2.attr('data-'+ vers2SluttScroll +'p', 'margin-lef:'+vers2SluttLeft+'%;top:'+vers2SluttTop+'%;visibility:hidden;');
@@ -167,9 +167,6 @@ window.onload = function(){
 			/*vers3*/
             vers3.attr('data-'+ vers3StartScroll +'p', 'margin-left:'+vers3StartLeft+'%;');
 //			vers3.attr('data-'+ vers3SluttScroll +'p', 'margin-left:'+vers3SluttLeft+'%;');
-
-
-
 
             var imageWidth = $('#slides').width();
 
@@ -281,14 +278,15 @@ window.onload = function(){
 }(window, skrollr));
 
 
-i18n.init(function(t) {
+i18n.init({ detectLngQS: 'lang' }, function(t) {
     $(".slide").i18n();
     var currentLang = navigator.language;    
     console.log('currentLang: ' + currentLang);
-    if(currentLang === 'nb-no' || currentLang === 'nb-no') {
-		i18n.setLng('no', function(t) {});	    	
-    } else if(currentLang === 'en-US' || currentLang === 'en-UK') {
-    	i18n.setLng('en', function(t) {});
-    } 
+    i18n.setLng('no', function(t) {});
+  //   if(currentLang === 'nb-no' || currentLang === 'nb-no') {
+		// i18n.setLng('no', function(t) {});	    	
+  //   } else if(currentLang === 'en-US' || currentLang === 'en-UK') {
+  //   	i18n.setLng('en', function(t) {});
+  //   } 
     console.log('Satt språk: ' + i18n.lng());
 });

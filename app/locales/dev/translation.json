@@ -1,0 +1,12 @@
+{
+    "test" : {
+        "tast": "norsk",
+        "textLabel": "Tekst",
+        "translatorLabel": "Oversettelse",
+        "musicLabel":"Musikk",
+        "photoLabel": "Fotografi",
+        "designerLabel":"Design Illustrasjoner",
+        "developersLabel": "Utvikling",
+        "christmasGreetings" : "Vi ønsker dere en gledelig jul og et godt nyttår!"
+    }
+}
