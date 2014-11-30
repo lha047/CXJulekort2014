@@ -58,7 +58,8 @@ sub {
   border-radius: 50%;
   margin-top: 1%;
   margin-left: 1%;
-  position: absolute; }
+  position: absolute;
+  z-index: 99; }
 
 .volume-off {
   background: url('../../../images/musikknote-mute.png') no-repeat;
@@ -72,7 +73,7 @@ sub {
   top: 0;
   margin: auto;
   position: absolute;
-  z-index: 20; }
+  z-index: 100; }
 
 .volume {
   background: url('../../../images/musikknote.png') no-repeat;
@@ -86,7 +87,7 @@ sub {
   top: 0;
   margin: auto;
   position: absolute;
-  z-index: 1; }
+  z-index: 100; }
 
 @-webkit-keyframes bounce {
   0%, 20%, 50%, 80%, 100% {
@@ -168,7 +169,7 @@ sub {
   width: 100vw;
   height: 100vh;
   position: absolute;
-  z-index: 10; }
+  z-index: 50; }
 
 .arrow {
   left: 0;
