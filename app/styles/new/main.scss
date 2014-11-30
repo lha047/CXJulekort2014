@@ -57,10 +57,9 @@ html, body {
     left: 0;
     height: 33.33%;
 }
-$julebildeUrl: '../../../images/julebilde.jpg';
 #slide1 {
     width: 100vw;
-    background: url($julebildeUrl) no-repeat center center;
+    background: url('../../../images/julebilde.jpg') no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
