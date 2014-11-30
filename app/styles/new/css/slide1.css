@@ -4,7 +4,8 @@ header {
   color: #F5F5F5; }
 
 header h1 {
-  font-size: 4em; }
+  font-size: 4em;
+  font-weight: 300; }
 
 sub {
   font-family: 'DINProItalic';
@@ -50,7 +51,7 @@ sub {
   position: relative;
   padding-bottom: 1em;
   color: #F5F5F5;
-  font-family: 'DINProBold'; }
+  font-family: 'DINPro'; }
 
 .volume-container {
   width: 2em;
