@@ -271,14 +271,13 @@ window.onload = function(){
                 }
             }
         }
-
-        generateSnow('snowBackground1', 'snowWindow1');
-        generateSnow('snowBackground2', 'snowWindow2');
     
         //animation loop
         setInterval(draw, 33);
     }
-};
+        generateSnow('snowBackground1', 'snowWindow1');
+        generateSnow('snowBackground2', 'snowWindow2');
+    };
 }(window, skrollr));
 
 
