@@ -1,6 +1,6 @@
 @font-face{
     font-family:'DINPro';
-    src: url('../../fonts/DinPro/DINPro.otf') format('opentype');
+    src: url('../../fonts/DinPro/DINPro.otf') format('opentype'),
              url('../../fonts/DinPro/dinpro-webfont.eot?iefix') format('eot'),
              url('../../fonts/DinPro/dinpro-webfont.woff') format('woff'),
              url('../../fonts/DinPro/dinpro-webfont.ttf') format('truetype');
@@ -8,7 +8,7 @@
 
 @font-face{
     font-family:'DINProBold';
-    src: url('../../fonts/DinPro/DINPro-Bold.otf') format('opentype');
+    src: url('../../fonts/DinPro/DINPro-Bold.otf') format('opentype'),
              url('../../fonts/DinPro/dinpro-bold-webfont.eot?iefix') format('eot'),
              url('../../fonts/DinPro/dinpro-bold-webfont.woff') format('woff'),
              url('../../fonts/DinPro/dinpro-bold-webfont.ttf') format('truetype');
@@ -16,7 +16,7 @@
 
 @font-face{
     font-family:'DINProItalic';
-    src: url('../../fonts/DinPro/DINPro-Italic.otf') format('opentype');
+    src: url('../../fonts/DinPro/DINPro-Italic.otf') format('opentype'),
              url('../../fonts/DinPro/dinpro-italic-webfont.eot?iefix') format('eot'),
              url('../../fonts/DinPro/dinpro-italic-webfont.woff') format('woff'),
              url('../../fonts/DinPro/dinpro-italic-webfont.ttf') format('truetype');
@@ -57,10 +57,9 @@ html, body {
     left: 0;
     height: 33.33%;
 }
-$julebildeUrl: '../../../images/julebilde.jpg';
 #slide1 {
     width: 100vw;
-    background: url($julebildeUrl) no-repeat center center;
+    background: url('../../../images/julebilde.jpg') no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
