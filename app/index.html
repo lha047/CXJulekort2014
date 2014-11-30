@@ -47,15 +47,15 @@
         <div id="slide1" class="slide">
 
             <div class="intro-content-container">
-                 <div id="volume-container">
+                 <div class="volume-container" >
                     <i id="playpause" class="volume" onclick="togglePlayPause()"> </i>
                 </div>
+
                 <div class="intro-textbox-container">      
                     <div class="intro-textbox">              
                         <header>
                             <h1>God Jul</h1>
-                        </header>
-                       
+                        </header>                       
 <!-- 8 -->
 
                         <p data-i18n="hilsen.takker"></p>
@@ -63,9 +63,9 @@
                         <sub data-i18n="hilsen.trond"></sub>
 
                     </div>
-                    <div class="logo-container">
-                        <div class="logo"> </div>
-                    </div>
+                </div>
+                 <div class="logo-container">
+                    <div class="logo"> </div>
                 </div>
             </div>
             <div class="arrow-container bounce animated">
@@ -94,8 +94,8 @@
                     <p data-i18n="vers1.6"></p>
                 </div>
             </div>
-            <div id="snowBackground" data-50p="opacity:1;" data-140p="opacity:0.4;">
-                <canvas id="snowWindow"></canvas>
+            <div class="snowBackground" data-50p="opacity:1;" data-140p="opacity:0;">
+                <canvas class="snowWindow"></canvas>
             </div>
             <div id="lykt-container" data-0="color[swing]:rgb(0,0,0);" data-250p="color:rgb(255,255,0);">
                 <div id="lykt">
@@ -115,7 +115,9 @@
 
                 <p data-i18n="refreng.5"></p>
             </div>
-
+             <div class="snowBackground" data-100p="opacity:0;" data-450p="opacity:1;">
+                <canvas class="snowWindow"></canvas>
+            </div>
             <div id="lykt-opplyst-container" data-100p="opacity: 0;" data-450p="opacity: 1;">
                 <div id="lykt-opplyst">
                 </div>
