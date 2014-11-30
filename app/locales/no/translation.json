@@ -7,7 +7,8 @@
         "photoLabel": "Fotografi",
         "designerLabel":"Design Illustrasjoner",
         "developersLabel": "Utvikling",
-        "christmasGreetings" : "Vi ønsker dere en gledelig jul og et godt nyttår!"
+        "christmasGreetings1" : "Vi ønsker dere en gledelig jul ",
+        "christmasGreetings2":" og et godt nyttår!"
     },"sang" : {
         "refreng" : {
             "1":"Ja, vi tenner våre lykter når det mørkner",

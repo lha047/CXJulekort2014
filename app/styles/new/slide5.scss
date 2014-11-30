@@ -1,4 +1,8 @@
-
+small {
+    text-align: center;
+    color: #F5F5F5; 
+    font-family: 'DINPro';
+}
 
 #ut1 {
 }
@@ -50,12 +54,7 @@ $julebildeUrl: '../../../images/julebilde.jpg';
     left: 0;
     z-index: 1;
 }
-.bold {
-    font-family: 'DINProBold';
-}
-.normal {
-    font-family: 'DINPro';   
-}
+
 .credit {
     margin: 1em;
 }
@@ -65,16 +64,27 @@ $julebildeUrl: '../../../images/julebilde.jpg';
     text-align: center;
 }
 .infoTextboxCenter {
+    padding-left: 10%;
+    padding-right: 10%;
     top: 50%;
-    left: 50%;
-    margin-right: -50%;
+    left: 50%;    
     transform: translate(-50%, -50%);
 }
 #christmasGreetings{
- text-align: center;
-   font-family: Selfie;   
+    text-align: center;
+    font-family: Selfie;   
      color: #F5F5F5;
 
 } 
+.centerHeaderText {
+    text-align: center;
+}
 
-
+.bold {
+    background-color: blue;
+    font-family: 'DINProBold';
+}
+.normal {
+    background-color: red;
+    font-family: 'DINPro';   
+}
