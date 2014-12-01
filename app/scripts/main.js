@@ -200,19 +200,20 @@ window.onload = function(){
 	// }
 	// getCustomerNameFromUrl();
 
-   function getReceipientFromUrl() {
-        var l = location ? location : (window.location ? window.location : document.location);
-        var receipient = l.hash ? l.hash.substr(1):(l.search?l.search.substr(1):'');
-        return decodeURIComponent(receipient);
-    }
 
-    this.setReceipient = function (receipient) {
-    	var to = document.getElementById("to");
-	    // to.innerText = to.textContent = dom.to_en.innerText = dom.to_en.textContent = receipient || getReceipientFromUrl() || (this.lang=='no'?'Deg':'You');
-	    to.innerText = to.textContent = receipient || getReceipientFromUrl() || (this.lang=='no'?'Deg':'You');
-    }
-
-	this.setReceipient();
+//   function getReceipientFromUrl() {
+//        var l = location ? location : (window.location ? window.location : document.location);
+//        var receipient = l.hash ? l.hash.substr(1):(l.search?l.search.substr(1):'');
+//        return decodeURIComponent(receipient);
+//    }
+//
+//    function setReceipient(receipient) {
+//    	var to = document.getElementById('to');
+//	    // to.innerText = to.textContent = dom.to_en.innerText = dom.to_en.textContent = receipient || getReceipientFromUrl() || (this.lang=='no'?'Deg':'You');
+//	    to.innerText = to.textContent = receipient || getReceipientFromUrl() || (this.lang=='no'?'Deg':'You');
+//    }
+//
+//	setReceipient();
 
     function generateSnow(backgroundId, canvasId) {
         var canvas = document.getElementById(canvasId);
