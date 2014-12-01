@@ -2,6 +2,7 @@
 
 function togglePlayPause() {
 	 // Grab a handle to the audio
+
 	var audio = document.getElementById('audio');
     var playpause = document.getElementById('playpause');
     if (audio.paused || audio.ended) {
@@ -13,6 +14,10 @@ function togglePlayPause() {
     	playpause.className = 'volume';
         audio.pause();
     }
+}
+
+function stopScrolling() {
+     skrollr.get().stopAnimateTo(); 
 }
 
 /*function detectIE() {
@@ -34,6 +39,7 @@ function togglePlayPause() {
     // other browser
     return false;
 }*/
+
 
 (function(window, skrollr){
 
@@ -65,8 +71,11 @@ var s = skrollr.init({
     		this.setScrollTop(0, true);
     	}
     },
-    smoothScrolling: true
+    smoothScrolling: true,
+    mobileDeceleration:1
     });
+
+
 
 function setLanguage(lang) {
 
@@ -192,6 +201,7 @@ window.onload = function(){
 
             skrollr.get().refresh();
 
+
         }
         resize();
         $(window).resize(function () {
@@ -305,9 +315,21 @@ window.onload = function(){
         setInterval(draw, 50);
     }
         generateSnow('snowBackground1', 'snowWindow1');
-        generateSnow('snowBackground2', 'snowWindow2');
+        generateSnow('snowBackground2', 'snowWindow2');  
+
     };
+
+    function autoplay() {
+        if(s.getScrollTop() === 0 ) {
+
+            s.animateTo(5900, { duration: 40000}, {interruptible: true}); 
+        }
+    }
+    s.animateTo(s.getMaxScrollTop(), { duration: 400});
+    setTimeout(autoplay, 4000);
+
 }(window, skrollr));
+
 
 
 i18n.init({ detectLngQS: 'lang', lng:'no' }, function(t) {
