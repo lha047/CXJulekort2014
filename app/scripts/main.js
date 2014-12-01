@@ -45,12 +45,18 @@ var s = skrollr.init({
     		return s;
     	},
     	y : function(p){
-            var c = Math.sin(2*p);
-            console.log('cos: ' + c);
-            var minste = 0;
-            if(minste < p) {
-            	minste = p;
+
+            var stopSin = 0.70;
+            var c;
+            if(stopSin <= p) {
+                c = 1;
+               // c= 0.99;
+                console.log('cos****: ' + c);
+            } else {
+                c = Math.sin(2*p);
+
             }
+            console.log('cos: ' + c);
     		return c;
     	}
     },
@@ -162,7 +168,7 @@ window.onload = function(){
             akeBilde.css({width: slide4Width/25});
             akeBilde.attr('data-'+ akeStartScroll +'p', 'left[x]:'+akeStartLeft+'%;top[y]:'+akeStartTop+'%');
             akeBilde.attr('data-'+ akeSluttScroll +'p', 'left[x]:'+akeSluttLeft+'%;top[y]:'+ akeSluttTop+'%');
-            akeBilde.attr('data-'+ (akeSluttScroll +50) +'p', 'left[x]:'+(akeSluttLeft+5)+'%;top[y]:'+ (akeSluttTop)+'%');
+            // akeBilde.attr('data-'+ (akeSluttScroll +50) +'p', 'left[x]:'+(akeSluttLeft+5)+'%;top[y]:'+ (akeSluttTop)+'%');
 
            	console.log("log left: "+akeBilde.css("left"));
 
@@ -201,19 +207,19 @@ window.onload = function(){
 	// getCustomerNameFromUrl();
 
 
-//   function getReceipientFromUrl() {
-//        var l = location ? location : (window.location ? window.location : document.location);
-//        var receipient = l.hash ? l.hash.substr(1):(l.search?l.search.substr(1):'');
-//        return decodeURIComponent(receipient);
-//    }
-//
-//    function setReceipient(receipient) {
-//    	var to = document.getElementById('to');
-//	    // to.innerText = to.textContent = dom.to_en.innerText = dom.to_en.textContent = receipient || getReceipientFromUrl() || (this.lang=='no'?'Deg':'You');
-//	    to.innerText = to.textContent = receipient || getReceipientFromUrl() || (this.lang=='no'?'Deg':'You');
-//    }
-//
-//	setReceipient();
+   function getReceipientFromUrl() {
+        var l = location ? location : (window.location ? window.location : document.location);
+        var receipient = l.hash ? l.hash.substr(1):(l.search?l.search.substr(1):'');
+        return decodeURIComponent(receipient);
+    }
+
+   function setReceipient(receipient) {
+   	var to = document.getElementById('to');
+	    // to.innerText = to.textContent = dom.to_en.innerText = dom.to_en.textContent = receipient || getReceipientFromUrl() || (this.lang=='no'?'Deg':'You');
+	    to.innerText = to.textContent = receipient || getReceipientFromUrl();
+   }
+
+	setReceipient();
 
     function generateSnow(backgroundId, canvasId) {
         var canvas = document.getElementById(canvasId);
@@ -225,7 +231,7 @@ window.onload = function(){
         canvas.width = width;
         canvas.height = height;
 
-        var maxPixels = 7;
+        var maxPixels = 5;
         var particles = [];
         for(var i = 0 ; i < maxPixels; i++)
         // particles.forEach(function()
@@ -233,7 +239,7 @@ window.onload = function(){
             particles.push({
                 x: Math.random()*width,
                 y: Math.random()*height,
-                r: Math.random()*4+1,
+                r: Math.random()*3,
                 d: Math.random()*maxPixels
             });
         }
@@ -296,7 +302,7 @@ window.onload = function(){
         }
     
         //animation loop
-        setInterval(draw, 33);
+        setInterval(draw, 50);
     }
         generateSnow('snowBackground1', 'snowWindow1');
         generateSnow('snowBackground2', 'snowWindow2');
