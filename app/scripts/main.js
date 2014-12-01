@@ -47,6 +47,10 @@ var s = skrollr.init({
     	y : function(p){
             var c = Math.sin(2*p);
             console.log('cos: ' + c);
+            var minste = 0;
+            if(minste < p) {
+            	minste = p;
+            }
     		return c;
     	}
     },
@@ -157,7 +161,11 @@ window.onload = function(){
             }
             akeBilde.css({width: slide4Width/25});
             akeBilde.attr('data-'+ akeStartScroll +'p', 'left[x]:'+akeStartLeft+'%;top[y]:'+akeStartTop+'%');
-            akeBilde.attr('data-'+ akeSluttScroll +'p', 'left[x]:'+akeSluttLeft+'%;top[y]:'+ (akeSluttTop)+'%');
+            akeBilde.attr('data-'+ akeSluttScroll +'p', 'left[x]:'+akeSluttLeft+'%;top[y]:'+ akeSluttTop+'%');
+            akeBilde.attr('data-'+ (akeSluttScroll +50) +'p', 'left[x]:'+(akeSluttLeft+5)+'%;top[y]:'+ (akeSluttTop)+'%');
+
+           	console.log("log left: "+akeBilde.css("left"));
+
             /*vers2*/
             vers2.attr('data-'+ vers2StartScroll +'p', 'margin-left:'+vers2StartLeft+'%;top:'+vers2StartTop+'%;visibility:visible;');
 //			vers2.attr('data-'+ vers2SluttScroll +'p', 'margin-lef:'+vers2SluttLeft+'%;top:'+vers2SluttTop+'%;visibility:hidden;');
@@ -186,11 +194,25 @@ window.onload = function(){
         });
 
 
-	function getCustomerNameFromUrl() {
-		var customer = window.location.pathName;
-		console.log("customer: " + customer);
-	}
-	getCustomerNameFromUrl();
+	// function getCustomerNameFromUrl() {
+	// 	var customer = window.location.pathName;
+	// 	console.log("customer: " + customer);
+	// }
+	// getCustomerNameFromUrl();
+
+   function getReceipientFromUrl() {
+        var l = location ? location : (window.location ? window.location : document.location);
+        var receipient = l.hash ? l.hash.substr(1):(l.search?l.search.substr(1):'');
+        return decodeURIComponent(receipient);
+    }
+
+    this.setReceipient = function (receipient) {
+    	var to = document.getElementById("to");
+	    // to.innerText = to.textContent = dom.to_en.innerText = dom.to_en.textContent = receipient || getReceipientFromUrl() || (this.lang=='no'?'Deg':'You');
+	    to.innerText = to.textContent = receipient || getReceipientFromUrl() || (this.lang=='no'?'Deg':'You');
+    }
+
+	this.setReceipient();
 
     function generateSnow(backgroundId, canvasId) {
         var canvas = document.getElementById(canvasId);
