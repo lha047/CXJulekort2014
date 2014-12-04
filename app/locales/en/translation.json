@@ -7,7 +7,8 @@
         "photoLabel": "Photo",
         "designerLabel": "Design & Illustration",
         "developersLabel": "Developers",
-        "christmasGreetings" : "We wish you a merry christmas and a happy new year!"
+        "christmasGreetings1" : "We wish you a merry christmas",
+        "christmasGreetings2":"and a happy new year!"
     },
     "sang" : {
         "refreng" : {
