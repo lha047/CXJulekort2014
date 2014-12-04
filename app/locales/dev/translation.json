@@ -1,12 +1,58 @@
 {
     "test" : {
         "tast": "norsk",
-        "textLabel": "Tekst",
-        "translatorLabel": "Oversettelse",
+        "textLabel": "Tekst & Melodi",
         "musicLabel":"Musikk",
         "photoLabel": "Fotografi",
-        "designerLabel":"Design Illustrasjoner",
+        "designerLabel":"Design & Illustrasjon",
         "developersLabel": "Utvikling",
-        "christmasGreetings" : "Vi ønsker dere en gledelig jul og et godt nyttår!"
+        "christmasGreetings1" : "Vi ønsker dere en gledelig jul",
+        "christmasGreetings2":"og et godt nyttår!"
+    },"sang" : {
+    "refreng" : {
+        "1":"Ja, vi tenner våre lykter når det mørkner",
+        "2":"og når alle lyder pakkes inn i vatt",
+        "3":"Ja, vi tenner våre lykter når det mørkner",
+        "4":"kanskje lyser de til kvelden si'r god natt.",
+        "5":"kanskje lyser de til kvelden si'r god natt."
+    },
+    "vers1" : {
+        "1":"Sneen dalte lett og fin,",
+        "2":"og strøk blidt mot ruten min",
+        "3":"i morgens da jeg drømte på min pute.",
+        "4":"Vi tok skjerf og votter på,",
+        "5":"hastet veldig med å gå,",
+        "6":"snart var det tusen barnespor her ute!"
+    },
+    "vers2" : {
+        "1":"Først så trakk vi kjelken opp,",
+        "2":"på en diger bakketopp,",
+        "3":"så suste vi avsted langt ut på jordet!",
+        "4":"Også bar det opp igjen",
+        "5":"snart var vi på topp igjen",
+        "6":"så lo vi mens vi akte små og store."
+    },
+    "vers3" : {
+        "1":"Vi har bygget oss et slott,",
+        "2":"som vi syns ble stort og flott,",
+        "3":"med prinser og en sne-dronning så vakker.",
+        "4":"vinterdagen tar farvel",
+        "5":"vi må hjem nå er det kveld,",
+        "6":"vi ser på himmelen at det lir og lakker!"
     }
+}, "hilsen" : {
+    "takker" : "Computas ønsker å takke for et spennende og fremgangsrikt år i 2014, og ser frem til fortsatt samarbeide i 2015. "
+    ,"donasjon":" Tradisjonen tro har vi valgt å støtte en god sak med en donasjon, denne gang til aksjonen NerdAid 3 og Røde Kors til arbeidet på Filippinene etter tyfonens herjinger."
+    ,"trond":"Hilsen Trond Eilertsen "
+}, "navn" : {
+    "bjorn" : "Bjørn Rønning",
+    "marit" : "",
+    "aksel":"Aksel Qviller",
+    "ailin":"Ailin Helgestad",
+    "lene":"Lene Nævdal",
+    "lisa":"Lisa Halvorsen",
+    "olga":"Olga Voronkova",
+    "nicho":"Nicholas Paulik"
+
+}
 }
