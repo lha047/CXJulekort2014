@@ -1,16 +1,40 @@
 #akeBilde {
-//    width: 7.5%;
-//    height: auto;
-  position: absolute;
-  z-index: -1;
-  // background-color: red;
+    //    width: 7.5%;
+    //    height: auto;
+    position: absolute;
+    z-index: -1;
+    // background-color: red;
+}
+
+#fadeOut {
+    width: 100vw;
+    height: 100vw;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#slide4verscontainer
+{
+    height: 100%;
+    width: 100%;
+}
+
+#slide4 .vers {
+    position: absolute;
 }
 
 
-#fadeOut{
-  width: 100vw;
-  height: 100vw;
-  position: absolute;
-  top: 0;
-  right: 0;
+#vers2 {
+    left: 2%;
 }
+
+#refreng2 {
+    left: 40%;
+
+}
+
+#vers3 {
+    left: 68%;
+}
+
