@@ -29,6 +29,23 @@
          url('../../fonts/DinPro/dinpro-italic-webfont.ttf') format('truetype');
 }
 
+header {
+  display:block;
+  font-family: Selfie;
+  color: #F5F5F5;
+}
+header h1 {
+  @media (max-width: 350px) {
+    font-size: 2em;
+  }
+  @media (max-width: 600px) and (min-width: 350px) {
+    font-size: 3em;
+  }
+  font-size: 4em;
+  font-weight: 300;
+}
+
+
 .Selfie { 
     font-family: Selfie;
     font-weight: normal;
@@ -37,6 +54,12 @@
 
 p {
     font-family: 'DINPro';
+  @media (max-width: 350px) {
+    font-size: 0.8em;
+  }
+  @media (max-width: 600px) and (min-width: 350px) {
+    font-size: 1em;
+  }
     font-size: 1.2em;
     line-height: 1.4em;
 }
@@ -132,4 +155,7 @@ span.line {
     background-color: rgba(7, 70, 109, 0.6);
     padding: 3em;
     z-index: 16;
+}
+.box {
+  padding: 5%;
 }

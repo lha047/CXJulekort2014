@@ -223,7 +223,8 @@ window.onload = function(){
 
    function setReceipient(receipient) {
     var lang = i18n.lng();
-   	$('.to').text(receipient || getReceipientFromUrl() ||(lang=='no'?'Deg':'You'));
+       console.log("lang " + lang);
+   	$('.to').text(receipient || getReceipientFromUrl() ||(lang==='no'?'Deg':'You'));
 
    }
 

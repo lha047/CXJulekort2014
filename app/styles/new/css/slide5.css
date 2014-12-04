@@ -18,6 +18,8 @@ small {
 #slide5-content {
   width: 100%;
   height: 100%;
+  position: relative;
+  /* IE9-fix */
   background: url('../../../images/julebilde-blurry.png') no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -38,7 +40,10 @@ small {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 1; }
+  z-index: -1; }
+
+#intro-content-container {
+  z-index: 2; }
 
 .credit {
   margin: 1em; }
