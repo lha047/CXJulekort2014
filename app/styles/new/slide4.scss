@@ -1,9 +1,9 @@
 #akeBilde {
-//    width: 7.5%;
-//    height: auto;
-  position: absolute;
-  z-index: -1;
-  // background-color: red;
+    //    width: 7.5%;
+    //    height: auto;
+    position: absolute;
+    z-index: -1;
+    // background-color: red;
 }
 
 // #vers2 {
@@ -16,14 +16,34 @@
 //   margin-right: 30%;
 // }
 
-#refreng3 {
+#fadeOut {
+    width: 100vw;
+    height: 100vw;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#slide4verscontainer
+{
+    height: 100%;
+    width: 100%;
+}
+
+#slide4 .vers {
+    position: absolute;
+}
+
+#vers2 {
+    left: 2%;
+}
+
+#refreng2 {
+    left: 40%;
 
 }
 
-#fadeOut{
-  width: 100vw;
-  height: 100vw;
-  position: absolute;
-  top: 0;
-  right: 0;
+#vers3 {
+    left: 68%;
 }
+
