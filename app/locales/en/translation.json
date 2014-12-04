@@ -7,7 +7,8 @@
         "photoLabel": "Photo",
         "designerLabel": "Design & Illustration",
         "developersLabel": "Developers",
-        "christmasGreetings" : "We wish you a merry christmas and a happy new year!"
+        "christmasGreetings1" : "We wish you a merry christmas",
+        "christmasGreetings2":"and a happy new year!"
     },
     "sang" : {
         "refreng" : {
@@ -40,10 +41,20 @@
             "5":"We must go home, evening is here,",
             "6":"the darkening sky tells us so."
         }
-    },
-    "hilsen" : {
-        "takker" : "Computas ønsker å takke for et spennende og fremgangsrikt år i 2014, og ser frem til fortsatt samarbeide i 2015. "
-        ,"donasjon":" Tradisjonen tro har vi valgt å støtte en god sak med en donasjon, denne gang til aksjonen NerdAid 3 og Røde Kors til arbeidet på Filippinene etter tyfonens herjinger."
+    }, 
+    "hilsen" : { 
+        "takker" : "***** English Text ***** Computas ønsker å takke for et spennende og fremgangsrikt år i 2014, og ser frem til fortsatt samarbeide i 2015. "
+        ,"donasjon":" Tradisjonen tro har vi valgt å støtte en god sak med en donasjon, denne gang til aksjonen NerdAid 3 og Røde Kors til arbeidet på Filipinene etter tyfonens herjinger."
         ,"trond":"Hilsen Trond Eilertsen "
-    }
+    }, "navn" : {
+    "bjorn" : "Bjørn Rønning",
+    "marit" : "Marit Grundstad",
+    "aksel":"Aksel Qviller",
+    "ailin":"Ailin Helgestad",
+    "lene":"Lene Nævdal",
+    "lisa":"Lisa Halvorsen",
+    "olga":"Olga Voronkova",
+    "nicho":"Nicholas Paulik"
+
+}
 }

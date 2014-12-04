@@ -2,7 +2,6 @@
     "test" : {
         "tast": "norsk",
         "textLabel": "Tekst & Melodi",
-        "translatorLabel": "Oversettelse",
         "musicLabel":"Musikk",
         "photoLabel": "Fotografi",
         "designerLabel":"Design & Illustrasjon",
@@ -45,5 +44,15 @@
         "takker" : "Computas ønsker å takke for et spennende og fremgangsrikt år i 2014, og ser frem til fortsatt samarbeide i 2015. "
         ,"donasjon":" Tradisjonen tro har vi valgt å støtte en god sak med en donasjon, denne gang til aksjonen NerdAid 3 og Røde Kors til arbeidet på Filippinene etter tyfonens herjinger."
         ,"trond":"Hilsen Trond Eilertsen "
+    }, "navn" : {
+        "bjorn" : "Bjørn Rønning",
+        "marit" : "",
+        "aksel":"Aksel Qviller",
+        "ailin":"Ailin Helgestad",
+        "lene":"Lene Nævdal",
+        "lisa":"Lisa Halvorsen",
+        "olga":"Olga Voronkova",
+        "nicho":"Nicholas Paulik"
+
     }
 }
