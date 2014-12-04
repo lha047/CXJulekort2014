@@ -9,7 +9,8 @@ header h1 {
 
 sub {
   font-family: 'DINProItalic';
-  color: #F5F5F5; }
+  color: #F5F5F5;
+  font-size: 0.8em; }
 
 .logo-container {
   position: absolute;
@@ -40,7 +41,7 @@ sub {
   position: absolute; }
 
 .intro-textbox {
-  padding-left: 15%;
+  padding-left: 20%;
   padding-right: 10%;
   max-width: 50em;
   position: absolute; }
