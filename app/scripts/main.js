@@ -47,7 +47,7 @@ var s = skrollr.init({
     easing: {
     	x : function(p) {
             var s = p;
-            console.log('sin: ' + s);
+//            console.log('sin: ' + s);
     		return s;
     	},
     	y : function(p){
@@ -57,12 +57,12 @@ var s = skrollr.init({
             if(stopSin <= p) {
                 c = 1;
                // c= 0.99;
-                console.log('cos****: ' + c);
+//                console.log('cos****: ' + c);
             } else {
                 c = Math.sin(2*p);
 
             }
-            console.log('cos: ' + c);
+//            console.log('cos: ' + c);
     		return c;
     	}
     },
@@ -77,9 +77,6 @@ var s = skrollr.init({
 
 
 
-function setLanguage(lang) {
-
-}
 
 window.onload = function(){
         function resize() {
@@ -209,27 +206,45 @@ window.onload = function(){
             resize();
         });
 
-
-	// function getCustomerNameFromUrl() {
-	// 	var customer = window.location.pathName;
-	// 	console.log("customer: " + customer);
-	// }
-	// getCustomerNameFromUrl();
-
-
    function getReceipientFromUrl() {
         var l = location ? location : (window.location ? window.location : document.location);
-        var receipient = l.hash ? l.hash.substr(1):(l.search?l.search.substr(1):'');
-        return decodeURIComponent(receipient);
+
+        var query = l.hash ? l.hash.substr(1):(l.search?l.search.substr(1):'');
+
+       var indexLng = query.indexOf('=');
+
+       if(indexLng !== -1) {
+           var receipient = query.substring((indexLng + 4));
+           return decodeURIComponent(receipient);
+       } else {
+           return decodeURIComponent(query);
+       }
     }
 
    function setReceipient(receipient) {
-   	var to = document.getElementById('to');
-	    // to.innerText = to.textContent = dom.to_en.innerText = dom.to_en.textContent = receipient || getReceipientFromUrl() || (this.lang=='no'?'Deg':'You');
-	    to.innerText = to.textContent = receipient || getReceipientFromUrl();
+    var lang = i18n.lng();
+   	$('.to').text(receipient || getReceipientFromUrl() ||(lang=='no'?'Deg':'You'));
+
    }
 
 	setReceipient();
+
+    function setLanguage() {
+        var l = location ? location : (window.location ? window.location : document.location);
+        var query = l.hash ? l.hash.substr(1):(l.search?l.search.substr(1):'');
+        //hvis det er language på
+        var indexLng = query.indexOf('=');
+        var lng = query.substring((indexLng + 1), (indexLng + 3));
+
+        if(indexLng !== -1) {
+            i18n.setLng(lng, function(t) {});
+
+        } else {
+            i18n.setLng('no', function(t) {});
+        }
+
+    }
+    setLanguage();
 
     function generateSnow(backgroundId, canvasId) {
         var canvas = document.getElementById(canvasId);
@@ -332,15 +347,7 @@ window.onload = function(){
 
 
 
-i18n.init({ detectLngQS: 'lang', lng:'no' }, function(t) {
+i18n.init({ detectLngQS: 'lang', useCookie : false }, function(t) {
     $(".slide").i18n();
-    var currentLang = navigator.language;    
-    console.log('currentLang: ' + currentLang);
-    // i18n.setLng('no', function(t) {});
-  //   if(currentLang === 'nb-no' || currentLang === 'nb-no') {
-		// i18n.setLng('no', function(t) {});	    	
-  //   } else if(currentLang === 'en-US' || currentLang === 'en-UK') {
-  //   	i18n.setLng('en', function(t) {});
-  //   } 
-    console.log('Satt språk: ' + i18n.lng());
+
 });
