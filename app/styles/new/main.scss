@@ -1,25 +1,32 @@
 @font-face{
     font-family:'DINPro';
     src: url('../../fonts/DinPro/DINPro.otf') format('opentype'),
-             url('../../fonts/DinPro/dinpro-webfont.eot?iefix') format('eot'),
-             url('../../fonts/DinPro/dinpro-webfont.woff') format('woff'),
-             url('../../fonts/DinPro/dinpro-webfont.ttf') format('truetype');
+         url('../../fonts/DinPro/dinpro-webfont.eot?iefix') format('eot'),
+         url('../../fonts/DinPro/dinpro-webfont.woff') format('woff'),
+         url('../../fonts/DinPro/dinpro-webfont.ttf') format('truetype');
+}
+@font-face{
+    font-family:'DINProMedium';
+    src: url('../../fonts/DinPro/DINPro-Medium.otf') format('opentype'),
+         url('../../fonts/DinPro/DINPro-Medium.eot') format('eot'),
+         url('../../fonts/DinPro/DINPro-Medium.woff') format('woff'),
+         url('../../fonts/DinPro/DINPro-Medium.ttf') format('truetype');
 }
 
 @font-face{
     font-family:'DINProBold';
     src: url('../../fonts/DinPro/DINPro-Bold.otf') format('opentype'),
-             url('../../fonts/DinPro/dinpro-bold-webfont.eot?iefix') format('eot'),
-             url('../../fonts/DinPro/dinpro-bold-webfont.woff') format('woff'),
-             url('../../fonts/DinPro/dinpro-bold-webfont.ttf') format('truetype');
+         url('../../fonts/DinPro/dinpro-bold-webfont.eot?iefix') format('eot'),
+         url('../../fonts/DinPro/dinpro-bold-webfont.woff') format('woff'),
+         url('../../fonts/DinPro/dinpro-bold-webfont.ttf') format('truetype');
 }
 
 @font-face{
     font-family:'DINProItalic';
     src: url('../../fonts/DinPro/DINPro-Italic.otf') format('opentype'),
-             url('../../fonts/DinPro/dinpro-italic-webfont.eot?iefix') format('eot'),
-             url('../../fonts/DinPro/dinpro-italic-webfont.woff') format('woff'),
-             url('../../fonts/DinPro/dinpro-italic-webfont.ttf') format('truetype');
+         url('../../fonts/DinPro/dinpro-italic-webfont.eot?iefix') format('eot'),
+         url('../../fonts/DinPro/dinpro-italic-webfont.woff') format('woff'),
+         url('../../fonts/DinPro/dinpro-italic-webfont.ttf') format('truetype');
 }
 
 .Selfie { 
@@ -30,6 +37,8 @@
 
 p {
     font-family: 'DINPro';
+    font-size: 1.2em;
+    line-height: 1.4em;
 }
 
 html, body {
@@ -121,7 +130,6 @@ span.line {
     display: inline-block;
     color: #f5f5f5;
     background-color: rgba(7, 70, 109, 0.6);
-    padding: 1.8em;
-    line-height: 1.3em;
+    padding: 3em;
     z-index: 16;
 }
