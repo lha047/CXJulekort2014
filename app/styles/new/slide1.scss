@@ -59,6 +59,25 @@ sub {
     position: absolute;
 }
 
+.scroll-hint-container {
+   position: absolute;
+   right: 0em;
+   bottom: 0em;
+   left: 0em;
+   text-align: center;
+   color: #F5F5F5;
+}
+
+.scroll-hint-container > p {
+   margin: auto;
+}
+
+.scroll-hint-container > hr {
+   margin: auto;
+   width: 20%;
+   color: #07466D;
+}
+
 .intro-textbox {
   padding-left: 20%;
   padding-right: 10%;

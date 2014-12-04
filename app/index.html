@@ -5,6 +5,7 @@
     <title>CXJulekort2014</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
     <!-- inject:css -->
@@ -22,7 +23,8 @@
 </head>
 <body> <!-- scrollbar moved -->
 
-<audio id="audio" loop>
+<audio id="audio" loop preload="auto">
+    <source src="audio/cxlykter.mp3" type="audio/mpeg">
     <source src="audio/cxlykter.mp3" type="audio/mp3">
     <source src="audio/cxlykter.ogg" type="audio/ogg">
     <source src="audio/cxlykter.flac" type="audio/flac">
@@ -35,9 +37,9 @@
                     <i id="playpause" class="volume" onclick="togglePlayPause()"> </i>
                 </div>
 <div class="arrow-container bounce animated" data-0="visibility:visible;" data-700p="visibility:hidden;">
-                <div class="arrow">
-                </div>
-            </div>   
+    <div class="arrow">
+    </div>
+</div>   
 <div id="slides-container">
     <div id="slides"
          data-0p="transform:translate(0%,0%);"
@@ -59,7 +61,6 @@
 
             <div class="intro-content-container">
 
-
                 <div class="intro-textbox-container">      
                     <div class="intro-textbox">              
                         <header>
@@ -68,8 +69,11 @@
                         <p data-i18n="hilsen.takker"></p>
                         <p data-i18n="hilsen.donasjon"></p>
                         <sub data-i18n="hilsen.trond"></sub>
-
                     </div>
+                </div>                
+                <div class="scroll-hint-container">
+                    <hr>
+                    <p>Scroll for å starte</p>
                 </div>
                  <div class="logo-container">
                     <div class="logo"> </div>

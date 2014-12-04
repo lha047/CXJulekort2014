@@ -5,10 +5,25 @@ function togglePlayPause() {
 
 	var audio = document.getElementById('audio');
     var playpause = document.getElementById('playpause');
+
+    document.createElement("audio");
+
+audio.addEventListener("canplaythrough", function() { 
+    audio.play() }
+    )
+
+/*var ss = document.createElement('audio');
+audio.appendChild(ss);
+*/
+
+
+
     if (audio.paused || audio.ended) {
     	playpause.className = 'volume-off';
   /*      var sound = new Audio();
-        sound.play();*/
+  var sound = new Audio("/audio/cxlykter.mp3");
+   sound.play();
+        */
         audio.play();
     } else {
     	playpause.className = 'volume';
@@ -327,7 +342,6 @@ window.onload = function(){
     }
     s.animateTo(s.getMaxScrollTop(), { duration: 400});
     setTimeout(autoplay, 4000);
-
 }(window, skrollr));
 
 
