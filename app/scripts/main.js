@@ -214,8 +214,10 @@ window.onload = function(){
 
    function setReceipient(receipient) {
     var lang = i18n.lng();
-       console.log("lang " + lang);
-   	$('.to').text(receipient || getReceipientFromUrl() ||(lang==='no'?'Deg':'You'));
+
+    var norsk = (lang==='no'||lang==='nb-NO'||lang==='nn-NO'||lang==='nb'||lang==='nn')?true:false;
+
+   	$('.to').text(receipient || getReceipientFromUrl() ||(norsk?'Deg':'You'));
 
    }
 
