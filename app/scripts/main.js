@@ -5,10 +5,25 @@ function togglePlayPause() {
 
 	var audio = document.getElementById('audio');
     var playpause = document.getElementById('playpause');
+
+    document.createElement("audio");
+
+audio.addEventListener("canplaythrough", function() { 
+    audio.play() }
+    )
+
+/*var ss = document.createElement('audio');
+audio.appendChild(ss);
+*/
+
+
+
     if (audio.paused || audio.ended) {
     	playpause.className = 'volume-off';
   /*      var sound = new Audio();
-        sound.play();*/
+  var sound = new Audio("/audio/cxlykter.mp3");
+   sound.play();
+        */
         audio.play();
     } else {
     	playpause.className = 'volume';
@@ -84,6 +99,9 @@ window.onload = function(){
 
             $('#slides').css({width: $('#slide4').height() * 3.55 + 'px'});
             $('#slide4verscontainer').css({width: $('#slide4').height() * 3.55 + 'px'});
+
+            $('p.vers').css({'font-size': ($(window).height() / 50) + 'px', 'padding': ($(window).height() / 400) + 'em'})
+
             var slide4Width = $('#slide4').width();
 
             var vers2 = $('#vers2'),
@@ -336,7 +354,6 @@ window.onload = function(){
     }
     s.animateTo(s.getMaxScrollTop(), { duration: 400});
     setTimeout(autoplay, 4000);
-
 }(window, skrollr));
 
 
