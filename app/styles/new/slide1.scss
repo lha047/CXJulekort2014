@@ -55,17 +55,13 @@ sub {
    bottom: 0em;
    left: 0em;
    text-align: center;
-   color: #F5F5F5;
-}
+   color: #F5F5F5;}
 
-.scroll-hint-container > p {
+.scroll-hint-container p {
    margin: auto;
-}
-
-.scroll-hint-container > hr {
-   margin: auto;
-   width: 20%;
-   color: #07466D;
+   width: 15em;
+   border-top: 1px solid rgba(7, 70, 109, 0.5);
+   font-size: 1em;
 }
 
 .intro-textbox {
@@ -167,7 +163,7 @@ sub {
   left:0; right:0; bottom:0;
   margin:auto;
   position:absolute;  
-  width: 5em;
+  width: 2.5em;
   height: 3em;
   background: url('../../../images/pil.png') no-repeat;
   -webkit-background-size: auto 50%;
