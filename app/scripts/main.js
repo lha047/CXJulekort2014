@@ -353,7 +353,7 @@ window.onload = function(){
         }
     }
     s.animateTo(s.getMaxScrollTop(), { duration: 400});
-    setTimeout(autoplay, 4000);
+    setTimeout(autoplay, 10000);
 }(window, skrollr));
 
 
