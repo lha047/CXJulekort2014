@@ -3,7 +3,7 @@
 function togglePlayPause() {
 	 // Grab a handle to the audio
 
-	var audio = document.getElementById('audio');
+	var audio = document.getElementById('audioelement');
     var playpause = document.getElementById('playpause');
 
     document.createElement("audio");
