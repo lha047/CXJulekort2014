@@ -18,6 +18,9 @@ sub {
   -o-background-size: auto 100%;
   background-size: auto 100%;
   min-height: 2em;
+   @media (max-width: 350px) {
+    height: 2em;
+   }
   height: 3em;
   width: 10em;
 }

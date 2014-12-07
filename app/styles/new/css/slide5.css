@@ -48,6 +48,13 @@ small {
 #intro-content-container {
   z-index: 2; }
 
+.credits {
+  position: relative;
+  white-space: nowrap; }
+  @media (max-width: 350px) {
+    .credits {
+      padding: 0; } }
+
 .credit {
   margin: 1em; }
 
@@ -59,11 +66,12 @@ small {
 .infoTextboxCenter {
   padding-left: 10%;
   padding-right: 10%;
-  top: 50%;
+  top: 40%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%); }
+  transform: translate(-50%, -50%);
+  width: 75%; }
 
 #christmasGreetings {
   text-align: center;

@@ -17,6 +17,9 @@ sub {
   min-height: 2em;
   height: 3em;
   width: 10em; }
+  @media (max-width: 350px) {
+    .logo {
+      height: 2em; } }
 
 .intro-content-container {
   background-color: rgba(7, 70, 109, 0.65);
