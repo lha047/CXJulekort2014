@@ -1,35 +1,37 @@
 'use strict';
 
-function togglePlayPause() {
+//function togglePlayPause() {
 	 // Grab a handle to the audio
 
-	var audio = document.getElementById('audioelement');
-    var playpause = document.getElementById('playpause');
-
-    document.createElement("audio");
-
-audio.addEventListener("canplaythrough", function() { 
-    audio.play() }
-    )
-
-/*var ss = document.createElement('audio');
-audio.appendChild(ss);
-*/
+//	var audio = document.getElementById('audioelement');
+//    var playpause = document.getElementById('playpause');
 
 
-
-    if (audio.paused || audio.ended) {
-    	playpause.className = 'volume-off';
-  /*      var sound = new Audio();
-  var sound = new Audio("/audio/cxlykter.mp3");
-   sound.play();
-        */
-        audio.play();
-    } else {
-    	playpause.className = 'volume';
-        audio.pause();
-    }
-}
+//    document.createElement("audio");
+//
+//    audio.addEventListener("canplaythrough", function() {
+//        audio.play();
+//        }
+//    );
+//
+///*var ss = document.createElement('audio');
+//audio.appendChild(ss);
+//*/
+//
+//
+//
+//    if (audio.paused || audio.ended) {
+//    	playpause.className = 'volume-off';
+//  /*      var sound = new Audio();
+//  var sound = new Audio("/audio/cxlykter.mp3");
+//   sound.play();
+//        */
+//        audio.play();
+//    } else {
+//    	playpause.className = 'volume';
+//        audio.pause();
+//    }
+//}
 
 function stopScrolling() {
      skrollr.get().stopAnimateTo();
@@ -86,7 +88,22 @@ var s = skrollr.init({
     });
 
 
+    var audio = document.getElementById('audioelement');
+    var playpause = document.getElementById('playpause');
 
+    playpause.addEventListener('click', function(){
+        if(audio){
+            if(audio.paused == true) {
+                console.log('Button clicked');
+
+                console.log(audio.play());
+                  $('#audioelement').attr('autoplay');
+
+            } else {
+                audio.pause();
+            }
+        }
+    });
 
 window.onload = function(){
         function resize() {

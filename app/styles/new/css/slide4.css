@@ -18,6 +18,12 @@
 
 #vers2 {
   left: 2%; }
+  @media (max-width: 420px) {
+    #vers2 {
+      left: 0%; } }
+  @media (min-width: 420px) and (max-width: 600px) {
+    #vers2 {
+      left: 1%; } }
 
 #refreng2 {
   left: 40%; }
