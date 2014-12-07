@@ -58,7 +58,6 @@ function stopScrolling() {
 
 (function(window, skrollr){
 
-var inited = false;
 var s = skrollr.init({
     easing: {
     	x : function(p) {
