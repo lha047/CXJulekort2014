@@ -81,11 +81,6 @@ var s = skrollr.init({
     		return c;
     	}
     },
-    render : function(data) {
-    	if(data.curTop === data.maxTop) {
-    		this.setScrollTop(0, true);
-    	}
-    },
     smoothScrolling: true,
     mobileDeceleration:0.7
     });
@@ -351,7 +346,6 @@ window.onload = function(){
             s.animateTo(document.body.offsetHeight, { duration: 80000}, {interruptible: true});
         }
     }
-    s.animateTo(s.getMaxScrollTop(), { duration: 0});
     setTimeout(autoplay, 10000);
 }(window, skrollr));
 
