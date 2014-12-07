@@ -112,7 +112,7 @@ window.onload = function(){
             $('#slides').css({width: $('#slide4').height() * 3.55 + 'px'});
             $('#slide4verscontainer').css({width: $('#slide4').height() * 3.55 + 'px'});
 
-            $('p.vers').css({'font-size': ($(window).height() / 40) + 'px', 'padding': ($(window).height() / 300) + 'em'})
+            $('p.vers').css({'font-size': ($(window).height() / 40) + 'px', 'padding': ($(window).height() / 300) + 'em'});
 
             var slide4Width = $('#slide4').width();
 

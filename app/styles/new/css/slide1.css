@@ -17,7 +17,7 @@ sub {
   min-height: 2em;
   height: 3em;
   width: 10em; }
-  @media (max-width: 350px) {
+  @media (max-width: 450px) {
     .logo {
       height: 2em; } }
 
@@ -27,7 +27,7 @@ sub {
   height: 70%;
   top: 20%;
   position: absolute; }
-  @media (max-width: 350px) {
+  @media (max-width: 450px) {
     .intro-content-container {
       height: 100%;
       top: 0; } }
@@ -69,13 +69,15 @@ position: relative;*/
   height: 2em;
   background-color: #FFFFFF;
   border-radius: 50%;
-  margin-top: 30%;
-  margin-left: 1%;
-  position: fixed;
-  z-index: 99; }
-  @media (max-width: 350px) {
+  margin-top: 25vh;
+  margin-left: 5vw;
+  margin-left: 5vh;
+  z-index: 99;
+  position: fixed; }
+  @media (max-width: 450px) {
     .volume-container {
-      margin-top: 1%; } }
+      margin-top: 2%;
+      margin-left: 2%; } }
 
 .volume-off {
   background: url('../../../images/musikknote-mute.png') no-repeat;
