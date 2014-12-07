@@ -93,8 +93,11 @@ position: relative;*/
     width: 2em;
     height: 2em;
     background-color: #FFFFFF;
-    border-radius: 50%;
-    margin-top: 1%;
+    border-radius: 50%;    
+    margin-top: 30%;
+    @media (max-width: 350px) {
+      margin-top: 1%;
+    }
     margin-left: 1%;
     position: fixed;
     z-index:99;
