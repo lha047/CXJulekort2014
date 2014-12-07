@@ -58,6 +58,7 @@ function stopScrolling() {
 
 (function(window, skrollr){
 
+var inited = false;
 var s = skrollr.init({
     easing: {
     	x : function(p) {
@@ -79,11 +80,6 @@ var s = skrollr.init({
             }
 //            console.log('cos: ' + c);
     		return c;
-    	}
-    },
-    render : function(data) {
-    	if(data.curTop === data.maxTop) {
-    		this.setScrollTop(0, true);
     	}
     },
     smoothScrolling: true,
@@ -351,7 +347,6 @@ window.onload = function(){
             s.animateTo(document.body.offsetHeight, { duration: 80000}, {interruptible: true});
         }
     }
-    s.animateTo(s.getMaxScrollTop(), { duration: 0});
     setTimeout(autoplay, 10000);
 }(window, skrollr));
 
