@@ -280,7 +280,7 @@ window.onload = function(){
         canvas.width = width;
         canvas.height = height;
 
-        var maxPixels = 5;
+	var maxPixels = 7;
         var particles = [];
         for(var i = 0 ; i < maxPixels; i++)
         // particles.forEach(function()
@@ -288,7 +288,7 @@ window.onload = function(){
             particles.push({
                 x: Math.random()*width,
                 y: Math.random()*height,
-                r: Math.random()*3,
+			r: Math.random()*2.5,
                 d: Math.random()*maxPixels
             });
         }
@@ -313,7 +313,7 @@ window.onload = function(){
         function update()
         {
 
-            angle += 0.01;
+            angle += 0.02;
             for(var i = 0; i < maxPixels; i++)
             {
                 var p = particles[i];
@@ -351,7 +351,7 @@ window.onload = function(){
         }
 
         //animation loop
-        setInterval(draw, 50);
+        setInterval(draw, 70);
     }
         generateSnow('snowBackground1', 'snowWindow1');
         generateSnow('snowBackground2', 'snowWindow2');

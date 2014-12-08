@@ -10,9 +10,18 @@
   max-width: 50em; }
 
 #slide3 .snowWindow {
-  width: 100%;
+  width: 30%;
   height: 90%;
   z-index: 10; }
+  @media only screen and (min-width: 320px) {
+    #slide3 .snowWindow {
+      width: 100%; } }
+  @media only screen and (min-width: 480px) {
+    #slide3 .snowWindow {
+      width: 100%; } }
+  @media only screen and (min-width: 768px) {
+    #slide3 .snowWindow {
+      width: 100%; } }
 
 #lykt-opplyst-container {
   z-index: 1;
@@ -38,4 +47,4 @@
       background-position: 100%; } }
   @media only screen and (min-width: 768px) {
     #lykt-opplyst {
-      background-position: 0%; } }
+      background-position: 100%; } }

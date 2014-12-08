@@ -48,17 +48,12 @@ small {
 #intro-content-container {
   z-index: 2; }
 
-<<<<<<< HEAD
 .credits {
   position: relative;
   white-space: nowrap; }
   @media (max-width: 350px) {
     .credits {
       padding: 0; } }
-=======
-.info-text {
-  margin-top: 8%; }
->>>>>>> fixed typo in translation and added merry christmas. Added styling changes.
 
 .credit {
   margin: 1em; }
