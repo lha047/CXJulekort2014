@@ -84,7 +84,6 @@ var s = skrollr.init({
     	}
     },
     smoothScrolling: true,
-    skrollrBody:'skrollr-body',
     mobileDeceleration:0.7
     });
 
