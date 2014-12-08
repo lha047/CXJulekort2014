@@ -88,22 +88,6 @@ var s = skrollr.init({
     });
 
 
-    var audio = document.getElementById('audioelement');
-    var playpause = document.getElementById('playpause');
-
-    playpause.addEventListener('click', function(){
-        if(audio){
-            if(audio.paused == true) {
-                console.log('Button clicked');
-
-                console.log(audio.play());
-                  $('#audioelement').attr('autoplay');
-
-            } else {
-                audio.pause();
-            }
-        }
-    });
 
 window.onload = function(){
         function resize() {
@@ -372,3 +356,63 @@ i18n.init({ detectLngQS: 'lang', useCookie : false }, function(t) {
     $(".slide").i18n();
 
 });
+
+//setup audio behaviour
+(function() {
+    var audio = document.getElementById('audioelement');
+    var playpause = document.getElementById('playpause');
+    var playing = false;
+
+    playpause.addEventListener('click', function(){
+        if(audio){
+            if(audio.paused == true) {
+                console.log('Button clicked');
+
+                console.log(audio.play());
+                $('#audioelement').attr('autoplay');
+                playing = true;
+            } else {
+                playing = false;
+                audio.pause();
+            }
+        }
+    });
+    var hidden = 'hidden';
+
+    // Standards:
+    if (hidden in document){
+        document.addEventListener("visibilitychange", onchange);
+    }
+    else if ((hidden = "mozHidden") in document) {
+        document.addEventListener("mozvisibilitychange", onchange);
+    }
+    else if ((hidden = "webkitHidden") in document){
+        document.addEventListener("webkitvisibilitychange", onchange);
+    }
+    else if ((hidden = "msHidden") in document) {
+        document.addEventListener("msvisibilitychange", onchange);
+    }
+    // IE 9 and lower:
+    else if ("onfocusin" in document){
+        document.onfocusin = document.onfocusout = onchange;
+    }
+    // All others:
+    else {
+        window.onpageshow = window.onpagehide
+            = window.onfocus = window.onblur = onchange;
+    }
+
+    function onchange (evt) {
+        if(this !== undefined) {
+            if(this[hidden]){
+                audio.pause();
+            } else if(playing) {
+                audio.play();
+            }
+        }
+    }
+
+    // set the initial state (but only if browser supports the Page Visibility API)
+    if( document[hidden] !== undefined )
+        onchange({type: document[hidden] ? "blur" : "focus"});
+})();
