@@ -18,7 +18,7 @@ sub {
   -o-background-size: auto 100%;
   background-size: auto 100%;
   min-height: 2em;
-   @media (max-width: 350px) {
+   @media (max-width: 450px) {
     height: 2em;
    }
   height: 3em;
@@ -41,7 +41,7 @@ sub {
 .intro-content-container {
     background-color: rgba(7, 70, 109, 0.65); 
     width: 100%;
-    @media (max-width: 350px) {
+    @media (max-width: 450px) {
       height: 100%;
       top: 0;
     }
@@ -94,14 +94,19 @@ position: relative;*/
     width: 2em;
     height: 2em;
     background-color: #FFFFFF;
-    border-radius: 50%;
-    margin-top: 1%;
-    margin-left: 1%;
-    position: fixed;
+    border-radius: 50%;    
+    margin-top: 25vh;
+    margin-left: 5vw;
+    @media (max-width: 450px) {
+      margin-top: 2%;
+      margin-left: 2%;
+    }
+    margin-left: 5vh;
     z-index:99;
+    position: fixed;
 }
 .volume-off {  
-    background: url('../../../images/musikknote-mute.png') no-repeat;
+    background: url('../../../images/musikknote.png') no-repeat;
     -webkit-background-size: auto 100%;
     -moz-background-size: auto 100%;
     -o-background-size: auto 100%;
@@ -114,7 +119,7 @@ position: relative;*/
     z-index:100;
 }
 .volume {  
-    background: url('../../../images/musikknote.png') no-repeat;
+    background: url('../../../images/musikknote-mute.png') no-repeat;
     -webkit-background-size: auto 100%;
     -moz-background-size: auto 100%;
     -o-background-size: auto 100%;

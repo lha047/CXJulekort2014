@@ -157,6 +157,12 @@ $julebildeBlurry: '../../../images/julebilde-blurry.png';
 }
 span.line {
     display: block;
+    @media (max-width: 420px) {
+      max-width: 260px;
+    }
+  @media (min-width: 420px) and (max-width: 600px) {
+      max-width: 350px;
+  }
 }
 .vers {
     display: inline-block;

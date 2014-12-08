@@ -124,6 +124,12 @@ html, body {
 
 span.line {
   display: block; }
+  @media (max-width: 420px) {
+    span.line {
+      max-width: 260px; } }
+  @media (min-width: 420px) and (max-width: 600px) {
+    span.line {
+      max-width: 350px; } }
 
 .vers {
   display: inline-block;
