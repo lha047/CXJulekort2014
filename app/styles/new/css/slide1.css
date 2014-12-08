@@ -40,16 +40,17 @@ sub {
 .scroll-hint-container {
   position: absolute;
   right: 0em;
-  bottom: 0em;
+  bottom: 0.2em;
   left: 0em;
   text-align: center;
   color: #F5F5F5; }
 
 .scroll-hint-container p {
+  padding: 0.4em;
   margin: auto;
-  width: 15em;
+  width: 16em;
   border-top: 1px solid rgba(7, 70, 109, 0.5);
-  font-size: 1em; }
+  font-size: 0.8em; }
 
 .intro-textbox {
   padding-left: 20%;
@@ -194,13 +195,14 @@ position: relative;*/
   bottom: 0;
   margin: auto;
   position: absolute;
-  width: 2.5em;
+  width: 7em;
   height: 3em;
+  opacity: 0.6;
   background: url('../../../images/pil.png') no-repeat;
-  -webkit-background-size: auto 50%;
-  -moz-background-size: auto 50%;
-  -o-background-size: auto 50%;
-  background-size: auto 50%; }
+  -webkit-background-size: auto 60%;
+  -moz-background-size: auto 60%;
+  -o-background-size: auto 60%;
+  background-size: auto 60%; }
 
 .bounce {
   -webkit-animation: bounce 2s infinite;

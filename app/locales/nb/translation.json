@@ -42,11 +42,12 @@
         "6":"vi ser på himmelen at det lir og lakker!"
     }
 }, "hilsen" : {
+    "godjul": "God Jul",
     "to": "Til",
-    "takker" : "Computas ønsker å takke for et spennende og fremgangsrikt år i 2014, og ser frem til fortsatt samarbeide i 2015. "
-    ,"donasjon":" Tradisjonen tro har vi valgt å støtte en god sak med en donasjon, denne gang til aksjonen NerdAid 3 og Røde Kors til arbeidet på Filippinene etter tyfonens herjinger."
-    ,"merinfo": "EDUGATE legger til rette for at vanskeligstilte og begavede barn skal få den nødvendige oppfølgingen de trenger gjennom skolegangen, som ellers ville være i risikosonen for å ikke integreres i samfunnet. Organisasjonen arbeider for å utarbeide tilpassede programmer i forhold til undervisning og rådgivning, og er også en viktig støttespiller for utarbeidelse av retningslinjer innen det rumenske utdanningssystemet på nasjonalt nivå. "
-    ,"trond":"Hilsen Computas "
+    "takker" : "Computas ønsker å takke for et spennende og fremgangsrikt år i 2014, og ser frem til fortsatt samarbeide i 2015. ",
+    "donasjon":" Tradisjonen tro har vi valgt å støtte en god sak med en donasjon, denne gang til aksjonen NerdAid 3 og Røde Kors til arbeidet på Filippinene etter tyfonens herjinger.",
+    "merinfo": "EDUGATE legger til rette for at vanskeligstilte og begavede barn skal få den nødvendige oppfølgingen de trenger gjennom skolegangen, som ellers ville være i risikosonen for å ikke integreres i samfunnet. Organisasjonen arbeider for å utarbeide tilpassede programmer i forhold til undervisning og rådgivning, og er også en viktig støttespiller for utarbeidelse av retningslinjer innen det rumenske utdanningssystemet på nasjonalt nivå. ",
+    "computas":"Hilsen Computas "
 }, "navn" : {
     "bjorn" : "Bjørn Rønning",
     "marit" : "",
