@@ -342,12 +342,12 @@ window.onload = function(){
 
     };
 
-    /*function autoplay() {
+    function autoplay() {
         if(s.getScrollTop() === 0 ) {
             s.animateTo(document.body.offsetHeight, { duration: 80000}, {interruptible: true});
         }
     }
-    setTimeout(autoplay, 10000);*/
+    setTimeout(autoplay, 1000);
 }(window, skrollr));
 
 

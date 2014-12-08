@@ -81,7 +81,7 @@ position: relative;*/
       margin-left: 2%; } }
 
 .volume-off {
-  background: url('../../../images/musikknote-mute.png') no-repeat;
+  background: url('../../../images/musikknote.png') no-repeat;
   -webkit-background-size: auto 100%;
   -moz-background-size: auto 100%;
   -o-background-size: auto 100%;
@@ -97,7 +97,7 @@ position: relative;*/
   z-index: 100; }
 
 .volume {
-  background: url('../../../images/musikknote.png') no-repeat;
+  background: url('../../../images/musikknote-mute.png') no-repeat;
   -webkit-background-size: auto 100%;
   -moz-background-size: auto 100%;
   -o-background-size: auto 100%;
@@ -195,8 +195,7 @@ position: relative;*/
   z-index: 50; }
 
 .arrow {
-  left: 0;
-  right: 0;
+  right: 1%;
   bottom: 0;
   margin: auto;
   position: absolute;

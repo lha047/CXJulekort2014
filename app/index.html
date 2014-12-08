@@ -22,17 +22,23 @@
     <!-- endinject -->
 
 </head>
-<body> <!-- scrollbar moved -->
+<body> 
 
-<!--audio id="audioelement" loop preload="auto"-->
 <audio id="audioelement" loop preload="auto">
     <source src="audio/cxlykter.mp3" type="audio/mp3">
     <source src="audio/cxlykter.ogg" type="audio/ogg">
     <source src="audio/cxlykter.flac" type="audio/flac">
     Your browser does not support the audio element.
 </audio>
-<div class="arrow-container bounce animated" data-0="visibility:visible;" data-700p="visibility:hidden;">
-<div class="arrow">
+
+<div class="timeline">
+    <div id="dot1-container">
+        <img id="dot1" src="images/timeline-dot.png"/> 
+    </div>
+</div>
+
+<div data-0="visibility:visible; @class:arrow-container bounce animated" data-50p="@class:arrow-container" data-700p="visibility:hidden;">
+    <div class="arrow">
     </div>
 </div>   
 
