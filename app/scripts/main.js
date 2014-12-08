@@ -342,12 +342,12 @@ window.onload = function(){
 
     };
 
-    function autoplay() {
+    /*function autoplay() {
         if(s.getScrollTop() === 0 ) {
             s.animateTo(document.body.offsetHeight, { duration: 80000}, {interruptible: true});
         }
     }
-    setTimeout(autoplay, 10000);
+    setTimeout(autoplay, 10000);*/
 }(window, skrollr));
 
 
@@ -370,9 +370,11 @@ i18n.init({ detectLngQS: 'lang', useCookie : false }, function(t) {
 
                 console.log(audio.play());
                 $('#audioelement').attr('autoplay');
+                playpause.className = 'volume';
                 playing = true;
             } else {
                 playing = false;
+                playpause.className = 'volume-off';
                 audio.pause();
             }
         }
@@ -405,8 +407,10 @@ i18n.init({ detectLngQS: 'lang', useCookie : false }, function(t) {
     function onchange (evt) {
         if(this !== undefined) {
             if(this[hidden]){
+                playpause.className = 'volume-off';
                 audio.pause();
             } else if(playing) {
+                playpause.className = 'volume';
                 audio.play();
             }
         }
