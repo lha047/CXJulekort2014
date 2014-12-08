@@ -54,7 +54,7 @@ h2, h3 {
 }
 
 
-.Selfie { 
+.Selfie {
     font-family: Selfie;
     font-weight: normal;
     font-style: normal;
@@ -100,14 +100,14 @@ html, body {
 }
 #slide1 {
     width: 100vw;
-    background: url('../../../images/julebilde.jpg') no-repeat center center;
+    background: url('../../../images/smaller/julebilde.jpg') no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
 
-$julebildeBlurry: '../../../images/julebilde-blurry.png';
+$julebildeBlurry: '../../../images/smaller/julebilde-blurry.jpg';
 #slide1-blurry {
     width: 100vw;
     background: url($julebildeBlurry) no-repeat center center;
@@ -132,7 +132,7 @@ $julebildeBlurry: '../../../images/julebilde-blurry.png';
 }
 
 #slide4 {
-    background: url('../../../images/vers2-3.png') no-repeat left center;
+    background: url('../../../images/smaller/vers2-3.jpg') no-repeat left center;
     -webkit-background-size: auto 100%;
     -moz-background-size: auto 100%;
     -o-background-size: auto 100%;
