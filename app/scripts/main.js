@@ -37,6 +37,12 @@ function stopScrolling() {
      skrollr.get().stopAnimateTo();
 }
 
+function next() {
+    $('html, body').animate({
+        scrollTop: $("#slide2").offset().top
+    }, 5000);
+}
+
 /*function detectIE() {
     var ua = window.navigator.userAgent;
     var msie = ua.indexOf('MSIE ');
@@ -365,7 +371,7 @@ i18n.init({ detectLngQS: 'lang', useCookie : false }, function(t) {
 
     playpause.addEventListener('click', function(){
         if(audio){
-            if(audio.paused == true) {
+            if(audio.paused === true) {
                 console.log('Button clicked');
 
                 console.log(audio.play());
@@ -400,8 +406,7 @@ i18n.init({ detectLngQS: 'lang', useCookie : false }, function(t) {
     }
     // All others:
     else {
-        window.onpageshow = window.onpagehide
-            = window.onfocus = window.onblur = onchange;
+        window.onpageshow = window.onpagehide = window.onfocus = window.onblur = onchange;
     }
 
     function onchange (evt) {
@@ -417,6 +422,7 @@ i18n.init({ detectLngQS: 'lang', useCookie : false }, function(t) {
     }
 
     // set the initial state (but only if browser supports the Page Visibility API)
-    if( document[hidden] !== undefined )
+    if( document[hidden] !== undefined ) {        
         onchange({type: document[hidden] ? "blur" : "focus"});
+    }
 })();

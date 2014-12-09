@@ -53,6 +53,10 @@ h2, h3 {
   margin: auto;
   position: relative; }
 
+.active {
+  background-image: url('../../../images/timeline-active-dot.png') no-repeat center center;
+  z-index: 100; }
+
 .Selfie {
   font-family: Selfie;
   font-weight: normal;
