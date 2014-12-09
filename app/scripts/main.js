@@ -104,7 +104,7 @@ window.onload = function(){
                 $('#lykt').css({'background-position': 5 + 'em'});
                 $('#lykt-opplyst').css({'background-position': 5 + 'em'});
                 console.log('mindre');
-            } 
+            }
 
             $('#slides').css({width: $('#slide4').height() * 3.55 + 'px'});
             $('#slide4verscontainer').css({width: $('#slide4').height() * 3.55 + 'px'});
@@ -232,7 +232,10 @@ window.onload = function(){
             var transform = 'translate(' + (imageWidth - (imageWidth * (diff/100)) - viewportWidth) + 'px, 200%)';
             $('#slide5').css({'transform': transform, '-moz-transform': transform, '-webkit-transform': transform});
 
-
+            var pp = viewportHeight / 1200;
+            var baseSize = 26;
+            var fontSize = (pp * baseSize) + 'px';
+            $('.intro-textbox').css({'font-size': fontSize});
 
             skrollr.get().refresh();
 
