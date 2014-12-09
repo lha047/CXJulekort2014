@@ -72,7 +72,6 @@ position: relative;*/
   border-radius: 50%;
   margin-top: 25vh;
   margin-left: 5vw;
-  margin-left: 5vh;
   z-index: 99;
   position: fixed; }
   @media (max-width: 450px) {

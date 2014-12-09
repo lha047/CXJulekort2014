@@ -35,6 +35,24 @@ h2, h3 {
 .godjul {
   text-shadow: 1px 4px rgba(255, 255, 255, 0.3); }
 
+.timeline-container {
+  height: 100vh;
+  padding: 3em;
+  margin: auto;
+  z-index: 99;
+  position: fixed;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  text-align: center; }
+
+.timeline {
+  bottom: 0;
+  top: 0;
+  right: 0;
+  margin: auto;
+  position: relative; }
+
 .Selfie {
   font-family: Selfie;
   font-weight: normal;
