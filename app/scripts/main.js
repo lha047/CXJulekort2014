@@ -132,7 +132,7 @@ window.onload = function(){
                 $('#lykt').css({'background-position': 5 + 'em'});
                 $('#lykt-opplyst').css({'background-position': 5 + 'em'});
                 console.log('mindre');
-            } 
+            }
 
             $('#slides').css({width: $('#slide4').height() * 3.55 + 'px'});
             $('#slide4verscontainer').css({width: $('#slide4').height() * 3.55 + 'px'});
@@ -260,7 +260,10 @@ window.onload = function(){
             var transform = 'translate(' + (imageWidth - (imageWidth * (diff/100)) - viewportWidth) + 'px, 200%)';
             $('#slide5').css({'transform': transform, '-moz-transform': transform, '-webkit-transform': transform});
 
-
+            var pp = viewportHeight / 1200;
+            var baseSize = 26;
+            var fontSize = (pp * baseSize) + 'px';
+            $('.intro-textbox').css({'font-size': fontSize});
 
             skrollr.get().refresh();
 
@@ -316,15 +319,15 @@ window.onload = function(){
 
     function generateSnow(backgroundId, canvasId) {
         var canvas = document.getElementById(canvasId);
-        var snowBackground = document.getElementById(backgroundId);
+//        var snowBackground = document.getElementById(backgroundId);
         var ctx = canvas.getContext('2d');
 
-        var width = 510; //window.innerWidth;
-        var height = 550; //window.innerHeight;
+        var width = window.innerWidth;//510; //window.innerWidth;
+        var height = window.innerHeight;//550; //window.innerHeight;
         canvas.width = width;
         canvas.height = height;
 
-	var maxPixels = 7;
+	var maxPixels = 25;
         var particles = [];
         for(var i = 0 ; i < maxPixels; i++)
         // particles.forEach(function()
@@ -332,7 +335,7 @@ window.onload = function(){
             particles.push({
                 x: Math.random()*width,
                 y: Math.random()*height,
-			r: Math.random()*2.5,
+			    r: Math.random()*4+1,
                 d: Math.random()*maxPixels
             });
         }
@@ -346,9 +349,10 @@ window.onload = function(){
                 var p = particles[i];
                 ctx.moveTo(p.x,p.y);
                 ctx.arc(p.x,p.y, p.r, 0, Math.PI*2, true);
+            }
                 ctx.fill();
                 update();
-            }
+
         }
 
         //Function to move the snowflakes
@@ -357,7 +361,7 @@ window.onload = function(){
         function update()
         {
 
-            angle += 0.02;
+            angle += 0.01;
             for(var i = 0; i < maxPixels; i++)
             {
                 var p = particles[i];
@@ -382,12 +386,12 @@ window.onload = function(){
                         if(Math.sin(angle) > 0)
                         {
                             //Enter from the left
-                            particles[i] = {x: -5, y: Math.random()*height, r: p.r, d: p.d};
+                            particles[i] = {x: -2, y: Math.random()*height, r: p.r, d: p.d};
                         }
                         else
                         {
                             //Enter from the right
-                            particles[i] = {x: width+5, y: Math.random()*height, r: p.r, d: p.d};
+                            particles[i] = {x: width+2, y: Math.random()*height, r: p.r, d: p.d};
                         }
                     }
                 }
@@ -395,7 +399,7 @@ window.onload = function(){
         }
 
         //animation loop
-        setInterval(draw, 70);
+        setInterval(draw, 33);
     }
         generateSnow('snowBackground1', 'snowWindow1');
         generateSnow('snowBackground2', 'snowWindow2');
