@@ -138,7 +138,8 @@ window.onload = function(){
 
             if(viewportWidth < 300) {
                 akeStartLeft = 3;
-                akeSluttScroll = 395;
+                akeStartScroll = 450, //xl
+                akeSluttScroll = 500; //l
 
 	            vers2StartScroll = 350;
 				vers2SluttScroll = 380; //390
@@ -154,9 +155,10 @@ window.onload = function(){
 	            vers3SluttScroll = 430;
 	            vers3StartLeft = 20;//53;
 	            vers3SluttLeft = 21;
-            } else if(viewportWidth > 300 && viewportWidth < 500) {
+            } else if(viewportWidth > 300 && viewportWidth < 800) {
                 akeStartLeft = 6; //m
-                akeSluttScroll = 370; //l
+                akeStartScroll = 450, //xl
+                akeSluttScroll = 500; //l
 
                 vers2StartScroll = 350;
                     vers2SluttScroll = 380; //390
@@ -174,6 +176,7 @@ window.onload = function(){
                 vers3SluttLeft = 21;
             } else {
                 akeStartLeft = 10; //xl
+
                 akeSluttScroll = 500; //xl
 
                 vers2StartScroll = 350;
