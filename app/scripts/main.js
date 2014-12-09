@@ -134,8 +134,8 @@ window.onload = function(){
             if(viewportWidth < viewportHeight) {
                 $('#lykt').css({'background-position': 5 + 'em'});
                 $('#lykt-opplyst').css({'background-position': 5 + 'em'});
-                console.log('mindre');
-            } 
+                
+            }
 
             $('#slides').css({width: $('#slide4').height() * 3.55 + 'px'});
             $('#slide4verscontainer').css({width: $('#slide4').height() * 3.55 + 'px'});
@@ -150,23 +150,21 @@ window.onload = function(){
 
             var slide4Width = $('#slide4').width();
 
-            var vers2 = $('#vers2'),
-	            vers2StartScroll = 355,
-	            vers2SluttScroll = 395,
-	            vers2StartLeft = 4,
-	            vers2SluttLeft = 35,
-	            vers2StartTop = 0,
-	            vers2SluttTop = 0;
-	        var refreng2 = $('#refreng2'),
-	        	refreng2StartScroll = 395,
-	            refreng2SluttScroll = 410,
-	            refreng2StartLeft = 35,
-	            refreng2SluttLeft = 55;
-	        var vers3 = $('#vers3'),
-	            vers3StartScroll = 410,
-	            vers3SluttScroll = 420,
-	            vers3StartLeft = 60,
-	            vers3SluttLeft = 70;
+
+            var refreng2 = $('#refreng2'),
+                refreng2StartScroll = 470,
+                refreng2Slutt = 490;
+
+            refreng2.attr('data-'+refreng2StartScroll +'p', 'opacity:0');
+            refreng2.attr('data-'+refreng2Slutt +'p', 'opacity:1' );
+
+
+
+            var vers3 = $('#vers3'),
+	            vers3StartScroll = 530,
+	            vers3SluttScroll = 550;
+            vers3.attr('data-'+vers3StartScroll +'p', 'opacity:0');
+            vers3.attr('data-'+vers3SluttScroll +'p', 'opacity:1');
 
 
             /*Posisjoner akebilde*/
@@ -185,59 +183,15 @@ window.onload = function(){
                 akeStartScroll = 450, //xl
                 akeSluttScroll = 500; //l
 
-	            vers2StartScroll = 350;
-				vers2SluttScroll = 380; //390
-                vers2StartLeft = 1;
-                vers2SluttLeft = 30; //37
-
-                refreng2StartScroll = 380;
-	            refreng2SluttScroll = 410;
-	            refreng2StartLeft = 23;//28;
-	            refreng2SluttLeft = 35;
-
-    	       	vers3StartScroll = 410;
-	            vers3SluttScroll = 430;
-	            vers3StartLeft = 20;//53;
-	            vers3SluttLeft = 21;
             } else if(viewportWidth > 300 && viewportWidth < 800) {
                 akeStartLeft = 6; //m
                 akeStartScroll = 450, //xl
                 akeSluttScroll = 500; //l
 
-                vers2StartScroll = 350;
-                    vers2SluttScroll = 380; //390
-                vers2StartLeft = 1;
-                vers2SluttLeft = 30; //37
-
-                refreng2StartScroll = 380;
-                refreng2SluttScroll = 410;
-                refreng2StartLeft = 23;//28;
-                refreng2SluttLeft = 35;
-
-                vers3StartScroll = 410;
-                vers3SluttScroll = 430;
-                vers3StartLeft = 20;//53;
-                vers3SluttLeft = 21;
             } else {
                 akeStartLeft = 10; //xl
-
                 akeSluttScroll = 500; //xl
 
-                vers2StartScroll = 350;
-                    vers2SluttScroll = 380; //390
-                vers2StartLeft = 1;
-                vers2SluttLeft = 30; //37
-
-                refreng2StartScroll = 380;
-                refreng2SluttScroll = 410;
-                refreng2StartLeft = 23;//28;
-                refreng2SluttLeft = 35;
-
-
-                vers3StartScroll = 410;
-                vers3SluttScroll = 430;
-                vers3StartLeft = 20;//53;
-                vers3SluttLeft = 21;
             }
             akeBilde.css({width: slide4Width/25});
             akeBilde.attr('data-'+ akeStartScroll +'p', 'left[x]:'+akeStartLeft+'%;top[y]:'+akeStartTop+'%');
@@ -263,7 +217,10 @@ window.onload = function(){
             var transform = 'translate(' + (imageWidth - (imageWidth * (diff/100)) - viewportWidth) + 'px, 200%)';
             $('#slide5').css({'transform': transform, '-moz-transform': transform, '-webkit-transform': transform});
 
-
+            var pp = viewportHeight / 1200;
+            var baseSize = 26;
+            var fontSize = (pp * baseSize) + 'px';
+            $('.intro-textbox').css({'font-size': fontSize});
 
             skrollr.get().refresh();
 
@@ -319,15 +276,15 @@ window.onload = function(){
 
     function generateSnow(backgroundId, canvasId) {
         var canvas = document.getElementById(canvasId);
-        var snowBackground = document.getElementById(backgroundId);
+//        var snowBackground = document.getElementById(backgroundId);
         var ctx = canvas.getContext('2d');
 
-        var width = 510; //window.innerWidth;
-        var height = 550; //window.innerHeight;
+        var width = window.innerWidth;//510; //window.innerWidth;
+        var height = window.innerHeight;//550; //window.innerHeight;
         canvas.width = width;
         canvas.height = height;
 
-	var maxPixels = 7;
+	var maxPixels = 25;
         var particles = [];
         for(var i = 0 ; i < maxPixels; i++)
         // particles.forEach(function()
@@ -335,7 +292,7 @@ window.onload = function(){
             particles.push({
                 x: Math.random()*width,
                 y: Math.random()*height,
-			r: Math.random()*2.5,
+			    r: Math.random()*4+1,
                 d: Math.random()*maxPixels
             });
         }
@@ -349,9 +306,10 @@ window.onload = function(){
                 var p = particles[i];
                 ctx.moveTo(p.x,p.y);
                 ctx.arc(p.x,p.y, p.r, 0, Math.PI*2, true);
+            }
                 ctx.fill();
                 update();
-            }
+
         }
 
         //Function to move the snowflakes
@@ -360,7 +318,7 @@ window.onload = function(){
         function update()
         {
 
-            angle += 0.02;
+            angle += 0.01;
             for(var i = 0; i < maxPixels; i++)
             {
                 var p = particles[i];
@@ -385,12 +343,12 @@ window.onload = function(){
                         if(Math.sin(angle) > 0)
                         {
                             //Enter from the left
-                            particles[i] = {x: -5, y: Math.random()*height, r: p.r, d: p.d};
+                            particles[i] = {x: -2, y: Math.random()*height, r: p.r, d: p.d};
                         }
                         else
                         {
                             //Enter from the right
-                            particles[i] = {x: width+5, y: Math.random()*height, r: p.r, d: p.d};
+                            particles[i] = {x: width+2, y: Math.random()*height, r: p.r, d: p.d};
                         }
                     }
                 }
@@ -398,7 +356,7 @@ window.onload = function(){
         }
 
         //animation loop
-        setInterval(draw, 70);
+        setInterval(draw, 33);
     }
         generateSnow('snowBackground1', 'snowWindow1');
         generateSnow('snowBackground2', 'snowWindow2');

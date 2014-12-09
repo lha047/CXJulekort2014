@@ -22,12 +22,6 @@ header h1 {
   font-family: Selfie;
   font-weight: 300;
   font-size: 4em; }
-  @media (max-width: 350px) {
-    header h1 {
-      font-size: 2em; } }
-  @media (max-width: 600px) and (min-width: 350px) {
-    header h1 {
-      font-size: 3em; } }
 
 h2, h3 {
   font-family: 'DINPro'; }
@@ -82,12 +76,6 @@ p {
   font-family: 'DINPro';
   line-height: 1.4em;
   font-size: 1.2em; }
-  @media (max-width: 350px) {
-    p {
-      font-size: 0.8em; } }
-  @media (max-width: 600px) and (min-width: 350px) {
-    p {
-      font-size: 1em; } }
 
 html, body {
   width: 100%;
@@ -175,6 +163,10 @@ span.line {
   background-color: rgba(7, 70, 109, 0.6);
   padding: 3em;
   z-index: 16; }
+  .vers img {
+    width: 10%;
+    float: right;
+    opacity: 0.85; }
 
 .box {
   padding: 5%; }

@@ -37,12 +37,6 @@ header {
 header h1 {
   font-family: Selfie;
   font-weight: 300;
-  @media (max-width: 350px) {
-    font-size: 2em;
-  }
-  @media (max-width: 600px) and (min-width: 350px) {
-    font-size: 3em;
-  }
   font-size: 4em;
 }
 h2, h3 {
@@ -57,7 +51,7 @@ h2, h3 {
   height: 100vh;
   z-index:99;
   position: fixed;
-  bottom: 0; top: 0; right: 0; 
+  bottom: 0; top: 0; right: 0;
   text-align: center;
 }
 /*
@@ -101,13 +95,6 @@ height: 100%;
 p {
     font-family: 'DINPro';
     line-height: 1.4em;
-  @media (max-width: 350px) {
-    font-size: 0.8em;
-  }
-  @media (max-width: 600px) and (min-width: 350px) {
-    font-size: 1em;
-  }
-
     font-size: 1.2em;
 }
 
@@ -209,6 +196,12 @@ span.line {
     background-color: rgba(7, 70, 109, 0.6);
     padding: 3em;
     z-index: 16;
+
+    img {
+      width: 10%;
+      float: right;
+      opacity: 0.85;
+    }
 }
 .box {
   padding: 5%;
