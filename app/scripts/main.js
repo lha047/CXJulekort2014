@@ -39,23 +39,31 @@ function stopScrolling() {
 
 function next() {
     var currentActive = document.getElementsByClassName('active');
-    if(currentActive.id === '#slide1') {
+    var id = currentActive[0].id;
+    
+    document.getElementById(id).className = 'dot';
+
+    if(id === 'dot1') {
         $('html, body').animate({
             scrollTop: $("#slide2").offset().top
-        }, 5000);        
-    } else if(currentActive.id === '#slide2') {
+        }, 5000);   
+        $("#dot2").addClass('active');
+    } else if(id === 'dot2') {
         $('html, body').animate({
             scrollTop: $("#slide3").offset().top
         }, 5000);   
-    } else if(currentActive.id === '#slide3') {
+        $("#dot3").addClass('active');
+    } else if(id === 'dot3') {
         $('html, body').animate({
             scrollTop: $("#slide4").offset().top
         }, 5000);   
-    } else if(currentActive.id === '#slide4') {
+        $("#dot4").addClass('active');
+    } else if(id === 'dot4') {
         $('html, body').animate({
             scrollTop: $("#slide5").offset().top
-        }, 5000);   
-    } else if(currentActive.id === '#slide5') {
+        }, 5000);  
+        $("#dot5").addClass('active'); 
+    } else if(id === 'dot5') {
         $('html, body').animate({
             scrollTop: document.body.offsetHeight
         }, 5000);   
