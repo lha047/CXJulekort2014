@@ -9,17 +9,17 @@
     position: absolute;
     left: 0;
     top: 0;
-    background-position: 0%;
+//    background-position: 0%;
 
     @media (max-width: 420px) {
       background-position: 90%;
     }
-    @media (min-width: 420px) and (max-width: 600px) {
+    @media (max-width: 610px) {
       background-position: 95%;
     }
-    @media (min-width: 600px) {
+//    @media (min-width: 600px) {
       background-position: 100%;
-    }
+//    }
 }
 
 .snowBackground {
