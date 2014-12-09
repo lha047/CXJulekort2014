@@ -68,9 +68,13 @@ h2, h3 {
     position: relative;
 }
 
-.active {
-  background-image: url('../../../images/timeline-active-dot.png') no-repeat center center;
+.dot {
+  content:url('../../../images/timeline-dot.png');
   z-index: 100;
+}
+
+.active {
+  content: url('../../../images/timeline-active-dot.png');
 }
 
 .Selfie {

@@ -134,8 +134,8 @@ window.onload = function(){
 
             /*Posisjoner akebilde*/
             var akeBilde = $('#akeBilde'),
-                akeStartScroll = 300, //xl
-                akeSluttScroll = 320, //l
+                akeStartScroll = 430, //xl
+                akeSluttScroll = 500, //l
                 akeStartLeft = 6, //m
                 akeStartTop = 20,
                 akeSluttLeft = 45,
@@ -145,7 +145,8 @@ window.onload = function(){
 
             if(viewportWidth < 300) {
                 akeStartLeft = 3;
-                akeSluttScroll = 395;
+                akeStartScroll = 450, //xl
+                akeSluttScroll = 500; //l
 
 	            vers2StartScroll = 350;
 				vers2SluttScroll = 380; //390
@@ -161,9 +162,10 @@ window.onload = function(){
 	            vers3SluttScroll = 430;
 	            vers3StartLeft = 20;//53;
 	            vers3SluttLeft = 21;
-            } else if(viewportWidth > 300 && viewportWidth < 500) {
+            } else if(viewportWidth > 300 && viewportWidth < 800) {
                 akeStartLeft = 6; //m
-                akeSluttScroll = 370; //l
+                akeStartScroll = 450, //xl
+                akeSluttScroll = 500; //l
 
                 vers2StartScroll = 350;
                     vers2SluttScroll = 380; //390
@@ -181,7 +183,8 @@ window.onload = function(){
                 vers3SluttLeft = 21;
             } else {
                 akeStartLeft = 10; //xl
-                akeSluttScroll = 400; //xl
+
+                akeSluttScroll = 500; //xl
 
                 vers2StartScroll = 350;
                     vers2SluttScroll = 380; //390
@@ -205,16 +208,27 @@ window.onload = function(){
             // akeBilde.attr('data-'+ (akeSluttScroll +50) +'p', 'left[x]:'+(akeSluttLeft+5)+'%;top[y]:'+ (akeSluttTop)+'%');
 
 
+
+            //Løser at den ikke scroller forbi slottet på små skjermer
             var imageWidth = $('#slides').width();
 
             var percentage = 100 - ((viewportWidth / imageWidth) * 100);
-            $('#slides').attr('data-450p', 'transform:translate(-' + percentage + '%,-66.66%);');
+            var diff = 0;
+            var pmax = 68;
+            if(percentage > pmax)
+            {
+                diff = percentage - pmax;
+                percentage = pmax;
+            }
+            $('#slides').attr('data-550p', 'transform:translate(-' + percentage + '%,-66.66%);');
 
-            var transform = 'translate(' + (imageWidth - viewportWidth) + 'px, 200%)';
+            //Hører til det over, sørger for at siste slide blir posisjonert riktig også.
+            var transform = 'translate(' + (imageWidth - (imageWidth * (diff/100)) - viewportWidth) + 'px, 200%)';
             $('#slide5').css({'transform': transform, '-moz-transform': transform, '-webkit-transform': transform});
 
-            skrollr.get().refresh();
 
+
+            skrollr.get().refresh();
 
         }
         resize();
@@ -428,7 +442,7 @@ i18n.init({ detectLngQS: 'lang', useCookie : false }, function(t) {
     }
 
     // set the initial state (but only if browser supports the Page Visibility API)
-    if( document[hidden] !== undefined ) {        
+    if( document[hidden] !== undefined ) {
         onchange({type: document[hidden] ? "blur" : "focus"});
     }
 })();
