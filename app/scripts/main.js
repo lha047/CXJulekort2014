@@ -131,7 +131,7 @@ window.onload = function(){
             if(viewportWidth < viewportHeight) {
                 $('#lykt').css({'background-position': 5 + 'em'});
                 $('#lykt-opplyst').css({'background-position': 5 + 'em'});
-                console.log('mindre');
+                
             }
 
             $('#slides').css({width: $('#slide4').height() * 3.55 + 'px'});
@@ -147,23 +147,21 @@ window.onload = function(){
 
             var slide4Width = $('#slide4').width();
 
-            var vers2 = $('#vers2'),
-	            vers2StartScroll = 355,
-	            vers2SluttScroll = 395,
-	            vers2StartLeft = 4,
-	            vers2SluttLeft = 35,
-	            vers2StartTop = 0,
-	            vers2SluttTop = 0;
-	        var refreng2 = $('#refreng2'),
-	        	refreng2StartScroll = 395,
-	            refreng2SluttScroll = 410,
-	            refreng2StartLeft = 35,
-	            refreng2SluttLeft = 55;
-	        var vers3 = $('#vers3'),
-	            vers3StartScroll = 410,
-	            vers3SluttScroll = 420,
-	            vers3StartLeft = 60,
-	            vers3SluttLeft = 70;
+
+            var refreng2 = $('#refreng2'),
+                refreng2StartScroll = 470,
+                refreng2Slutt = 490;
+
+            refreng2.attr('data-'+refreng2StartScroll +'p', 'opacity:0');
+            refreng2.attr('data-'+refreng2Slutt +'p', 'opacity:1' );
+
+
+
+            var vers3 = $('#vers3'),
+	            vers3StartScroll = 530,
+	            vers3SluttScroll = 550;
+            vers3.attr('data-'+vers3StartScroll +'p', 'opacity:0');
+            vers3.attr('data-'+vers3SluttScroll +'p', 'opacity:1');
 
 
             /*Posisjoner akebilde*/
@@ -182,59 +180,15 @@ window.onload = function(){
                 akeStartScroll = 450, //xl
                 akeSluttScroll = 500; //l
 
-	            vers2StartScroll = 350;
-				vers2SluttScroll = 380; //390
-                vers2StartLeft = 1;
-                vers2SluttLeft = 30; //37
-
-                refreng2StartScroll = 380;
-	            refreng2SluttScroll = 410;
-	            refreng2StartLeft = 23;//28;
-	            refreng2SluttLeft = 35;
-
-    	       	vers3StartScroll = 410;
-	            vers3SluttScroll = 430;
-	            vers3StartLeft = 20;//53;
-	            vers3SluttLeft = 21;
             } else if(viewportWidth > 300 && viewportWidth < 800) {
                 akeStartLeft = 6; //m
                 akeStartScroll = 450, //xl
                 akeSluttScroll = 500; //l
 
-                vers2StartScroll = 350;
-                    vers2SluttScroll = 380; //390
-                vers2StartLeft = 1;
-                vers2SluttLeft = 30; //37
-
-                refreng2StartScroll = 380;
-                refreng2SluttScroll = 410;
-                refreng2StartLeft = 23;//28;
-                refreng2SluttLeft = 35;
-
-                vers3StartScroll = 410;
-                vers3SluttScroll = 430;
-                vers3StartLeft = 20;//53;
-                vers3SluttLeft = 21;
             } else {
                 akeStartLeft = 10; //xl
-
                 akeSluttScroll = 500; //xl
 
-                vers2StartScroll = 350;
-                    vers2SluttScroll = 380; //390
-                vers2StartLeft = 1;
-                vers2SluttLeft = 30; //37
-
-                refreng2StartScroll = 380;
-                refreng2SluttScroll = 410;
-                refreng2StartLeft = 23;//28;
-                refreng2SluttLeft = 35;
-
-
-                vers3StartScroll = 410;
-                vers3SluttScroll = 430;
-                vers3StartLeft = 20;//53;
-                vers3SluttLeft = 21;
             }
             akeBilde.css({width: slide4Width/25});
             akeBilde.attr('data-'+ akeStartScroll +'p', 'left[x]:'+akeStartLeft+'%;top[y]:'+akeStartTop+'%');
