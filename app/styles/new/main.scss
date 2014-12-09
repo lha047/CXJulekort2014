@@ -55,17 +55,32 @@ h2, h3 {
 
 .timeline-container {
   height: 100vh;
-  padding: 3em;
-  margin: auto;
   z-index:99;
   position: fixed;
   bottom: 0; top: 0; right: 0; 
   text-align: center;
 }
+/*
+height: 100%;
+    width: 100%;
+    */
 .timeline {
+    display: none;    
     bottom: 0; top: 0; right: 0;    
     margin: auto;
     position: relative;
+}
+
+.timeline > div {
+  height: 5em;
+  width: 5em;
+  position: relative;  
+}
+
+.timeline > div > img {
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
 .dot {

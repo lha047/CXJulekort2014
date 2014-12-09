@@ -33,6 +33,9 @@
 //    }
 //}
 
+
+var currentPosition = 0;
+
 function stopScrolling() {
      skrollr.get().stopAnimateTo();
 }
@@ -61,7 +64,7 @@ function next() {
     } else if(id === 'dot4') {
         $('html, body').animate({
             scrollTop: $("#slide5").offset().top
-        }, 5000);  
+        }, 8000);  
         $("#dot5").addClass('active'); 
     } else if(id === 'dot5') {
         $('html, body').animate({
@@ -441,6 +444,18 @@ i18n.init({ detectLngQS: 'lang', useCookie : false }, function(t) {
     });
     var hidden = 'hidden';
 
+    function onchange (evt) {
+        if(this !== undefined) {
+            if(this[hidden]){
+                playpause.className = 'volume-off';
+                audio.pause();
+            } else if(playing) {
+                playpause.className = 'volume';
+                audio.play();
+            }
+        }
+    }
+
     // Standards:
     if (hidden in document){
         document.addEventListener("visibilitychange", onchange);
@@ -463,17 +478,7 @@ i18n.init({ detectLngQS: 'lang', useCookie : false }, function(t) {
         window.onpageshow = window.onpagehide = window.onfocus = window.onblur = onchange;
     }
 
-    function onchange (evt) {
-        if(this !== undefined) {
-            if(this[hidden]){
-                playpause.className = 'volume-off';
-                audio.pause();
-            } else if(playing) {
-                playpause.className = 'volume';
-                audio.play();
-            }
-        }
-    }
+  
 
     // set the initial state (but only if browser supports the Page Visibility API)
     if( document[hidden] !== undefined ) {
