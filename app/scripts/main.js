@@ -127,8 +127,8 @@ window.onload = function(){
 
             /*Posisjoner akebilde*/
             var akeBilde = $('#akeBilde'),
-                akeStartScroll = 300, //xl
-                akeSluttScroll = 320, //l
+                akeStartScroll = 430, //xl
+                akeSluttScroll = 500, //l
                 akeStartLeft = 6, //m
                 akeStartTop = 20,
                 akeSluttLeft = 45,
@@ -138,7 +138,8 @@ window.onload = function(){
 
             if(viewportWidth < 300) {
                 akeStartLeft = 3;
-                akeSluttScroll = 395;
+                akeStartScroll = 450, //xl
+                akeSluttScroll = 500; //l
 
 	            vers2StartScroll = 350;
 				vers2SluttScroll = 380; //390
@@ -154,9 +155,10 @@ window.onload = function(){
 	            vers3SluttScroll = 430;
 	            vers3StartLeft = 20;//53;
 	            vers3SluttLeft = 21;
-            } else if(viewportWidth > 300 && viewportWidth < 500) {
+            } else if(viewportWidth > 300 && viewportWidth < 800) {
                 akeStartLeft = 6; //m
-                akeSluttScroll = 370; //l
+                akeStartScroll = 450, //xl
+                akeSluttScroll = 500; //l
 
                 vers2StartScroll = 350;
                     vers2SluttScroll = 380; //390
@@ -174,7 +176,8 @@ window.onload = function(){
                 vers3SluttLeft = 21;
             } else {
                 akeStartLeft = 10; //xl
-                akeSluttScroll = 400; //xl
+
+                akeSluttScroll = 500; //xl
 
                 vers2StartScroll = 350;
                     vers2SluttScroll = 380; //390
@@ -202,7 +205,7 @@ window.onload = function(){
             var imageWidth = $('#slides').width();
 
             var percentage = 100 - ((viewportWidth / imageWidth) * 100);
-            $('#slides').attr('data-450p', 'transform:translate(-' + percentage + '%,-66.66%);');
+            $('#slides').attr('data-550p', 'transform:translate(-' + percentage + '%,-66.66%);');
 
             var transform = 'translate(' + (imageWidth - viewportWidth) + 'px, 200%)';
             $('#slide5').css({'transform': transform, '-moz-transform': transform, '-webkit-transform': transform});
@@ -422,7 +425,7 @@ i18n.init({ detectLngQS: 'lang', useCookie : false }, function(t) {
     }
 
     // set the initial state (but only if browser supports the Page Visibility API)
-    if( document[hidden] !== undefined ) {        
+    if( document[hidden] !== undefined ) {
         onchange({type: document[hidden] ? "blur" : "focus"});
     }
 })();
