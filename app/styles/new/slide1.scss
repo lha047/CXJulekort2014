@@ -18,6 +18,8 @@ sub {
   -o-background-size: auto 100%;
   background-size: auto 100%;
   min-height: 2em;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
    @media (max-width: 450px) {
     height: 2em;
    }
@@ -180,14 +182,14 @@ position: relative;*/
   right:1%; bottom:0;
   margin:auto;
   position:absolute;  
-  width: 7em;
+  width: 4em;
   height: 3em;
-  opacity: 0.6;
+  opacity: 0.85;
   background: url('../../../images/pil.png') no-repeat;
-  -webkit-background-size: auto 60%;
-  -moz-background-size: auto 60%;
-  -o-background-size: auto 60%;
-  background-size: auto 60%;
+  -webkit-background-size: auto 50%;
+  -moz-background-size: auto 50%;
+  -o-background-size: auto 50%;
+  background-size: auto 50%;
 }
 
 .bounce {

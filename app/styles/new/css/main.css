@@ -57,9 +57,8 @@ h2, h3 {
   content: url('../../../images/timeline-dot.png');
   z-index: 100; }
 
-.active-dot {
-  background: url('../../../images/timeline-active-dot.png') no-repeat center center;
-  z-index: 100; }
+.active {
+  content: url('../../../images/timeline-active-dot.png'); }
 
 .Selfie {
   font-family: Selfie;
