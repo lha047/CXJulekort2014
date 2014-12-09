@@ -8,11 +8,12 @@
   background-size: auto 100%;
   position: absolute;
   left: 0;
-  top: 0; }
+  top: 0;
+  background-position: 100%; }
   @media (max-width: 420px) {
     #vers1 {
       background-position: 90%; } }
-  @media (min-width: 420px) and (max-width: 600px) {
+  @media (max-width: 610px) {
     #vers1 {
       background-position: 95%; } }
 
@@ -62,12 +63,3 @@
   background-size: auto 100%;
   height: 100%;
   width: 100%; }
-  @media only screen and (min-width: 320px) {
-    #lykt {
-      background-position: -100%; } }
-  @media only screen and (min-width: 480px) {
-    #lykt {
-      background-position: 100%; } }
-  @media only screen and (min-width: 768px) {
-    #lykt {
-      background-position: 100%; } }

@@ -38,10 +38,38 @@ function stopScrolling() {
 }
 
 function next() {
-    $('html, body').animate({
-        scrollTop: $("#slide2").offset().top
-    }, 5000);
+    var currentActive = document.getElementsByClassName('active');
+    var id = currentActive[0].id;
+    
+    document.getElementById(id).className = 'dot';
+
+    if(id === 'dot1') {
+        $('html, body').animate({
+            scrollTop: $("#slide2").offset().top
+        }, 5000);   
+        $("#dot2").addClass('active');
+    } else if(id === 'dot2') {
+        $('html, body').animate({
+            scrollTop: $("#slide3").offset().top
+        }, 5000);   
+        $("#dot3").addClass('active');
+    } else if(id === 'dot3') {
+        $('html, body').animate({
+            scrollTop: $("#slide4").offset().top
+        }, 5000);   
+        $("#dot4").addClass('active');
+    } else if(id === 'dot4') {
+        $('html, body').animate({
+            scrollTop: $("#slide5").offset().top
+        }, 5000);  
+        $("#dot5").addClass('active'); 
+    } else if(id === 'dot5') {
+        $('html, body').animate({
+            scrollTop: document.body.offsetHeight
+        }, 5000);   
+    }
 }
+
 
 /*function detectIE() {
     var ua = window.navigator.userAgent;
@@ -98,11 +126,24 @@ var s = skrollr.init({
 window.onload = function(){
         function resize() {
             var viewportWidth = $(window).width();
+            var viewportHeight = $(window).height();
+
+            if(viewportWidth < viewportHeight) {
+                $('#lykt').css({'background-position': 5 + 'em'});
+                $('#lykt-opplyst').css({'background-position': 5 + 'em'});
+                console.log('mindre');
+            } 
 
             $('#slides').css({width: $('#slide4').height() * 3.55 + 'px'});
             $('#slide4verscontainer').css({width: $('#slide4').height() * 3.55 + 'px'});
 
-            $('p.vers').css({'font-size': ($(window).height() / 40) + 'px', 'padding': ($(window).height() / 300) + 'em'});
+
+            var padding = ($(window).height() / 300);
+            if(padding > 2) {
+                padding = 2;
+            }
+            var paddingBottom = padding * 1.5;
+            $('p.vers').css({'font-size': ($(window).height() / 40) + 'px', 'padding': padding + 'em', 'padding-bottom': paddingBottom + 'em'});
 
             var slide4Width = $('#slide4').width();
 
@@ -200,7 +241,6 @@ window.onload = function(){
             akeBilde.attr('data-'+ akeSluttScroll +'p', 'left[x]:'+akeSluttLeft+'%;top[y]:'+ akeSluttTop+'%');
             // akeBilde.attr('data-'+ (akeSluttScroll +50) +'p', 'left[x]:'+(akeSluttLeft+5)+'%;top[y]:'+ (akeSluttTop)+'%');
 
-           	console.log("log left: "+akeBilde.css("left"));
 
 
             //Løser at den ikke scroller forbi slottet på små skjermer
