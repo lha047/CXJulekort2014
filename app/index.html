@@ -22,7 +22,7 @@
     <!-- endinject -->
 
 </head>
-<body> 
+<body>
 
 <audio id="audioelement" loop preload="auto">
     <source src="audio/cxlykter.mp3" type="audio/mp3">
@@ -33,55 +33,51 @@
 <div class="timeline-container">
     <div class="timeline">
         <div id="dot1-container" class="active">
-            <img id="dot1" src="images/timeline-dot.png"/> 
+            <img id="dot1" src="images/timeline-dot.png"/>
         </div>
         <div id="dot2-container">
-            <img id="dot2" src="images/timeline-dot.png"/> 
+            <img id="dot2" src="images/timeline-dot.png"/>
         </div>
         <div id="dot3-container">
-            <img id="dot3" src="images/timeline-dot.png"/> 
+            <img id="dot3" src="images/timeline-dot.png"/>
         </div>
     </div>
     <div data-0="visibility:visible; @class:arrow-container bounce animated" data-50p="@class:arrow-container" data-700p="visibility:hidden;" onclick="next()">
     <div class="arrow">
     </div>
-</div>   
+</div>
 </div>
 
 <div data-0="visibility:visible; @class:arrow-container bounce animated" data-50p="@class:arrow-container" data-700p="visibility:hidden;" onclick="next()">
     <div class="arrow">
     </div>
-</div>   
+</div>
 
-<div class="volume-container" 
+<div class="volume-container"
             data-0p="margin-top: 25vh;"
             data-30p=""
-            data-40p=""
-            data-50p="margin-top: 2vh;">
+            data-50p=""
+            data-60p="margin-top: 2vh;">
      <i id="playpause" class="volume-off"> </i>
 </div>
 
 <div id="slides-container">
     <div id="slides"
          data-0p="transform:translate(0%,0%);"
-         data-25p=""
-         data-30p=""
-         data-50p="transform:translate(0%,-33.33%);"
-         data-150p=""
-         data-200p=""
-         data-250p=""
-         data-300p="transform:translate(-0%,-66.66%);"
-         data-450p="transform:translate(-60%,-66.66%);"
-         data-550p=""
-         data-600p=""
-         data-750p=""
+         data-50p=""
+         data-100p="transform:translate(0%,-33.33%);"
+         data-350p=""
+         data-400p="transform:translate(-0%,-66.66%);"
+         data-450p=""
+         data-550p="transform:translate(-60%,-66.66%);"
+         data-820p=""
         >
         <div id="slide1" class="slide">
 
 
             <div class="intro-content-container">
-                <div class="intro-textbox-container">      
-                    <div class="intro-textbox">       
+                <div class="intro-textbox-container">
+                    <div class="intro-textbox">
                         <header>
                             <h1 data-i18n="hilsen.godjul" class="godjul"></h1>
                             <h2 id="mottager"><span data-i18n="hilsen.to"></span> <span class="to"></span></h2>
@@ -90,7 +86,7 @@
                         <p data-i18n="hilsen.donasjon"></p>
                         <sub data-i18n="hilsen.computas"></sub>
                     </div>
-                </div>                
+                </div>
                 <div class="scroll-hint-container">
                     <p data-i18n="scroll"></p>
                 </div>
@@ -121,10 +117,10 @@
             </div>
         </div>
         <div id="slide2" class="slide"
-             data-40p="background:rgba(0,0,0,0.75);color:rgb(255,255,255);">
+             data-90p="background:rgba(0,0,0,0.75);color:rgb(255,255,255);">
 
-            <div id="vers1" class='main' data-120p="opacity:1;" data-140p="opacity:0;">
-                <div id="vers1-text" data-120p="display:block;" data-140p="display:none;">
+            <div id="vers1" class='main' data-170p="opacity:1;" data-190p="opacity:0;">
+                <div id="vers1-text" data-170p="display:block;" data-190p="display:none;">
                     <!--data-10p="display:block;"  -->
                     <p class="vers">
                         <span class="line" data-i18n="sang.vers1.1"></span>
@@ -136,17 +132,17 @@
                     </p>
                 </div>
             </div>
-            <div id="snowBackground1" class="snowBackground" data-50p="opacity:1;" data-140p="opacity:0;">
-                <canvas id="snowWindow1" class="snowWindow" data-50p="opacity:1;" data-140p="opacity:0;"></canvas>
+            <div id="snowBackground1" class="snowBackground" data-100p="opacity:1;" data-190p="opacity:0;">
+                <canvas id="snowWindow1" class="snowWindow" data-100p="opacity:1;" data-190p="opacity:0;"></canvas>
             </div>
-            <div id="lykt-container" data-0="color[swing]:rgb(0,0,0);" data-250p="color:rgb(255,255,0);">
+            <div id="lykt-container" data-0="color[swing]:rgb(0,0,0);" data-300p="color:rgb(255,255,0);">
                 <div id="lykt">
                 </div>
             </div>
         </div>
 
         <div id="slide3" class="slide">
-                <div id="refreng1" data-140p="opacity: 0;" data-250p="opacity: 1;">
+                <div id="refreng1" data-190p="opacity: 0;" data-290p="opacity: 1;">
                     <div class="box">
                     <p class="vers">
                         <span class="line" data-i18n="sang.refreng.1"></span>
@@ -156,10 +152,10 @@
                     </p>
                 </div>
             </div>
-            <div id="snowBackground2" class="snowBackground" data-140p="opacity:0;" data-250p="opacity:1;">
+            <div id="snowBackground2" class="snowBackground" data-190p="opacity:0;" data-290p="opacity:1;">
                  <canvas id="snowWindow2" class="snowWindow"></canvas>
              </div>
-            <div id="lykt-opplyst-container" data-100p="opacity: 0;" data-250p="opacity: 1;">
+            <div id="lykt-opplyst-container" data-150p="opacity: 0;" data-250p="opacity: 1;">
                 <div id="lykt-opplyst">
                 </div>
             </div>
@@ -205,13 +201,13 @@
         <div id="slide5" class="slide">
 
 
-            <div id="fadeOut" data-450p="background:rgba(0,0,0,0) right center;"
-                 data-550p="background:rgba(0,0,0,1) right center;"></div>
-            <div id="slide5-content" data-550p="opacity:0;" data-620p="opacity:1">
+            <div id="fadeOut" data-580p="background:rgba(0,0,0,0) right center;"
+                 data-630p="background:rgba(0,0,0,1) right center;"></div>
+            <div id="slide5-content" data-650p="opacity:0;" data-720p="opacity:1">
                 <div class="intro-content-container">
                     <div class="intro-textbox-container">
 
-                            <div class="intro-textbox infoTextboxCenter" data-550p="visibility:visible;" data-650p="visibility:hidden;">
+                            <div class="intro-textbox infoTextboxCenter" data-650p="visibility:visible;" data-750p="visibility:hidden;">
                                <header>
                                   <h2>EDUGATE</h2>
                                 </header>
@@ -222,7 +218,7 @@
                             </div>
 
 
-                            <div class="intro-textbox infoTextboxCenter credits" data-550p="visibility:hidden;" data-650p="visibility:visible;" data-700p="visibility:hidden;">
+                            <div class="intro-textbox infoTextboxCenter credits" data-650p="visibility:hidden;" data-750p="visibility:visible;" data-800p="visibility:hidden;">
                                 <div class="credit ">
                                     <p><small data-i18n="test.textLabel"></small></p>
                                     <p data-i18n="navn.bjorn"></p>
@@ -250,7 +246,7 @@
                                     <p data-i18n="navn.nicho"></p>
                                 </div>
                             </div>
-                            <div class="intro-textbox infoTextboxCenter" data-550p="visibility:hidden;" data-700p="visibility:visible;">
+                            <div class="intro-textbox infoTextboxCenter" data-650p="visibility:hidden;" data-800p="visibility:visible;">
                                 <header>
                                     <h1 class="centerHeaderText"><span data-i18n="test.christmasGreetings1"></span><br/><span data-i18n="test.christmasGreetings2"></span></h1>
                                     <!-- <h1 class="centerHeaderText" data-i18n="test.christmasGreetings2"></h1> -->
@@ -261,8 +257,8 @@
                         </div>
                     </div>
                 </div>
-                <div id="fadeIn" data-580p="background:rgba(0,0,0,0.9) right center;"
-                     data-600p="background:rgba(0,0,0,0) right center;"></div>
+                <div id="fadeIn" data-680p="background:rgba(0,0,0,0.9) right center;"
+                     data-700p="background:rgba(0,0,0,0) right center;"></div>
             </div>
 
         </div>
