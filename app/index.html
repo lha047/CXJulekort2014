@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" onwheel="stopScrolling()" onmousedown="stopScrolling()" touchend="stopScrolling()" onkeyup="stopScrolling()">
+<html class="no-js"> <!-- onwheel="stopScrolling()" onmousedown="stopScrolling()" touchend="stopScrolling()" onkeyup="stopScrolling()" -->
 <head>
     <meta charset="utf-8">
     <title>CXJulekort2014</title>
@@ -22,27 +22,34 @@
     <!-- endinject -->
 
 </head>
-<body> <!-- scrollbar moved -->
+<body> 
 
-<!--audio id="audioelement" loop preload="auto"-->
 <audio id="audioelement" loop preload="auto">
     <source src="audio/cxlykter.mp3" type="audio/mp3">
     <source src="audio/cxlykter.ogg" type="audio/ogg">
     <source src="audio/cxlykter.flac" type="audio/flac">
     Your browser does not support the audio element.
 </audio>
-<div class="arrow-container bounce animated" data-0="visibility:visible;" data-700p="visibility:hidden;">
-<div class="arrow">
+
+<!-- <div class="timeline">
+    <div id="dot1-container">
+        <img id="dot1" src="images/timeline-dot.png"/> 
+    </div>
+</div>
+ -->
+<div data-0="visibility:visible; @class:arrow-container bounce animated" data-50p="@class:arrow-container" data-700p="visibility:hidden;">
+    <div class="arrow">
     </div>
 </div>   
 
-        <div class="volume-container" 
-                    data-0p="margin-top: 25vh;"
-                    data-30p=""
-                    data-40p=""
-                    data-50p="margin-top: 2vh;">
-             <i id="playpause" class="volume"> </i>
-        </div>
+<div class="volume-container" 
+            data-0p="margin-top: 25vh;"
+            data-30p=""
+            data-40p=""
+            data-50p="margin-top: 2vh;">
+     <i id="playpause" class="volume-off"> </i>
+</div>
+
 <div id="slides-container">
     <div id="slides"
          data-0p="transform:translate(0%,0%);"
@@ -58,7 +65,6 @@
          data-600p=""
          data-750p=""
         >
-
         <div id="slide1" class="slide">
 
 
@@ -83,7 +89,6 @@
             </div>
 
         </div>
-
         <div id="slide1-blurry" class="slide" data-0p="opacity: 0;" data-20p="opacity: 1;">
 
             <div class="intro-content-container">
@@ -252,6 +257,8 @@
         </div>
     </div>
 </div>
+</div>
+
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 <script>
     (function (b, o, i, l, e, r) {

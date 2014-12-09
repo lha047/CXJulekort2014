@@ -75,7 +75,7 @@ html, body {
 
 #slide1 {
   width: 100vw;
-  background: url('../../../images/julebilde.jpg') no-repeat center center;
+  background: url('../../../images/smaller/julebilde.jpg') no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -83,7 +83,7 @@ html, body {
 
 #slide1-blurry {
   width: 100vw;
-  background: url('../../../images/julebilde-blurry.png') no-repeat center center;
+  background: url('../../../images/smaller/julebilde-blurry.jpg') no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -102,7 +102,7 @@ html, body {
   transform: translate(0, 100%); }
 
 #slide4 {
-  background: url('../../../images/vers2-3.png') no-repeat left center;
+  background: url('../../../images/smaller/vers2-3.jpg') no-repeat left center;
   -webkit-background-size: auto 100%;
   -moz-background-size: auto 100%;
   -o-background-size: auto 100%;
