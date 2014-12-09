@@ -38,10 +38,30 @@ function stopScrolling() {
 }
 
 function next() {
-    $('html, body').animate({
-        scrollTop: $("#slide2").offset().top
-    }, 5000);
+    var currentActive = document.getElementsByClassName('active');
+    if(currentActive.id === '#slide1') {
+        $('html, body').animate({
+            scrollTop: $("#slide2").offset().top
+        }, 5000);        
+    } else if(currentActive.id === '#slide2') {
+        $('html, body').animate({
+            scrollTop: $("#slide3").offset().top
+        }, 5000);   
+    } else if(currentActive.id === '#slide3') {
+        $('html, body').animate({
+            scrollTop: $("#slide4").offset().top
+        }, 5000);   
+    } else if(currentActive.id === '#slide4') {
+        $('html, body').animate({
+            scrollTop: $("#slide5").offset().top
+        }, 5000);   
+    } else if(currentActive.id === '#slide5') {
+        $('html, body').animate({
+            scrollTop: document.body.offsetHeight
+        }, 5000);   
+    }
 }
+
 
 /*function detectIE() {
     var ua = window.navigator.userAgent;
