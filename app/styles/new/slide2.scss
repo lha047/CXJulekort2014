@@ -26,12 +26,22 @@
 }
 
 #slide2 .snowWindow {
-    width: 100%;
+    width: 30%;
     height: 90%;
     position: absolute;
     top: 0;
     right: 0;
     z-index: -1;
+
+  @media only screen and (min-width: 320px) {
+    width: 100%;
+  }
+  @media only screen and (min-width: 480px) {
+    width: 100%;
+  }
+  @media only screen and (min-width: 768px) {
+    width: 100%;
+  }
 }
 
 #vers1-text {
@@ -65,7 +75,7 @@
     background-position: 100%;
   }
   @media only screen and (min-width: 768px) {
-    background-position: 0%;
+    background-position: 100%;
   }
 //    @media (max-width: 420px) {
 //      background-position: -100%;
