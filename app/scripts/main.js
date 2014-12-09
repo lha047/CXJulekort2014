@@ -222,16 +222,27 @@ window.onload = function(){
 
            	console.log("log left: "+akeBilde.css("left"));
 
+
+            //Løser at den ikke scroller forbi slottet på små skjermer
             var imageWidth = $('#slides').width();
 
             var percentage = 100 - ((viewportWidth / imageWidth) * 100);
+            var diff = 0;
+            var pmax = 68;
+            if(percentage > pmax)
+            {
+                diff = percentage - pmax;
+                percentage = pmax;
+            }
             $('#slides').attr('data-550p', 'transform:translate(-' + percentage + '%,-66.66%);');
 
-            var transform = 'translate(' + (imageWidth - viewportWidth) + 'px, 200%)';
+            //Hører til det over, sørger for at siste slide blir posisjonert riktig også.
+            var transform = 'translate(' + (imageWidth - (imageWidth * (diff/100)) - viewportWidth) + 'px, 200%)';
             $('#slide5').css({'transform': transform, '-moz-transform': transform, '-webkit-transform': transform});
 
-            skrollr.get().refresh();
 
+
+            skrollr.get().refresh();
 
         }
         resize();
