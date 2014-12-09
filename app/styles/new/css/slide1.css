@@ -28,7 +28,8 @@ sub {
   width: 100%;
   height: 70%;
   top: 20%;
-  position: absolute; }
+  position: absolute;
+  z-index: 1; }
   @media (max-width: 450px) {
     .intro-content-container {
       height: 100%;
@@ -60,8 +61,8 @@ sub {
   max-width: 50em;
   position: absolute; }
 
-/* font-size: 2vw; 
-padding-bottom: 1em; 
+/* font-size: 2vw;
+padding-bottom: 1em;
 position: relative;*/
 .intro-textbox p {
   color: #F5F5F5;
@@ -214,3 +215,31 @@ position: relative;*/
   -moz-animation: bounce 2s infinite;
   -ms-animation: bounce 2s infinite;
   animation: bounce 2s infinite; }
+
+#frost-downer {
+  background: url('../../../images/frost-downer.png') no-repeat;
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  -o-background-size: 100% 100%;
+  background-size: 100% 100%;
+  background-position: bottom left;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 20%;
+  width: 20%;
+  z-index: 2; }
+
+#frost-upper {
+  background: url('../../../images/frost-upper.png') no-repeat;
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  -o-background-size: 100% 100%;
+  background-size: 100% 100%;
+  background-position: right top;
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  height: 20%;
+  width: 20%;
+  z-index: 2; }
