@@ -131,7 +131,7 @@ window.onload = function(){
             if(viewportWidth < viewportHeight) {
                 $('#lykt').css({'background-position': 5 + 'em'});
                 $('#lykt-opplyst').css({'background-position': 5 + 'em'});
-                
+
             }
 
             $('#slides').css({width: $('#slide4').height() * 3.55 + 'px'});
