@@ -102,7 +102,13 @@ window.onload = function(){
             $('#slides').css({width: $('#slide4').height() * 3.55 + 'px'});
             $('#slide4verscontainer').css({width: $('#slide4').height() * 3.55 + 'px'});
 
-            $('p.vers').css({'font-size': ($(window).height() / 40) + 'px', 'padding': ($(window).height() / 300) + 'em'});
+
+            var padding = ($(window).height() / 300);
+            if(padding > 2) {
+                padding = 2;
+            }
+            var paddingBottom = padding * 1.5;
+            $('p.vers').css({'font-size': ($(window).height() / 40) + 'px', 'padding': padding + 'em', 'padding-bottom': paddingBottom + 'em'});
 
             var slide4Width = $('#slide4').width();
 
