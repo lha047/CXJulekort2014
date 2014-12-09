@@ -41,6 +41,7 @@ h2, h3 {
   text-align: center; }
 
 .timeline {
+  display: none;
   bottom: 0;
   top: 0;
   right: 0;
@@ -150,6 +151,10 @@ span.line {
   background-color: rgba(7, 70, 109, 0.6);
   padding: 3em;
   z-index: 16; }
+  .vers img {
+    width: 10%;
+    float: right;
+    opacity: 0.85; }
 
 .box {
   padding: 5%; }
