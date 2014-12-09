@@ -1,10 +1,10 @@
 {
     "test" : {
         "tast": "engelsk",
-        "textLabel": "Lyrcis & Melody",
+        "textLabel": "Lyrics & Melody",
         "translatorLabel": "Translation",
         "musicLabel": "Music",
-        "photoLabel": "Photo",
+        "photoLabel": "Photography",
         "designerLabel": "Design & Illustration",
         "developersLabel": "Developers",
         "christmasGreetings1" : "We wish you a merry christmas",
