@@ -464,6 +464,7 @@ i18n.init({ detectLngQS: 'lang', useCookie : false }, function(t) {
                 $('#audioelement').attr('autoplay');
                 playpause.className = 'volume';
                 playing = true;
+                audio.play();
             } else {
                 playing = false;
                 playpause.className = 'volume-off';
