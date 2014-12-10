@@ -227,7 +227,7 @@ window.onload = function(){
             var fontSize = (pp * baseSize) + 'px';
             $('.intro-textbox').css({'font-size': fontSize});
 
-            $('.scollText').animate({ fontSize: "1.2em" }, 10000);
+            $('.scrollText').animate({ fontSize: "1.2em" }, 10000);
 
             skrollr.get().refresh();
 
