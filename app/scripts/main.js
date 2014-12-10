@@ -52,11 +52,11 @@ function toggleScrollPause() {
     if (isAutoScrolling === true) {
         stopScrolling();
         isAutoScrolling = false;
-        navigation.className = 'pause';
+        navigation.className = 'arrow-container bounce animated';
     } else {
        s.animateTo(document.body.offsetHeight, { duration: 30000}, {interruptible: true});
        isAutoScrolling = true;
-       navigation.className = 'arrow';
+       navigation.className = 'arrow-container';
     }
 
 /*
