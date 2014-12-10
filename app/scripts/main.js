@@ -45,7 +45,7 @@ function stopScrolling() {
      skrollr.get().stopAnimateTo();
 }
 
-function next() {   
+function next() {
     var s = skrollr.get();
     if(currentPosition >= slide1Top && currentPosition < slide2Top) {
         s.animateTo(slide2Top, { duration: 8000}, {interruptible: true});
@@ -86,8 +86,8 @@ function next() {
     } else if(id === 'dot4') {
         $('html, body').animate({
             scrollTop: $("#slide5").offset().top
-        }, 8000);  
-        $("#dot5").addClass('active'); 
+        }, 8000);
+        $("#dot5").addClass('active');
     } else if(id === 'dot5') {
         $('html, body').animate({
             scrollTop: document.body.offsetHeight
@@ -251,6 +251,20 @@ window.onload = function(){
             var baseSize = 26;
             var fontSize = (pp * baseSize) + 'px';
             $('.intro-textbox').css({'font-size': fontSize});
+
+            var highest;
+            $.each($('.intro-textbox'), function (index, element) {
+                if (!highest || $(element).height() > highest.height()) {
+                    highest = $(element);
+                }
+
+            });
+
+            while (highest.height() > highest.closest('.intro-textbox-container').height() * 0.8) {
+                baseSize = baseSize - 1;
+                fontSize = (pp * baseSize) + 'px';
+                $('.intro-textbox').css({'font-size': fontSize});
+            }
 
             skrollr.get().refresh();
 
@@ -418,7 +432,7 @@ i18n.init({ detectLngQS: 'lang', useCookie : false }, function(t) {
    // Check for audio element support.
     if (!(audio.canPlayType('audio/mp3') || audio.canPlayType('audio/mpeg') || audio.canPlayType('audio/ogg') || audio.canPlayType('audio/flac'))) {
         document.getElementsByClassName('volume-container')[0].hidden = "true";
-    } 
+    }
 
     playpause.addEventListener('click', function(){
         if(audio){
@@ -472,7 +486,7 @@ i18n.init({ detectLngQS: 'lang', useCookie : false }, function(t) {
         window.onpageshow = window.onpagehide = window.onfocus = window.onblur = onchange;
     }
 
-  
+
 
     // set the initial state (but only if browser supports the Page Visibility API)
     if( document[hidden] !== undefined ) {
