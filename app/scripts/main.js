@@ -45,23 +45,25 @@ function stopScrolling() {
      skrollr.get().stopAnimateTo();
 }
 
-function next() {
+function toggleScrollPause() {
     var s = skrollr.get();
+    s.animateTo(document.body.offsetHeight, { duration: 20000}, {interruptible: true});
+/*    
     if(currentPosition >= slide1Top && currentPosition < slide2Top) {
         s.animateTo(slide2Top, { duration: 8000}, {interruptible: true});
         $("#dot2").addClass('active');
-    } /*else if(currentPosition >= slide2Top && currentPosition < slide3Top) {
+    } else if(currentPosition >= slide2Top && currentPosition < slide3Top) {
         $('html, body').animate({
             scrollTop: slide3Top
         }, 5000);
         $("#dot3").addClass('active');
-    } */else if(currentPosition >= slide2Top && currentPosition < slide4Top) {
+    } else if(currentPosition >= slide2Top && currentPosition < slide4Top) {
         s.animateTo(slide4Top, { duration: 8000}, {interruptible: true});
         $("#dot4").addClass('active');
     } else if(currentPosition >= slide4Top && currentPosition < document.body.offsetHeight) {
          s.animateTo(document.body.offsetHeight, { duration: 20000}, {interruptible: true});
         $("#dot5").addClass('active');
-    }
+    }*/
 
  /*   var currentActive = document.getElementsByClassName('active');
     var id = currentActive[0].id;
