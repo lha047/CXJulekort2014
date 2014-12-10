@@ -34,20 +34,28 @@
 //}
 
 
-var currentPosition = 0;
+/*var currentPosition = 0;
 var slide1Top = $("#slide1").offset().top;
 var slide2Top = $("#slide2").offset().top;
 /*var slide3Top = $("#slide3").offset().top;*/
-var slide4Top = $("#slide4").offset().top;
+/*var slide4Top = $("#slide4").offset().top;*/
 /*var slide5Bottom = document.body.offsetHeight;*/
 
 function stopScrolling() {
      skrollr.get().stopAnimateTo();
 }
 
+var isAutoScrolling = false;
 function toggleScrollPause() {
     var s = skrollr.get();
-    s.animateTo(document.body.offsetHeight, { duration: 20000}, {interruptible: true});
+    if (isAutoScrolling === true) {
+        stopScrolling();
+        isAutoScrolling = false;
+    } else {
+       s.animateTo(document.body.offsetHeight, { duration: 30000}, {interruptible: true});
+       isAutoScrolling = true;
+    }
+  
 /*    
     if(currentPosition >= slide1Top && currentPosition < slide2Top) {
         s.animateTo(slide2Top, { duration: 8000}, {interruptible: true});
@@ -141,9 +149,9 @@ var s = skrollr.init({
     	}
     },
     smoothScrolling: true,
-    render: function(data) {
+    /*render: function(data) {
         currentPosition = data.curTop;
-    },
+    },*/
     mobileDeceleration:0.7
     });
 
