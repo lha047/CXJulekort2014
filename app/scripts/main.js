@@ -125,7 +125,6 @@ var s = skrollr.init({
     easing: {
     	x : function(p) {
             var s = p;
-//            console.log('sin: ' + s);
     		return s;
     	},
     	y : function(p){
@@ -134,13 +133,10 @@ var s = skrollr.init({
             var c;
             if(stopSin <= p) {
                 c = 1;
-               // c= 0.99;
-//                console.log('cos****: ' + c);
             } else {
                 c = Math.sin(2*p);
 
             }
-//            console.log('cos: ' + c);
     		return c;
     	}
     },
@@ -226,8 +222,22 @@ window.onload = function(){
 
             }
             akeBilde.css({width: slide4Width/25});
+
+            if(akeBilde.attr('data-akeStartScroll'))
+            {
+                akeBilde.removeAttr('data-' + akeBilde.attr('data-akeStartScroll') + 'p');
+            }
+
             akeBilde.attr('data-'+ akeStartScroll +'p', 'left[x]:'+akeStartLeft+'%;top[y]:'+akeStartTop+'%');
+            akeBilde.attr('data-akeStartScroll', akeStartScroll);
+
+            if(akeBilde.attr('data-akeSluttScroll'))
+            {
+                akeBilde.removeAttr('data-' + akeBilde.attr('data-akeSluttScroll') + 'p');
+            }
             akeBilde.attr('data-'+ akeSluttScroll +'p', 'left[x]:'+akeSluttLeft+'%;top[y]:'+ akeSluttTop+'%');
+            akeBilde.attr('data-akeSluttScroll', akeSluttScroll);
+
             // akeBilde.attr('data-'+ (akeSluttScroll +50) +'p', 'left[x]:'+(akeSluttLeft+5)+'%;top[y]:'+ (akeSluttTop)+'%');
 
 
@@ -254,9 +264,8 @@ window.onload = function(){
             var fontSize = (pp * baseSize) + 'px';
             $('.intro-textbox').css({'font-size': fontSize});
 
-//<<<<<<< HEAD
             $('.scrollText').animate({ fontSize: "1.2em" }, 10000);
-//=======
+
             var highest;
             $.each($('.intro-textbox'), function (index, element) {
                 if (!highest || $(element).height() > highest.height()) {
@@ -270,14 +279,12 @@ window.onload = function(){
                 fontSize = (pp * baseSize) + 'px';
                 $('.intro-textbox').css({'font-size': fontSize});
             }
-//>>>>>>> 6ae3cb714be9c1fb9d4b83577f982e48b1744743
 
             skrollr.get().refresh();
 
         }
         resize();
         $(window).resize(function () {
-            console.log('resize');
             resize();
         });
 
@@ -348,7 +355,6 @@ window.onload = function(){
         }
 
         function draw() {
-
             ctx.clearRect(0,0,width,height);
             ctx.fillStyle = 'rgba(255, 255, 255, 0.8)';
             ctx.beginPath();
@@ -443,9 +449,6 @@ i18n.init({ detectLngQS: 'lang', useCookie : false }, function(t) {
     playpause.addEventListener('click', function(){
         if(audio){
             if(audio.paused === true) {
-                console.log('Button clicked');
-
-                console.log(audio.play());
                 $('#audioelement').attr('autoplay');
                 playpause.className = 'volume';
                 playing = true;
