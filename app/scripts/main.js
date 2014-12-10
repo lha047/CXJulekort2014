@@ -58,8 +58,8 @@ function toggleScrollPause() {
        isAutoScrolling = true;
        navigation.className = 'arrow';
     }
-  
-/*    
+
+/*
     if(currentPosition >= slide1Top && currentPosition < slide2Top) {
         s.animateTo(slide2Top, { duration: 8000}, {interruptible: true});
         $("#dot2").addClass('active');
@@ -275,7 +275,7 @@ window.onload = function(){
             var fontSize = (pp * baseSize) + 'px';
             $('.intro-textbox').css({'font-size': fontSize});
 
-            $('.scrollText').animate({ fontSize: "1.2em" }, 10000);
+            //$('.scrollText').animate({ fontSize: "1.2em" }, 10000);
 
             var highest;
             $.each($('.intro-textbox'), function (index, element) {
