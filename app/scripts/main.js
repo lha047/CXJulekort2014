@@ -48,12 +48,15 @@ function stopScrolling() {
 var isAutoScrolling = false;
 function toggleScrollPause() {
     var s = skrollr.get();
+    var navigation = document.getElementById('navigation');
     if (isAutoScrolling === true) {
         stopScrolling();
         isAutoScrolling = false;
+        navigation.className = 'pause';
     } else {
        s.animateTo(document.body.offsetHeight, { duration: 30000}, {interruptible: true});
        isAutoScrolling = true;
+       navigation.className = 'arrow';
     }
   
 /*    
