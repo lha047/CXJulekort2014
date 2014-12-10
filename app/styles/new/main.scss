@@ -202,6 +202,16 @@ span.line {
       float: right;
       opacity: 0.85;
     }
+    .center-image {
+      width: 100%;
+      text-align: center;
+      display: block;
+
+      img {
+        float: none;
+        margin-top: 1em;
+      }
+    }
 }
 .box {
   padding: 5%;
