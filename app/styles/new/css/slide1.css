@@ -216,7 +216,7 @@ position: relative;*/
   -ms-animation: bounce 2s infinite;
   animation: bounce 2s infinite; }
 
-#frost-downer {
+.frost-downer {
   background: url('../../../images/frost-downer.png') no-repeat;
   -webkit-background-size: 100% 100%;
   -moz-background-size: 100% 100%;
@@ -230,7 +230,7 @@ position: relative;*/
   width: 20%;
   z-index: 2; }
 
-#frost-upper {
+.frost-upper {
   background: url('../../../images/frost-upper.png') no-repeat;
   -webkit-background-size: 100% 100%;
   -moz-background-size: 100% 100%;
