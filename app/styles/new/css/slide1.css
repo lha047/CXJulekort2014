@@ -52,8 +52,7 @@ sub {
   padding: 0.4em;
   margin: auto;
   width: 16em;
-  border-top: 1px solid rgba(7, 70, 109, 0.5);
-  font-size: 0.8em; }
+  border-top: 1px solid rgba(7, 70, 109, 0.5); }
 
 .intro-textbox {
   padding-left: 20%;
