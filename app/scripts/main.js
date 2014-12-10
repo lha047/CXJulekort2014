@@ -35,13 +35,35 @@
 
 
 var currentPosition = 0;
+var slide1Top = $("#slide1").offset().top;
+var slide2Top = $("#slide2").offset().top;
+/*var slide3Top = $("#slide3").offset().top;*/
+var slide4Top = $("#slide4").offset().top;
+/*var slide5Bottom = document.body.offsetHeight;*/
 
 function stopScrolling() {
      skrollr.get().stopAnimateTo();
 }
 
 function next() {
-    var currentActive = document.getElementsByClassName('active');
+    var s = skrollr.get();
+    if(currentPosition >= slide1Top && currentPosition < slide2Top) {
+        s.animateTo(slide2Top, { duration: 8000}, {interruptible: true});
+        $("#dot2").addClass('active');
+    } /*else if(currentPosition >= slide2Top && currentPosition < slide3Top) {
+        $('html, body').animate({
+            scrollTop: slide3Top
+        }, 5000);
+        $("#dot3").addClass('active');
+    } */else if(currentPosition >= slide2Top && currentPosition < slide4Top) {
+        s.animateTo(slide4Top, { duration: 8000}, {interruptible: true});
+        $("#dot4").addClass('active');
+    } else if(currentPosition >= slide4Top && currentPosition < document.body.offsetHeight) {
+         s.animateTo(document.body.offsetHeight, { duration: 20000}, {interruptible: true});
+        $("#dot5").addClass('active');
+    }
+
+ /*   var currentActive = document.getElementsByClassName('active');
     var id = currentActive[0].id;
 
     document.getElementById(id).className = 'dot';
@@ -64,13 +86,13 @@ function next() {
     } else if(id === 'dot4') {
         $('html, body').animate({
             scrollTop: $("#slide5").offset().top
-        }, 8000);  
-        $("#dot5").addClass('active'); 
+        }, 8000);
+        $("#dot5").addClass('active');
     } else if(id === 'dot5') {
         $('html, body').animate({
             scrollTop: document.body.offsetHeight
         }, 5000);
-    }
+    }*/
 }
 
 
@@ -121,6 +143,9 @@ var s = skrollr.init({
     	}
     },
     smoothScrolling: true,
+    render: function(data) {
+        currentPosition = data.curTop;
+    },
     mobileDeceleration:0.7
     });
 
@@ -227,7 +252,23 @@ window.onload = function(){
             var fontSize = (pp * baseSize) + 'px';
             $('.intro-textbox').css({'font-size': fontSize});
 
+//<<<<<<< HEAD
             $('.scrollText').animate({ fontSize: "1.2em" }, 10000);
+//=======
+            var highest;
+            $.each($('.intro-textbox'), function (index, element) {
+                if (!highest || $(element).height() > highest.height()) {
+                    highest = $(element);
+                }
+
+            });
+
+            while (highest.height() > highest.closest('.intro-textbox-container').height() * 0.8) {
+                baseSize = baseSize - 1;
+                fontSize = (pp * baseSize) + 'px';
+                $('.intro-textbox').css({'font-size': fontSize});
+            }
+//>>>>>>> 6ae3cb714be9c1fb9d4b83577f982e48b1744743
 
             skrollr.get().refresh();
 
@@ -395,7 +436,7 @@ i18n.init({ detectLngQS: 'lang', useCookie : false }, function(t) {
    // Check for audio element support.
     if (!(audio.canPlayType('audio/mp3') || audio.canPlayType('audio/mpeg') || audio.canPlayType('audio/ogg') || audio.canPlayType('audio/flac'))) {
         document.getElementsByClassName('volume-container')[0].hidden = "true";
-    } 
+    }
 
     playpause.addEventListener('click', function(){
         if(audio){
@@ -449,7 +490,7 @@ i18n.init({ detectLngQS: 'lang', useCookie : false }, function(t) {
         window.onpageshow = window.onpagehide = window.onfocus = window.onblur = onchange;
     }
 
-  
+
 
     // set the initial state (but only if browser supports the Page Visibility API)
     if( document[hidden] !== undefined ) {
