@@ -390,6 +390,11 @@ i18n.init({ detectLngQS: 'lang', useCookie : false }, function(t) {
     var playpause = document.getElementById('playpause');
     var playing = false;
 
+   // Check for audio element support.
+    if (!(audio.canPlayType('audio/mp3') || audio.canPlayType('audio/mpeg') || audio.canPlayType('audio/ogg') || audio.canPlayType('audio/flac'))) {
+        document.getElementsByClassName('volume-container')[0].hidden = "true";
+    } 
+
     playpause.addEventListener('click', function(){
         if(audio){
             if(audio.paused === true) {
