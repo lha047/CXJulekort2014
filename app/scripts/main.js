@@ -48,12 +48,15 @@ function stopScrolling() {
 var isAutoScrolling = false;
 function toggleScrollPause() {
     var s = skrollr.get();
+    var navigation = document.getElementById('navigation');
     if (isAutoScrolling === true) {
         stopScrolling();
         isAutoScrolling = false;
+        navigation.className = 'arrow-container bounce animated';
     } else {
        s.animateTo(document.body.offsetHeight, { duration: 30000}, {interruptible: true});
        isAutoScrolling = true;
+       navigation.className = 'arrow-container';
     }
 
 /*
@@ -468,6 +471,7 @@ i18n.init({ detectLngQS: 'lang', useCookie : false }, function(t) {
                 $('#audioelement').attr('autoplay');
                 playpause.className = 'volume';
                 playing = true;
+                audio.play();
             } else {
                 playing = false;
                 playpause.className = 'volume-off';

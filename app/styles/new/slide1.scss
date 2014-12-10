@@ -193,6 +193,20 @@ position: relative;*/
   background-size: auto 50%;
 }
 
+.pause {
+  right:1%; bottom:5%;
+  margin:auto;
+  position:absolute;
+  width: 4em;
+  height: 3em;
+  opacity: 0.85;
+  background: url('../../../images/frost.png') no-repeat;
+  -webkit-background-size: auto 50%;
+  -moz-background-size: auto 50%;
+  -o-background-size: auto 50%;
+  background-size: auto 50%;
+}
+
 .bounce {
   @include animation(bounce 2s infinite);
 }
