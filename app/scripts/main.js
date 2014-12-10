@@ -185,7 +185,7 @@ window.onload = function(){
             }
             var paddingBottom = padding * 1.5;
             $('p.vers').css({'font-size': ($(window).height() / 40) + 'px', 'padding': padding + 'em', 'padding-bottom': paddingBottom + 'em'});
-            $('p.vers span.center-image').parent().css({'font-size': ($(window).height() / 40) + 'px', 'padding': padding + 'em', 'padding-bottom': paddingBottom / 2 + 'em'});
+            $('p.vers span.bottom-image').parent().css({'font-size': ($(window).height() / 40) + 'px', 'padding': padding + 'em', 'padding-bottom': paddingBottom / 2 + 'em'});
 
             var slide4Width = $('#slide4').width();
 
