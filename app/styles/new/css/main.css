@@ -22,6 +22,9 @@ header h1 {
   font-family: Selfie;
   font-weight: 300;
   font-size: 4em; }
+  @media (max-width: 800px) {
+    header h1 {
+      font-size: 3em; } }
 
 h2, h3 {
   font-family: 'DINPro'; }

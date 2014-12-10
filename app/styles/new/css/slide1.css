@@ -19,7 +19,7 @@ sub {
   backface-visibility: hidden;
   height: 3em;
   width: 10em; }
-  @media (max-width: 450px) {
+  @media (max-width: 550px) {
     .logo {
       height: 2em; } }
 
@@ -30,7 +30,7 @@ sub {
   top: 20%;
   position: absolute;
   z-index: 1; }
-  @media (max-width: 450px) {
+  @media (max-width: 550px) {
     .intro-content-container {
       height: 100%;
       top: 0; } }
@@ -76,7 +76,7 @@ position: relative;*/
   margin-left: 5vw;
   z-index: 99;
   position: fixed; }
-  @media (max-width: 450px) {
+  @media (max-width: 550px) {
     .volume-container {
       margin-top: 2%;
       margin-left: 2%; } }

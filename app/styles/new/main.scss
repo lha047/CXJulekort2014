@@ -37,6 +37,9 @@ header {
 header h1 {
   font-family: Selfie;
   font-weight: 300;
+  @media (max-width: 800px) {
+    font-size: 3em;
+  }
   font-size: 4em;
 }
 h2, h3 {

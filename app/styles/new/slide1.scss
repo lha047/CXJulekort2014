@@ -20,7 +20,7 @@ sub {
   min-height: 2em;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-   @media (max-width: 450px) {
+   @media (max-width: 550px) {
     height: 2em;
    }
   height: 3em;
@@ -43,7 +43,7 @@ sub {
 .intro-content-container {
     background-color: rgba(7, 70, 109, 0.65);
     width: 100%;
-    @media (max-width: 450px) {
+    @media (max-width: 550px) {
       height: 100%;
       top: 0;
     }
@@ -100,7 +100,7 @@ position: relative;*/
     border-radius: 50%;
     margin-top: 25vh;
     margin-left: 5vw;
-    @media (max-width: 450px) {
+    @media (max-width: 550px) {
       margin-top: 2%;
       margin-left: 2%;
     }
