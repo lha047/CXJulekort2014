@@ -415,8 +415,9 @@ window.onload = function(){
         generateSnow('snowBackground1', 'snowWindow1');
         generateSnow('snowBackground2', 'snowWindow2');
 
-    $('body').animate({scrollTop: ($(document).height() * 0.025)}, 3000);
-    };
+    s.animateTo($(document).height() * 0.025, {duration: 3000});
+
+};
 
    /* function autoplay() {
         if(s.getScrollTop() === 0 ) {
