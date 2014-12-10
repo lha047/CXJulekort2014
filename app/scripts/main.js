@@ -343,6 +343,7 @@ window.onload = function(){
     setLanguage();
 
     function generateSnow(backgroundId, canvasId) {
+        var intervalId;
         var canvas = document.getElementById(canvasId);
 //        var snowBackground = document.getElementById(backgroundId);
         var ctx = canvas.getContext('2d');
@@ -366,16 +367,22 @@ window.onload = function(){
         }
 
         function draw() {
-            ctx.clearRect(0,0,width,height);
+            if (window.innerWidth != canvas.width || window.innerHeight != canvas.height) {
+                clearInterval(intervalId);
+                ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+                generateSnow(backgroundId, canvasId);
+            }
+
+            ctx.clearRect(0, 0, width, height);
             ctx.fillStyle = 'rgba(255, 255, 255, 0.8)';
             ctx.beginPath();
-            for(var i = 0; i < maxPixels; i++){
+            for (var i = 0; i < maxPixels; i++) {
                 var p = particles[i];
-                ctx.moveTo(p.x,p.y);
-                ctx.arc(p.x,p.y, p.r, 0, Math.PI*2, true);
+                ctx.moveTo(p.x, p.y);
+                ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2, true);
             }
-                ctx.fill();
-                update();
+            ctx.fill();
+            update();
 
         }
 
@@ -423,7 +430,7 @@ window.onload = function(){
         }
 
         //animation loop
-        setInterval(draw, 33);
+        intervalId = setInterval(draw, 33);
     }
         generateSnow('snowBackground1', 'snowWindow1');
         generateSnow('snowBackground2', 'snowWindow2');
@@ -464,6 +471,7 @@ i18n.init({ detectLngQS: 'lang', useCookie : false }, function(t) {
                 $('#audioelement').attr('autoplay');
                 playpause.className = 'volume';
                 playing = true;
+                audio.play();
             } else {
                 playing = false;
                 playpause.className = 'volume-off';
