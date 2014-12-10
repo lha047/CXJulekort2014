@@ -141,8 +141,8 @@ window.onload = function(){
             $('#slide4verscontainer').css({width: $('#slide4').height() * 3.55 + 'px'});
 
 
-            $('#frost-upper').css({width: $('#frost-upper').height()});
-            $('#frost-downer').css({width: $('#frost-downer').height()});
+            $('.frost-upper').css({width: $('.frost-upper').height()});
+            $('.frost-downer').css({width: $('.frost-downer').height()});
 
 
             var padding = ($(window).height() / 300);
