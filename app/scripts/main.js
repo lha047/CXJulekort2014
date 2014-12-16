@@ -45,7 +45,7 @@ function stopScrolling() {
      skrollr.get().stopAnimateTo();
 }
 
-var isAutoScrolling = false;
+/*var isAutoScrolling = false;
 function toggleScrollPause() {
     var s = skrollr.get();
     var navigation = document.getElementById('navigation');
@@ -58,7 +58,7 @@ function toggleScrollPause() {
        isAutoScrolling = true;
        navigation.className = 'arrow-container';
     }
-
+}*/
 /*
     if(currentPosition >= slide1Top && currentPosition < slide2Top) {
         s.animateTo(slide2Top, { duration: 8000}, {interruptible: true});
@@ -106,7 +106,7 @@ function toggleScrollPause() {
             scrollTop: document.body.offsetHeight
         }, 5000);
     }*/
-}
+
 
 
 /*function detectIE() {
