@@ -6,7 +6,9 @@ inject = require('gulp-inject'),
 plumber = require('gulp-plumber'),
 connect = require('gulp-connect'),
 sass = require('gulp-sass'),
+minifyCSS = require('gulp-minify-css'),
 install = require('gulp-install');
+var uglify = require('gulp-uglify');
 
 
 // livereload plugins
@@ -31,6 +33,18 @@ gulp.task('sass', function(){
        .pipe(sass())
        .pipe(gulp.dest('app/styles/new/css'))
        .pipe(connect.reload());
+});
+
+gulp.task('minify-css', function() {
+    gulp.src('app/styles/new/css/*.css')
+        .pipe(minifyCSS({'mangle':true}))
+        .pipe(gulp.dest('app/dist/'))
+});
+
+gulp.task('compress', function() {
+    gulp.src('app/scripts/*.js')
+        .pipe(uglify())
+        .pipe(gulp.dest('app/dist'));
 });
 
 gulp.task('connect', function() {
